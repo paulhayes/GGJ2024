@@ -1,8 +1,9 @@
 using System;
 using System.Collections;
+using System.Linq;
 using UnityEngine;
 
-public class TypingInput : MonoBehaviour
+public class TypingInput : Singleton<TypingInput>
 {
 	public event Action<string> OnSuccessfullyTypedWord;
 	public event Action OnTimeout;
@@ -14,46 +15,47 @@ public class TypingInput : MonoBehaviour
 
 	public void TypePhrases(string[] phrases)
     {
-        StartCoroutine(TypePhrasesCoroutine(phrases));
+		var options = phrases.Select(p => new Option(p)).ToArray();
+        StartCoroutine(TypePhrasesCoroutine(options));
     }
 
-	private IEnumerator TypePhrasesCoroutine(string[] phrases)
+	private IEnumerator TypePhrasesCoroutine(Option[] options)
 	{
 		var timer = 0;
-		int count = phrases.Length;
-		int[] idx = new int[count];
 
 		while (timer < 52)
 		{
 			string input = Input.inputString.ToLower();
-			
-			for (int i = 0; i < count; i++)
+
+			foreach (var option in options)
 			{
-				string phrase = phrases[i].ToLower();
-				int index = idx[i];
+				CheckInput(option, input);
 
-				foreach (var letter in input)
-				{
-					print(phrase[index] + "");
-
-					if (phrase[index] == letter) //can go out of bounds
-					{
-						idx[i] = ++index;
-						print(phrase.Substring(0, index));
-					}
-
-					if (idx[i] >= phrase.Length)
-					{
-						OnSuccessfullyTypedWord?.Invoke(phrase);
-						print($"Successfully wrote: {phrase}");
-						yield break;
-					}
-				}
+				if (option.IsFinished())
+					yield break;
 			}
 
 			yield return null;
 		}
 
 		OnTimeout?.Invoke();
+
+		void CheckInput(Option option, string input)
+		{
+			foreach (var letter in input)
+			{
+				if (option.GetNext() == letter) //can go out of bounds
+				{
+					option.Increment();
+					print(option.GetTyped());
+				}
+
+				if (option.IsFinished())
+				{
+					OnSuccessfullyTypedWord?.Invoke(option.phrase);
+					print($"Successfully wrote: {option.phrase}");
+				}
+			}
+		}
 	}
 }
