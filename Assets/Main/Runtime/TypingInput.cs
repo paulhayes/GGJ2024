@@ -8,7 +8,7 @@ public class TypingInput : Singleton<TypingInput>
 {
 	public event Action<string> OnSuccessfullyTypedWord;
 	public event Action OnTimeout;
-	public List<OptionUI> optionUIs = new List<OptionUI>();
+	public List<OptionUI> optionUIs = new List<OptionUI>(); // TODO: move this elsewhere
 
 	private void Start()
 	{
