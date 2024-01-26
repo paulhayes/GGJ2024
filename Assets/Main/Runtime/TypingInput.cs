@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
@@ -7,24 +8,39 @@ public class TypingInput : Singleton<TypingInput>
 {
 	public event Action<string> OnSuccessfullyTypedWord;
 	public event Action OnTimeout;
+	public List<OptionUI> optionUIs = new List<OptionUI>();
 
 	private void Start()
 	{
-		TypePhrases(new[] { "Test" });
+		// TEST
+		TypePhrases(new[] { "Test", "Lorem Ipsum", "Depression", "Temple" });
+		OnSuccessfullyTypedWord += phrase => Debug.Log($"Successfully wrote: {phrase}");
+		OnTimeout += () => Debug.Log($"Timed out!");
 	}
 
 	public void TypePhrases(string[] phrases)
     {
 		var options = phrases.Select(p => new Option(p)).ToArray();
-        StartCoroutine(TypePhrasesCoroutine(options));
+        
+		foreach (var ui in optionUIs)
+			ui.gameObject.SetActive(false);
+
+		for (int i = 0; i < options.Length; i++)
+		{
+			var ui = optionUIs[i];
+			ui.gameObject.SetActive(true);
+			ui.SetOption(options[i]);
+		}
+
+		StartCoroutine(TypePhrasesCoroutine(options));
     }
 
 	private IEnumerator TypePhrasesCoroutine(Option[] options)
 	{
-		var timer = 0;
-
+		float timer = 0;
 		while (timer < 52)
 		{
+			timer += Time.deltaTime;
 			string input = Input.inputString.ToLower();
 
 			foreach (var option in options)
@@ -44,16 +60,13 @@ public class TypingInput : Singleton<TypingInput>
 		{
 			foreach (var letter in input)
 			{
-				if (option.GetNext() == letter) //can go out of bounds
-				{
+				if (option.GetNext() == letter)
 					option.Increment();
-					print(option.GetTyped());
-				}
 
 				if (option.IsFinished())
 				{
 					OnSuccessfullyTypedWord?.Invoke(option.phrase);
-					print($"Successfully wrote: {option.phrase}");
+					return;
 				}
 			}
 		}

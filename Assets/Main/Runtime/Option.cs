@@ -12,7 +12,7 @@ public class Option
 	}
 
 	public char GetNext() => phrase[idx];
-	public void Increment() => idx++;
 	public string GetTyped() => phrase.Substring(0, idx);
 	public bool IsFinished() => idx >= phrase.Length;
+	public void Increment() => idx++;
 }
