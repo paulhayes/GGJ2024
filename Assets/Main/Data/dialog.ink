@@ -1,7 +1,10 @@
+VAR suspicion = 0
+
 Hello my name is Jerry from Accounting.
 Where are you from again?
  *  mistype
     Hmmm, okay...
+    ~suspicion+=10
  *  Human Resources
     Ah, y'all are real sensitive nowadays, aren't ya?
  *  IT Support
