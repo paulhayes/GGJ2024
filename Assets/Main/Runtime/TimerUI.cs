@@ -10,8 +10,7 @@ public class TimerUI : MonoBehaviour
 	private void Start()
 	{
 		TypingInput.Instance.OnStartTyping += _ => ShowTimer();
-		TypingInput.Instance.OnSuccessfullyTypedWord += _ => HideTimer();
-		TypingInput.Instance.OnTimeout += HideTimer;
+		TypingInput.Instance.OnFinishedTyping += _ => HideTimer();
 	}
 
 	private void Update()

@@ -7,16 +7,20 @@ public class TypingInput : Singleton<TypingInput>
 {
 	public float TimeLeft {  get; private set; }
 
-	public event Action<string> OnSuccessfullyTypedWord;
-	public event Action OnTimeout;
 	public event Action<Option[]> OnStartTyping;
+	public event Action<string> OnFinishedTyping;
 
 	private void Start()
 	{
 		// TEST
 		TypePhrases(new[] { "Test", "Lorem Ipsum", "Depression", "Temple" });
-		OnSuccessfullyTypedWord += phrase => Debug.Log($"Successfully wrote: {phrase}");
-		OnTimeout += () => Debug.Log($"Timed out!");
+		OnFinishedTyping += phrase =>
+		{
+			if (phrase == null)
+				Debug.Log("Timed out!");
+			else
+				Debug.Log($"Successfully wrote: {phrase}");
+		};
 	}
 
 	public void TypePhrases(string[] phrases)
@@ -45,7 +49,7 @@ public class TypingInput : Singleton<TypingInput>
 			yield return null;
 		}
 
-		OnTimeout?.Invoke();
+		OnFinishedTyping?.Invoke(null);
 
 		void CheckInput(Option option, string input)
 		{
@@ -56,7 +60,7 @@ public class TypingInput : Singleton<TypingInput>
 
 				if (option.IsFinished())
 				{
-					OnSuccessfullyTypedWord?.Invoke(option.phrase);
+					OnFinishedTyping?.Invoke(option.phrase);
 					return;
 				}
 			}

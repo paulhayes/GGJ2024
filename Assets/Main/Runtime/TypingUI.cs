@@ -12,8 +12,7 @@ public class TypingUI : MonoBehaviour
 	private void Start()
 	{
 		TypingInput.Instance.OnStartTyping += ShowOptions;
-		TypingInput.Instance.OnTimeout += HideOptions;
-		TypingInput.Instance.OnSuccessfullyTypedWord += _ => HideOptions();
+		TypingInput.Instance.OnFinishedTyping += _ => HideOptions();
 	}
 
 	public void ShowOptions(Option[] optionData)
