@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Ink.Runtime;
+using Ink.UnityIntegration;
 
 public class StoryParser : MonoBehaviour
 {
@@ -12,6 +13,12 @@ public class StoryParser : MonoBehaviour
     public void Start()
     {
         m_story = new Story( m_text.text );
+
+        #if UNITY_EDITOR
+        InkPlayerWindow window = InkPlayerWindow.GetWindow(true);
+        if(window != null) InkPlayerWindow.Attach(m_story);
+        #endif
+
         StartCoroutine(Main());
     }
 
