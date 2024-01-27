@@ -50,9 +50,6 @@ Whoa there mate, watch where you're going!
 Wait - Do I know you? 
 My name is Jerry, from Accounting.
 Where are you from again?
- *  mistype
-    Hmmm, okay...
-    ~suspicion+=10
  *  Human Resources
     Ah, y'all are real sensitive nowadays, aren't ya?
  *  IT Support
@@ -62,79 +59,77 @@ Where are you from again?
  *  Accounting
     I haven't seen you around the office?
     ~suspicion+=10
+ *  mistype
+    Hmmm, okay...
+    ~suspicion+=10
 
     
 - Did you hear Janet was caught with her hand in petty cash?
-*  mistype
-    Hmmm, okay...
-    ~suspicion+=10
-*  Dumb Move!
+ *  Dumb Move!
     Crazy right? The first rule of stealing is don't get caught! What can you expect from a pretty blonde like that.
     ~suspicion-=5
-*  Not Janet
+ *  Not Janet
     I know right? She seems like such a little sweetheart... Guess the quiet ones are the naughtiest!
-*  Who?
+ *  Who?
     Where have you been? This is all everyone on the upper floors keeps talking about!
     ~suspicion+=10
+ *  mistype
+    Hmmm, okay...
+    ~suspicion+=10
 
-==choice2==
-Anyway, how are you liking the new tax forms? Pretty cool right? My idea.
-* They suck
+- Anyway, how are you liking the new tax forms? Pretty cool right? My idea.
+ * They suck
     How dare you?! Those forms are a bureaucratic masterpiece!
     ~suspicion+=10
-    -> choice3
-* What forms?
+ * What forms?
     Didn't you receive the newsletter update? Strange...
     ~suspicion+=20
-    -> choice3
-* Loving them!
-    Of course you are, Those forms are a piece of bureaucratic beauty!
+ * Loving them!
+    Of course you are, Those forms are a piece of bureaucratic beauty!
     ~suspicion-=10
-    -> choice3
+ *  mistype
+    Hmmm, okay...
+    ~suspicion+=10   
     
-==choice3==
-Well then! I'm going to grab some more beer and checkout the babes from marketing, bye!
+- Well then! I'm going to grab some more beer and checkout the babes from marketing, bye!
+
 //-----------------------Char change-----------------------
 ~character=Margaret
+
 Someone keeps printing pics of their butt on the office printers...
-* I'm pretty sure it's Tim
+ * I'm pretty sure it's Tim
 I don't know about that, Tim's butt is very nicely shaped - not that I have been looking at it!
-->DONE
-* Butt?
+ * Butt?
 You heard me right son. Just pages and pages of a round, perky butt...
-->DONE
-* Getting complaints
+ * Getting complaints
 So many complaints! We get sent all the printed images, and I of course have to go through all of them to see if they belong to the same person!
-->DONE
+ *  mistype
+    Are you feeling well love? You're slurring your words...
+    ~suspicion+=10  
+    
 //-----------------------Char change-----------------------
 ~character=Giles
 Are you the driver? Take me home right now!
-* No?
+ * No?
 Do you know who my daddy is?
 I'll have you fired!
-->DONE
-* Sure
-Amazing, go grab my things and let's go, a new hotdog skin just dropped and I have a bunch of VBucks burning a whole in my pocket!
-** VBucks?
-->DONE
-** You play fortnite?
-Of course I do! I'm gold 3 rank, I'm going to go pro for sure!
-->DONE
-* Who are you
+ * Who are you
 What do you mean? I'm Giles and my daddy is the boss of this company!
-->DONE
+ *  mistype
+    Ugh, are you drunk? Gross!
+    
 //-----------------------Char change-----------------------
 ~character=Bradley
-->DONE
+
 //-----------------------Char change-----------------------
 ~character=Rebbeca
-->DONE
-//-----------------------Char change-----------------------
+
+//-----------------------Char change----------------------
 ~character=Janet
-->DONE
+
 //-----------------------Char change-----------------------
 ~character=Will
-->DONE
+
 //-----------------------Char change-----------------------
 ~character=Felicity
 I can't believe the CEO brought his 12 year old son to the party. I guess it was his turn to look after the little rascal this weekend.
@@ -142,43 +137,43 @@ I can't believe the CEO brought his 12 year old son to the party. I guess it was
 Oh my god, yes!
 I couldn't believe it when I heard that he spent my annual salary on VBucks...
 ~suspicion-=10
-->DONE
 * Sweet childAre you crazy? You think that spoiled brat is sweet?
  You haven't been here long have you?
  ~suspicion+=10
-->DONE
 * Demon spawn
 Can you believe he just asked me to drive him home? Who does he think he is?
 ~suspicion-=10
-->DONE
+ *  mistype
+    Ugh, are you drunk? Gross!
+ ~suspicion+=10
 //-----------------------Char change-----------------------
 ~character=Tim 
-->DONE
+
 //-----------------------Char change-----------------------
 ~character=Benedict
-->DONE
+
 //-----------------------Char change-----------------------
 ~character=Jimmy
 I can't believe this sandwich theft keeps happening,! I'll have to write an email to HR again, ugh...
 * What's up with the fridge?
 What do you mean what's up?! We have a very serious problem of sandwich thievery!!
 ~suspicion+=20
-->DONE
+
 * Justice for the sandwich!
 Yes! I demand the culprit be brought to justice!
 ~suspicion-=20
-->DONE
+
 //-----------------------Char change-----------------------
 ~character=Miriam
-->DONE
+
 //-----------------------Char change-----------------------
 ~character=Sarah
-->DONE
+
 //-----------------------Char change-----------------------
 ~character=Will
-->DONE
+
 //-----------------------Char change-----------------------
 ~character=James
-->DONE
+
 
 -> END
