@@ -9,7 +9,7 @@ public class TypingUI : MonoBehaviour
 	public List<OptionUI> options;
 	public RectTransform[] points;
 
-	private void Awake()
+	private void Start()
 	{
 		TypingInput.Instance.OnStartTyping += ShowOptions;
 		TypingInput.Instance.OnFinishedTyping += _ => HideOptions();
