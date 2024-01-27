@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -6,12 +7,24 @@ public class SuspicionMeter : MonoBehaviour
 {
 	private Slider slider;
 
+
 	private void Awake()
 	{
 		slider = GetComponent<Slider>();
+		SetSuspicion(0);
 	}
 
-	public void SetSuspicion(int value)
+	void Start()
+	{
+		StoryParser.Instance.SuspicionChangeEvent += OnSuspicionChanges;
+	}
+
+    private void OnSuspicionChanges(int value)
+    {
+        SetSuspicion(value);
+    }
+
+    public void SetSuspicion(int value)
 	{
 		slider.value = value;
 	}

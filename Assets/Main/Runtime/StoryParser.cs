@@ -53,8 +53,8 @@ public class StoryParser : MonoBehaviour
         
 
         #if UNITY_EDITOR
-        InkPlayerWindow window = InkPlayerWindow.GetWindow(true);
-        if(window != null) InkPlayerWindow.Attach(m_story);
+        // InkPlayerWindow window = InkPlayerWindow.GetWindow(true);
+        // if(window != null) InkPlayerWindow.Attach(m_story);
         #endif
 
         yield return null;
@@ -100,12 +100,13 @@ public class StoryParser : MonoBehaviour
                 Debug.Log("Choice " + (i + 1) + ". " + choice.text);
             }
         }
-        TypingInput.Instance.OnFinishedTyping -= onFinishedTyping;
-
         
         while( !choiceIndex.HasValue ){
             yield return null;
         }
+
+        TypingInput.Instance.OnFinishedTyping -= onFinishedTyping;
+
         Debug.Log($"user choice is {choiceIndex.Value}");
         m_story.ChooseChoiceIndex(choiceIndex.Value);
         m_story.Continue();
