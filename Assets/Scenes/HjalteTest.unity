@@ -312,6 +312,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 910782531}
     m_Modifications:
+    - target: {fileID: 2247037337409612759, guid: 550ab7cdbefb84a40931136157cd0b12,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 999.4971
+      objectReference: {fileID: 0}
+    - target: {fileID: 2247037337409612759, guid: 550ab7cdbefb84a40931136157cd0b12,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 220
+      objectReference: {fileID: 0}
     - target: {fileID: 2706819213408465864, guid: 550ab7cdbefb84a40931136157cd0b12,
         type: 3}
       propertyPath: m_Name
@@ -445,6 +455,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1522669794346071127, guid: 5a7c3cbc12185e3478338753654db2be,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -186
       objectReference: {fileID: 0}
     - target: {fileID: 7129626324726607740, guid: 5a7c3cbc12185e3478338753654db2be,
         type: 3}
@@ -908,6 +923,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: TypingUICanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 6710964546284661080, guid: 76a4a775f1825c24fa2f3da62ae7d5a7,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 244
+      objectReference: {fileID: 0}
+    - target: {fileID: 6710964546284661080, guid: 76a4a775f1825c24fa2f3da62ae7d5a7,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -189
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
