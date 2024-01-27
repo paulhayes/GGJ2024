@@ -364,6 +364,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a7e75bd00e854d4a9a8bb953adada68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  optionPrefab: {fileID: 0}
+  options: []
+  points:
+  - {fileID: 1813763957}
+  - {fileID: 546634398}
+  - {fileID: 275290034}
+  - {fileID: 1461171049}
+  - {fileID: 1473470994}
 --- !u!1 &772191251
 GameObject:
   m_ObjectHideFlags: 0

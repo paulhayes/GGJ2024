@@ -14,7 +14,7 @@ public class TypingUI : MonoBehaviour
 
 	}
 
-	public void ShowOptions(Option[] options)
+	public void ShowOptions(Option[] optionData)
 	{
 
 	}

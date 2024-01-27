@@ -8,6 +8,7 @@ public class TypingInput : Singleton<TypingInput>
 {
 	public event Action<string> OnSuccessfullyTypedWord;
 	public event Action OnTimeout;
+	public event Action OnStartTyping;
 	public List<OptionUI> optionUIs = new List<OptionUI>(); // TODO: move this elsewhere
 
 	private void Start()
@@ -33,6 +34,7 @@ public class TypingInput : Singleton<TypingInput>
 		}
 
 		StartCoroutine(TypePhrasesCoroutine(options));
+		OnStartTyping?.Invoke();
     }
 
 	private IEnumerator TypePhrasesCoroutine(Option[] options)
