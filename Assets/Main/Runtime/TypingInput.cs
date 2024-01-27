@@ -9,6 +9,7 @@ public class TypingInput : Singleton<TypingInput>
 
 	public event Action<Option[]> OnStartTyping;
 	public event Action<int> OnFinishedTyping;
+	public event Action OnMistype;
 
 	public void TypePhrases(string[] phrases)
     {
@@ -19,19 +20,34 @@ public class TypingInput : Singleton<TypingInput>
 
 	private IEnumerator TypePhrasesCoroutine(Option[] options)
 	{
-		TimeLeft = 5;
+		TimeLeft = 25;
 		while (TimeLeft > 0)
 		{
 			TimeLeft -= Time.deltaTime;
 			string input = Input.inputString.ToLower();
+			bool mistype = true;
+
+			if (string.IsNullOrEmpty(input))
+			{
+				yield return null;
+				continue;
+			}
+
 			foreach (var option in options)
-			{				
-				CheckInput(option, input);
+			{
+				bool correct = CheckInput(option, input);
+
+				if (correct)
+					mistype = false;
 
 				if (option.IsFinished())
 					yield break;
+			}
 
-
+			if (mistype)
+			{
+				OnMistype?.Invoke();
+				Debug.Log("TYPO!");
 			}
 
 			yield return null;
@@ -39,20 +55,31 @@ public class TypingInput : Singleton<TypingInput>
 
 		OnFinishedTyping?.Invoke(-1);
 
-		void CheckInput(Option option, string input)
+		bool CheckInput(Option option, string input)
 		{
+			bool correct = false;
+
 			foreach (var letter in input)
 			{
 				if (option.GetNext() == letter)
+				{
 					option.Increment();
+					correct = true;
+				}
+				else
+				{
+					option.Mistype(letter);
+				}
 
 				if (option.IsFinished())
 				{
 					int phraseIdx = Array.IndexOf(options, option);
 					OnFinishedTyping?.Invoke(phraseIdx);
-					return;
+					return true;
 				}
 			}
+
+			return correct;
 		}
 	}
 }

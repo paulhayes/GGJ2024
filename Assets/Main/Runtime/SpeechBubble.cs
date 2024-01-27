@@ -10,9 +10,7 @@ public class SpeechBubble : MonoBehaviour
 
 	private void Start()
 	{
-		StoryParser.Instance.CharacterDialogEvent+=WriteDialogue;
-		//TEST
-		//WriteDialogue("Hello, my name is Jerry, I work in Accounting. How about you?");
+		StoryParser.Instance.CharacterDialogEvent += WriteDialogue;
 	}
 
 	public void WriteDialogue(DialogSnippet dialogue)
