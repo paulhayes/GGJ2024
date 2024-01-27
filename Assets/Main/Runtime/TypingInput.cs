@@ -20,7 +20,7 @@ public class TypingInput : Singleton<TypingInput>
 
 	private IEnumerator TypePhrasesCoroutine(Option[] options)
 	{
-		TimeLeft = 25;
+		TimeLeft = 15;
 		while (TimeLeft > 0)
 		{
 			TimeLeft -= Time.deltaTime;

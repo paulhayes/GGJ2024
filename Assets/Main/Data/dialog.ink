@@ -44,7 +44,6 @@ CONST Benedict = 13 // CEO
                     // Is always on the phone yelling at someone
 
 VAR character = Jerry
-
 Whoa there mate, watch where you're going! 
 Wait - Do I know you? 
 My name is Jerry, from Accounting.
@@ -62,7 +61,6 @@ Where are you from again?
     Hmmm, okay...
     ~suspicion+=10
 
-    
 - Did you hear Janet was caught with her hand in petty cash?
  *  Dumb Move!
     Crazy right? The first rule of stealing is don't get caught! What can you expect from a pretty blonde like that.
@@ -94,14 +92,13 @@ Where are you from again?
 
 //-----------------------Char change-----------------------
 ~character=Margaret
-
 - Someone keeps printing pics of their butt on the office printers...
  * I'm pretty sure it's Tim
-I don't know about that, Tim's butt is very nicely shaped - not that I have been looking at it!
+   I don't know about that, Tim's butt is very nicely shaped - not that I have been looking at it!
  * Butt?
-You heard me right son. Just pages and pages of a round, perky butt...
+   You heard me right son. Just pages and pages of a round, perky butt...
  * Getting complaints
-So many complaints! We get sent all the printed images, and I of course have to go through all of them to see if they belong to the same person!
+   So many complaints! We get sent all the printed images, and I of course have to go through all of them to see if they belong to the same person!
  *  mistype
     Are you feeling well love? You're slurring your words...
     ~suspicion+=10  
@@ -110,69 +107,69 @@ So many complaints! We get sent all the printed images, and I of course have to 
 ~character=Giles
 - Are you the driver? Take me home right now!
  * No?
-Do you know who my daddy is?
-I'll have you fired!
+   Do you know who my daddy is? I'll have you fired!
  * Who are you
-What do you mean? I'm Giles and my daddy is the boss of this company!
+   What do you mean? I'm Giles and my daddy is the boss of this company!
  *  mistype
     Ugh, are you drunk? Gross!
     
 //-----------------------Char change-----------------------
-~character=Bradley
+//~character=Bradley
 
 //-----------------------Char change-----------------------
-~character=Rebbeca
+//~character=Rebbeca
 
 //-----------------------Char change----------------------
-~character=Janet
+//~character=Janet
 
 //-----------------------Char change-----------------------
-~character=Will
+//~character=Will
 
 //-----------------------Char change-----------------------
-~character=Felicity
+//~character=Felicity
 - I can't believe the CEO brought his 12 year old son to the party. I guess it was his turn to look after the little rascal this weekend.
 * Spoiled brat
-Oh my god, yes!
-I couldn't believe it when I heard that he spent my annual salary on VBucks...
-~suspicion-=10
+  Oh my god, yes!
+  I couldn't believe it when I heard that he spent my annual salary on VBucks...
+  ~suspicion-=10
 * Sweet childAre you crazy? You think that spoiled brat is sweet?
- You haven't been here long have you?
- ~suspicion+=10
+  You haven't been here long have you?
+  ~suspicion+=10
 * Demon spawn
-Can you believe he just asked me to drive him home? Who does he think he is?
-~suspicion-=10
- *  mistype
-    Ugh, are you drunk? Gross!
- ~suspicion+=10
-//-----------------------Char change-----------------------
-~character=Tim 
+  Can you believe he just asked me to drive him home? Who does he think he is?
+  ~suspicion-=10
+ * mistype
+   Ugh, are you drunk? Gross!
+   ~suspicion+=10
 
 //-----------------------Char change-----------------------
-~character=Benedict
+//~character=Tim 
+
+//-----------------------Char change-----------------------
+//~character=Benedict
 
 //-----------------------Char change-----------------------
 ~character=Jimmy
 - I can't believe this sandwich theft keeps happening,! I'll have to write an email to HR again, ugh...
 * What's up with the fridge?
-What do you mean what's up?! We have a very serious problem of sandwich thievery!!
-~suspicion+=20
+  What do you mean what's up?! We have a very serious problem of sandwich thievery!!
+  ~suspicion+=20
 
 * Justice for the sandwich!
-Yes! I demand the culprit be brought to justice!
-~suspicion-=20
+  Yes! I demand the culprit be brought to justice!
+  ~suspicion-=20
 
 //-----------------------Char change-----------------------
-~character=Miriam
+//~character=Miriam
 
 //-----------------------Char change-----------------------
-~character=Sarah
+//~character=Sarah
 
 //-----------------------Char change-----------------------
-~character=Will
+//~character=Will
 
 //-----------------------Char change-----------------------
-~character=James
+//~character=James
 
 
 -> END
