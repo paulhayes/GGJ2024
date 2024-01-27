@@ -5,17 +5,25 @@ using UnityEngine;
 
 public class SpeechBubble : MonoBehaviour
 {
+	public GameObject visuals;
 	public TextMeshProUGUI text;
 	public float lettersPrSec = 50;
 
 	private void Start()
 	{
 		StoryParser.Instance.CharacterDialogEvent += WriteDialogue;
+		StoryParser.Instance.ConversationChoice	  += HideDialogue;
 	}
 
 	public void WriteDialogue(DialogSnippet dialogue)
 	{
+		visuals.SetActive(true);
 		StartCoroutine(TextWriter(dialogue));
+	}
+
+	public void HideDialogue()
+	{
+		visuals.SetActive(false);
 	}
 
 	IEnumerator TextWriter(DialogSnippet dialogue)

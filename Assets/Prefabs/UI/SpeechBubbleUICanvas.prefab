@@ -151,6 +151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 009442ddcde01ed48ab2963be25f3e86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  visuals: {fileID: 8620571597420817795}
   text: {fileID: 6616987982436054278}
   lettersPrSec: 50
 --- !u!1 &6270193763594474416

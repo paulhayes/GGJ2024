@@ -44,9 +44,9 @@ CONST Benedict = 13 // CEO
                     // Is always on the phone yelling at someone
 
 VAR character = Jerry
-Whoa there mate, watch where you're going! 
-Wait - Do I know you? 
-My name is Jerry, from Accounting.
+//Whoa there mate, watch where you're going! 
+//Wait - Do I know you? 
+//My name is Jerry, from Accounting.
 Where are you from again?
  *  Human Resources
     Ah, y'all are real sensitive nowadays, aren't ya?
