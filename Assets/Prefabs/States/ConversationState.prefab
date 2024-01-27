@@ -55,7 +55,6 @@ GameObject:
   - component: {fileID: 3216315871498588411}
   - component: {fileID: 6733175677284638178}
   - component: {fileID: 9219713210303356764}
-  - component: {fileID: 6513164927620716701}
   m_Layer: 0
   m_Name: ConversationState
   m_TagString: Untagged
@@ -110,18 +109,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_text: {fileID: 4900000, guid: 041791a5c19e5eb46beaf299840928aa, type: 3}
---- !u!114 &6513164927620716701
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7622165713733959336}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b3e07bc9de43da44acfd98ccc115633, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &6616563593529400093
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -577,6 +564,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1455924839152726384, guid: 5a7c3cbc12185e3478338753654db2be,
+        type: 3}
+      propertyPath: punchDuration
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1455924839152726384, guid: 5a7c3cbc12185e3478338753654db2be,
+        type: 3}
+      propertyPath: shakeIntensity
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1522669794346071127, guid: 5a7c3cbc12185e3478338753654db2be,
         type: 3}

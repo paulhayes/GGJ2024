@@ -55,7 +55,9 @@ public class TypingInput : Singleton<TypingInput>
 
 			foreach (var letter in input)
 			{
-				if (option.GetNext() == letter)
+				var nextLetter = Char.ToLower(option.GetNext());
+
+				if (nextLetter == letter)
 				{
 					option.Increment();
 					correct = true;
