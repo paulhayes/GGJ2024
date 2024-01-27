@@ -7,12 +7,6 @@ public class SpeechBubble : MonoBehaviour
 	public TextMeshProUGUI text;
 	public float lettersPrSec = 50;
 
-	private void Start()
-	{
-		//TEST
-		WriteDialogue("Hello, my name is Jerry, I work in Accounting. How about you?");
-	}
-
 	public void WriteDialogue(string dialogue)
 	{
 		StartCoroutine(TextWriter(dialogue));
