@@ -1,15 +1,15 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
 public class TypingInput : Singleton<TypingInput>
 {
+	public float TimeLeft {  get; private set; }
+
 	public event Action<string> OnSuccessfullyTypedWord;
 	public event Action OnTimeout;
-	public event Action OnStartTyping;
-	public List<OptionUI> optionUIs = new List<OptionUI>(); // TODO: move this elsewhere
+	public event Action<Option[]> OnStartTyping;
 
 	private void Start()
 	{
@@ -22,27 +22,16 @@ public class TypingInput : Singleton<TypingInput>
 	public void TypePhrases(string[] phrases)
     {
 		var options = phrases.Select(p => new Option(p)).ToArray();
-        
-		foreach (var ui in optionUIs)
-			ui.gameObject.SetActive(false);
-
-		for (int i = 0; i < options.Length; i++)
-		{
-			var ui = optionUIs[i];
-			ui.gameObject.SetActive(true);
-			ui.SetOption(options[i]);
-		}
-
+		OnStartTyping?.Invoke(options);
 		StartCoroutine(TypePhrasesCoroutine(options));
-		OnStartTyping?.Invoke();
     }
 
 	private IEnumerator TypePhrasesCoroutine(Option[] options)
 	{
-		float timer = 0;
-		while (timer < 52)
+		TimeLeft = 5;
+		while (TimeLeft > 0)
 		{
-			timer += Time.deltaTime;
+			TimeLeft -= Time.deltaTime;
 			string input = Input.inputString.ToLower();
 
 			foreach (var option in options)

@@ -11,11 +11,40 @@ public class TypingUI : MonoBehaviour
 
 	private void Start()
 	{
-
+		TypingInput.Instance.OnStartTyping += ShowOptions;
+		TypingInput.Instance.OnTimeout += HideOptions;
+		TypingInput.Instance.OnSuccessfullyTypedWord += _ => HideOptions();
 	}
 
 	public void ShowOptions(Option[] optionData)
 	{
+		for (int i = 0; i < optionData.Length; i++)
+		{
+			var data = optionData[i];
+			var option = GetOptionUI(i);
+			option.SetOption(data);
+		}
+	}
 
+	public void HideOptions()
+	{
+		foreach (var option in options)
+		{
+			option.gameObject.SetActive(false);
+		}
+	}
+
+	public OptionUI GetOptionUI(int i)
+	{
+		while (i >= options.Count) 
+		{
+			var newOption = Instantiate(optionPrefab, transform);
+			options.Add(newOption);
+		}
+
+		var option = options[i];
+		option.gameObject.SetActive(true);
+		option.transform.position = points[i].position;
+		return option;
 	}
 }
