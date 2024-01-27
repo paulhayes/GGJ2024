@@ -23,24 +23,6 @@ public class SuspicionMeter : MonoBehaviour
 		StoryParser.Instance.SuspicionChangeEvent += OnSuspicionChanges;
 	}
 
-	private void Update()
-	{
-		if (Input.GetKeyDown(KeyCode.Space))
-		{
-			int diff = 10;
-			float mult = Mathf.Clamp01(diff * .1f);
-			transform.DOPunchPosition(new Vector3(.5f, 1f, .5f) * mult, punchDuration, diff, .5f);
-			//transform.DOPunchRotation(new Vector3(0,0,75) * mult, punchDuration, diff, .5f);
-
-			DOTween.Shake(() => transform.rotation.eulerAngles, x =>
-			{
-				var rotation = transform.rotation;
-				rotation.eulerAngles = Vector3.forward * x.x;
-				transform.rotation = rotation;
-			}, punchDuration, diff * shakeIntensity, 8, 0);
-		}
-	}
-
 	private void OnSuspicionChanges(int value)
     {
         SetSuspicion(value);
