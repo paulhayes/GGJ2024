@@ -50,42 +50,33 @@ Whoa there mate, watch where you're going!
 Wait - Do I know you? 
 My name is Jerry, from Accounting.
 Where are you from again?
-*  mistype
+ *  mistype
     Hmmm, okay...
     ~suspicion+=10
-    -> choice1
-*  Human Resources
+ *  Human Resources
     Ah, y'all are real sensitive nowadays, aren't ya?
-    -> choice1
-*  IT Support
+ *  IT Support
     Oh really? Could you fix my computer, it has an error
-    -> choice1
-*  Janitorial Services
+ *  Janitorial Services
     Ah! You keep on cleaning those toilets. That's where I spend most of my day!
-    -> choice1
-*  Accounting
+ *  Accounting
     I haven't seen you around the office?
-    -> choice1
     ~suspicion+=10
+
     
- ==choice1==
-Did you hear Janet was caught with her hand in petty cash?
+- Did you hear Janet was caught with her hand in petty cash?
 *  mistype
     Hmmm, okay...
     ~suspicion+=10
-    -> choice2
 *  Dumb Move!
     Crazy right? The first rule of stealing is don't get caught! What can you expect from a pretty blonde like that.
-    -> choice2
     ~suspicion-=5
 *  Not Janet
     I know right? She seems like such a little sweetheart... Guess the quiet ones are the naughtiest!
-    -> choice2
 *  Who?
     Where have you been? This is all everyone on the upper floors keeps talking about!
     ~suspicion+=10
-    -> choice2
-    
+
 ==choice2==
 Anyway, how are you liking the new tax forms? Pretty cool right? My idea.
 * They suck
