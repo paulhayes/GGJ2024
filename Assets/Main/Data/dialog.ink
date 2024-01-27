@@ -43,9 +43,8 @@ CONST Benedict = 13 // CEO
                     // Very enlighted and in touch with his emotions, but is actually a bad boss
                     // Is always on the phone yelling at someone
 
-VAR character = 0
+VAR character = Jerry
 
-~character=Jerry
 Whoa there mate, watch where you're going! 
 Wait - Do I know you? 
 My name is Jerry, from Accounting.
@@ -96,7 +95,7 @@ Where are you from again?
 //-----------------------Char change-----------------------
 ~character=Margaret
 
-Someone keeps printing pics of their butt on the office printers...
+- Someone keeps printing pics of their butt on the office printers...
  * I'm pretty sure it's Tim
 I don't know about that, Tim's butt is very nicely shaped - not that I have been looking at it!
  * Butt?
@@ -109,7 +108,7 @@ So many complaints! We get sent all the printed images, and I of course have to 
     
 //-----------------------Char change-----------------------
 ~character=Giles
-Are you the driver? Take me home right now!
+- Are you the driver? Take me home right now!
  * No?
 Do you know who my daddy is?
 I'll have you fired!
@@ -132,7 +131,7 @@ What do you mean? I'm Giles and my daddy is the boss of this company!
 
 //-----------------------Char change-----------------------
 ~character=Felicity
-I can't believe the CEO brought his 12 year old son to the party. I guess it was his turn to look after the little rascal this weekend.
+- I can't believe the CEO brought his 12 year old son to the party. I guess it was his turn to look after the little rascal this weekend.
 * Spoiled brat
 Oh my god, yes!
 I couldn't believe it when I heard that he spent my annual salary on VBucks...
@@ -154,7 +153,7 @@ Can you believe he just asked me to drive him home? Who does he think he is?
 
 //-----------------------Char change-----------------------
 ~character=Jimmy
-I can't believe this sandwich theft keeps happening,! I'll have to write an email to HR again, ugh...
+- I can't believe this sandwich theft keeps happening,! I'll have to write an email to HR again, ugh...
 * What's up with the fridge?
 What do you mean what's up?! We have a very serious problem of sandwich thievery!!
 ~suspicion+=20

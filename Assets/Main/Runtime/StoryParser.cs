@@ -58,7 +58,7 @@ public class StoryParser : MonoBehaviour
         #endif
 
         yield return null;
-        m_story.Continue();
+        StartCoroutine(ContinueRoutine());
     }
 
     private void OnFinishedTyping(int idx)
@@ -76,7 +76,6 @@ public class StoryParser : MonoBehaviour
 
     public IEnumerator Next(){
         
-        yield return ShowCurrentText();
 
         while (m_story.canContinue) {
             Debug.Log (m_story.Continue());
@@ -109,6 +108,7 @@ public class StoryParser : MonoBehaviour
         }
         Debug.Log($"user choice is {choiceIndex.Value}");
         m_story.ChooseChoiceIndex(choiceIndex.Value);
+        m_story.Continue();
     }
 
     public IEnumerator ShowCurrentText()
