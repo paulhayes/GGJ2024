@@ -13,7 +13,7 @@ public class Option
 	public Option(string phrase)
 	{
 		idx = 0;
-		this.phrase = phrase.ToLower();
+		this.phrase = phrase;
 	}
 
 	public char GetNext() => phrase[idx];
