@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="ParameterPreset" id="{1a437702-c1b3-4631-b8d7-5b5a4a00acb9}">
+		<property name="name">
+			<value>People encounter</value>
+		</property>
+		<relationship name="folder">
+			<destination>{a8838979-57f3-4f7c-a826-8ad95c6fc29d}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{f7b8e9f1-4e91-4504-a8ca-7f230c0e81aa}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{f7b8e9f1-4e91-4504-a8ca-7f230c0e81aa}">
+		<property name="parameterType">
+			<value>1</value>
+		</property>
+		<property name="maximum">
+			<value>2</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
