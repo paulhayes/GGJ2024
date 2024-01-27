@@ -5,8 +5,10 @@ using UnityEngine;
 public class TestTypingInput : MonoBehaviour
 {
     [SerializeField] TypingInput m_typingInput;
-    private void Start()
+    private IEnumerator Start()
 	{
+		yield return new WaitForEndOfFrame();
+
 		// TEST
 		m_typingInput.OnFinishedTyping += phrase =>
 		{

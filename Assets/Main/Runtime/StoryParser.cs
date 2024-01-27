@@ -4,19 +4,23 @@ using UnityEngine;
 using Ink.Runtime;
 using Ink.UnityIntegration;
 using System;
+using System.Linq;
 
 public class StoryParser : MonoBehaviour
 {
     
     public event Action<int> CharacterChangeEvent;
-    public event Action<string> CharacterDialog;
+    public event Action<DialogSnippet> CharacterDialogEvent;
 
-    public event Action<int> SuspicionChange;
+    public event Action<int> SuspicionChangeEvent;
+
     
     [SerializeField] TextAsset m_text;
     
 
     Story m_story;
+
+    bool m_characterChanged = false;
 
     public static StoryParser Instance {
         private set;
@@ -30,27 +34,41 @@ public class StoryParser : MonoBehaviour
 
     void OnDestroy()
     {
-        Debug.Log("DESTROY");
         Instance = null;
     }
 
-    public void Start()
+    public IEnumerator Start()
     {
         m_story = new Story( m_text.text );
+        m_story.ObserveVariable("suspicion",(varName,val)=>{
+            Debug.Log($"{varName} changed to {val}");
+            SuspicionChangeEvent?.Invoke((int)val);
+        });
+        m_story.ObserveVariable("character",(varName,val)=>{
+            Debug.Log($"{varName} changed to {val}");
+            CharacterChangeEvent?.Invoke((int)val);
+            StartCoroutine(ContinueRoutine());
+        });
+        
+        TypingInput.Instance.OnFinishedTyping += OnFinishedTyping;
 
         #if UNITY_EDITOR
         InkPlayerWindow window = InkPlayerWindow.GetWindow(true);
         if(window != null) InkPlayerWindow.Attach(m_story);
         #endif
 
-        
-
-        StartCoroutine(Main());
+        yield return null;
+        m_story.Continue();
     }
 
-    IEnumerator Main()
+    private void OnFinishedTyping(string obj)
     {
-        while(enabled){
+        
+    }
+
+    IEnumerator ContinueRoutine()
+    {
+        while(!m_characterChanged){
             yield return Next();
             yield return new WaitForSeconds(1);
         }
@@ -58,10 +76,15 @@ public class StoryParser : MonoBehaviour
 
     public IEnumerator Next(){
         
+        yield return ShowCurrentText();
+
         while (m_story.canContinue) {
-            Debug.Log (m_story.Continue ());
+            Debug.Log (m_story.Continue());
+            yield return ShowCurrentText();
         }
 
+        var phrases = m_story.currentChoices.Select<Choice,string>( (choice)=>choice.text.Trim() ).ToArray();
+        TypingInput.Instance.TypePhrases(phrases);
         if( m_story.currentChoices.Count > 0 )
         {
             for (int i = 0; i < m_story.currentChoices.Count; ++i) {
@@ -69,6 +92,7 @@ public class StoryParser : MonoBehaviour
                 Debug.Log("Choice " + (i + 1) + ". " + choice.text);
             }
         }
+
 
         int choiceIndex = -1;
         while( choiceIndex==-1 ){
@@ -78,5 +102,14 @@ public class StoryParser : MonoBehaviour
             }
         }
         m_story.ChooseChoiceIndex(choiceIndex-1);
+    }
+
+    public IEnumerator ShowCurrentText()
+    {
+        var shownSnippet = new DialogSnippet(m_story.currentText); 
+        CharacterDialogEvent?.Invoke(shownSnippet);
+        while(!shownSnippet.complete){
+            yield return null;
+        }
     }
 }
