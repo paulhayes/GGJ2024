@@ -24,6 +24,9 @@ public class Option
 	{
 		idx++;
 		OnIncremented?.Invoke();
+
+		if (!IsFinished() && GetNext() == ' ')
+			Increment();
 	}
 	
 	public void Mistype(char letter)
