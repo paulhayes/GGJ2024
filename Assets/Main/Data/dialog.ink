@@ -12,10 +12,9 @@ CONST Felicity = 3  // Director
                     // Mean highschool girl all grown up, 
                     // Cat lady
                     // Finds James (IT mean guy) attractive
-CONST Jimmy = 4     // Old rich hippie
-                    // Always searching for the next big something spiritually, never finding it
-                    // Makes his way through live on confidence and bullshit
-                    // Impressed by bizarre displays of dominace
+CONST Jimmy = 4     // Comedy relief
+                    // Big guy
+                    // Childlike (a bit dumb) 
 // HR
 CONST Margaret = 5  // Older woman
                     // Sweet
@@ -26,15 +25,23 @@ CONST Sarah = 6     // Young ingénue (young girl, sweet, innocent)
 CONST James = 6     // "hum Actually-" guy - can't fail to take the bait if someone says something wrong and has to correct them
                     // Thinks everyone he is smarter than everyone
                     // Takes on the tasks of Ralph all the time
-CONST Ralph = 7     // Comedy relief
-                    // Big guy, childlike (a bit dumb)
 // Interns
-CONST Bradley = 8   // Loves the job - has fully drank the koolaid
+CONST Bradley = 7   // Loves the job - has fully drank the koolaid
                     // Doesn't get along with Rebbeca
-CONST Rebbeca = 9   // Hates the job - overworked and without pay                 // Doesn't get along with Bradley
+CONST Rebbeca = 8   // Hates the job - overworked and without pay                 // Doesn't get along with Bradley
 //Janitor
-CONST Will = 10     // Mysterious with very little to say
+CONST Will = 9     // Mysterious with very little to say
                     // Everybody thinks he has definitely killed some people
+//Upper management
+CONST Giles = 10    // CEO Son, 12 y.o., Fortnite
+CONST Miriam = 11   // No bullshit
+                    // Competent
+                    // Weakspot: Tim
+CONST Tim = 12      // Incompetent brother in law of Miriam
+                    // Just as scared as you of being found out
+CONST Benedict = 13 // CEO 
+                    // Very enlighted and in touch with his emotions, but is actually a bad boss
+                    // Is always on the phone yelling at someone
 
 VAR character = 0
 
@@ -43,48 +50,144 @@ Whoa there mate, watch where you're going!
 Wait - Do I know you? 
 My name is Jerry, from Accounting.
 Where are you from again?
- *  mistype
+*  mistype
     Hmmm, okay...
     ~suspicion+=10
-    -> janet
- *  Human Resources
+    -> choice1
+*  Human Resources
     Ah, y'all are real sensitive nowadays, aren't ya?
-    -> janet
- *  IT Support
+    -> choice1
+*  IT Support
     Oh really? Could you fix my computer, it has an error
-    -> janet
- *  Janitorial Services
+    -> choice1
+*  Janitorial Services
     Ah! You keep on cleaning those toilets. That's where I spend most of my day!
-    -> janet
- *  Accounting
+    -> choice1
+*  Accounting
     I haven't seen you around the office?
-    -> janet
+    -> choice1
     ~suspicion+=10
- *  Acounting Assistance
-    I haven't seen you around the office?
- ** mistype
-    Hmmm, okay...
-    ~suspicion+=10
-    -> janet
- ** You must be blind
-    Hmmm, okay...
-    ~suspicion+=10
-    -> janet
- ** I only assist juniors
-    Hmmm, okay...
-    ~suspicion+=10
-    -> janet
- 
- ==janet==
+    
+ ==choice1==
 Did you hear Janet was caught with her hand in petty cash?
- *  mistype
+*  mistype
     Hmmm, okay...
     ~suspicion+=10
- *  Totally!
- *  Not Janet
+    -> choice2
+*  Dumb Move!
+    Crazy right? The first rule of stealing is don't get caught! What can you expect from a pretty blonde like that.
+    -> choice2
+    ~suspicion-=5
+*  Not Janet
     I know right? She seems like such a little sweetheart... Guess the quiet ones are the naughtiest!
- *  Who?
+    -> choice2
+*  Who?
     Where have you been? This is all everyone on the upper floors keeps talking about!
     ~suspicion+=10
-====
+    -> choice2
+    
+==choice2==
+Anyway, how are you liking the new tax forms? Pretty cool right? My idea.
+* They suck
+    How dare you?! Those forms are a bureaucratic masterpiece!
+    ~suspicion+=10
+    -> choice3
+* What forms?
+    Didn't you receive the newsletter update? Strange...
+    ~suspicion+=20
+    -> choice3
+* Loving them!
+    Of course you are, Those forms are a piece of bureaucratic beauty!
+    ~suspicion-=10
+    -> choice3
+    
+==choice3==
+Well then! I'm going to grab some more beer and checkout the babes from marketing, bye!
+//-----------------------Char change-----------------------
+~character=Margaret
+Someone keeps printing pics of their butt on the office printers...
+* I'm pretty sure it's Tim
+I don't know about that, Tim's butt is very nicely shaped - not that I have been looking at it!
+->DONE
+* Butt?
+You heard me right son. Just pages and pages of a round, perky butt...
+->DONE
+* Getting complaints
+So many complaints! We get sent all the printed images, and I of course have to go through all of them to see if they belong to the same person!
+->DONE
+//-----------------------Char change-----------------------
+~character=Giles
+Are you the driver? Take me home right now!
+* No?
+Do you know who my daddy is?
+I'll have you fired!
+->DONE
+* Sure
+Amazing, go grab my things and let's go, a new hotdog skin just dropped and I have a bunch of VBucks burning a whole in my pocket!
+** VBucks?
+->DONE
+** You play fortnite?
+Of course I do! I'm gold 3 rank, I'm going to go pro for sure!
+->DONE
+* Who are you
+What do you mean? I'm Giles and my daddy is the boss of this company!
+->DONE
+//-----------------------Char change-----------------------
+~character=Bradley
+->DONE
+//-----------------------Char change-----------------------
+~character=Rebbeca
+->DONE
+//-----------------------Char change-----------------------
+~character=Janet
+->DONE
+//-----------------------Char change-----------------------
+~character=Will
+->DONE
+//-----------------------Char change-----------------------
+~character=Felicity
+I can't believe the CEO brought his 12 year old son to the party. I guess it was his turn to look after the little rascal this weekend.
+* Spoiled brat
+Oh my god, yes!
+I couldn't believe it when I heard that he spent my annual salary on VBucks...
+~suspicion-=10
+->DONE
+* Sweet childAre you crazy? You think that spoiled brat is sweet?
+ You haven't been here long have you?
+ ~suspicion+=10
+->DONE
+* Demon spawn
+Can you believe he just asked me to drive him home? Who does he think he is?
+~suspicion-=10
+->DONE
+//-----------------------Char change-----------------------
+~character=Tim 
+->DONE
+//-----------------------Char change-----------------------
+~character=Benedict
+->DONE
+//-----------------------Char change-----------------------
+~character=Jimmy
+I can't believe this sandwich theft keeps happening,! I'll have to write an email to HR again, ugh...
+* What's up with the fridge?
+What do you mean what's up?! We have a very serious problem of sandwich thievery!!
+~suspicion+=20
+->DONE
+* Justice for the sandwich!
+Yes! I demand the culprit be brought to justice!
+~suspicion-=20
+->DONE
+//-----------------------Char change-----------------------
+~character=Miriam
+->DONE
+//-----------------------Char change-----------------------
+~character=Sarah
+->DONE
+//-----------------------Char change-----------------------
+~character=Will
+->DONE
+//-----------------------Char change-----------------------
+~character=James
+->DONE
+
 -> END
