@@ -44,12 +44,6 @@ public class TypingInput : Singleton<TypingInput>
 					yield break;
 			}
 
-			if (mistype)
-			{
-				OnMistype?.Invoke();
-				Debug.Log("TYPO!");
-			}
-
 			yield return null;
 		}
 
