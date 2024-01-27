@@ -100,7 +100,7 @@ public class StoryParser : MonoBehaviour
                 Debug.Log("Choice " + (i + 1) + ". " + choice.text);
             }
         }
-
+        TypingInput.Instance.OnFinishedTyping -= onFinishedTyping;
 
         
         while( !choiceIndex.HasValue ){
