@@ -315,12 +315,22 @@ PrefabInstance:
     - target: {fileID: 2247037337409612759, guid: 550ab7cdbefb84a40931136157cd0b12,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 999.4971
+      value: 795.5801
+      objectReference: {fileID: 0}
+    - target: {fileID: 2247037337409612759, guid: 550ab7cdbefb84a40931136157cd0b12,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 159.1961
+      objectReference: {fileID: 0}
+    - target: {fileID: 2247037337409612759, guid: 550ab7cdbefb84a40931136157cd0b12,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2247037337409612759, guid: 550ab7cdbefb84a40931136157cd0b12,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 220
+      value: 253
       objectReference: {fileID: 0}
     - target: {fileID: 2706819213408465864, guid: 550ab7cdbefb84a40931136157cd0b12,
         type: 3}
@@ -441,8 +451,38 @@ PrefabInstance:
         type: 2}
     - target: {fileID: 6616987982436054278, guid: 550ab7cdbefb84a40931136157cd0b12,
         type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 6616987982436054278, guid: 550ab7cdbefb84a40931136157cd0b12,
+        type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6616987982436054278, guid: 550ab7cdbefb84a40931136157cd0b12,
+        type: 3}
       propertyPath: m_hasFontAssetChanged
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7874718510112489177, guid: 550ab7cdbefb84a40931136157cd0b12,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7874718510112489177, guid: 550ab7cdbefb84a40931136157cd0b12,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7874718510112489177, guid: 550ab7cdbefb84a40931136157cd0b12,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7874718510112489177, guid: 550ab7cdbefb84a40931136157cd0b12,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
