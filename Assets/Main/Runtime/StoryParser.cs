@@ -50,7 +50,7 @@ public class StoryParser : MonoBehaviour
             StartCoroutine(ContinueRoutine());
         });
         
-        TypingInput.Instance.OnFinishedTyping += OnFinishedTyping;
+        
 
         #if UNITY_EDITOR
         InkPlayerWindow window = InkPlayerWindow.GetWindow(true);
@@ -85,6 +85,15 @@ public class StoryParser : MonoBehaviour
 
         var phrases = m_story.currentChoices.Select<Choice,string>( (choice)=>choice.text.Trim() ).ToArray();
         TypingInput.Instance.TypePhrases(phrases);
+        int? choiceIndex=null;
+        Action<int> onFinishedTyping = (index)=>{
+            choiceIndex=index;
+
+            if(choiceIndex==-1){
+                choiceIndex=phrases.Length-1;
+            }
+        };
+        TypingInput.Instance.OnFinishedTyping += onFinishedTyping;
         if( m_story.currentChoices.Count > 0 )
         {
             for (int i = 0; i < m_story.currentChoices.Count; ++i) {
@@ -94,14 +103,12 @@ public class StoryParser : MonoBehaviour
         }
 
 
-        int choiceIndex = -1;
-        while( choiceIndex==-1 ){
+        
+        while( !choiceIndex.HasValue ){
             yield return null;
-            if(Input.anyKeyDown && Input.inputString.Length>0){
-                int.TryParse( Input.inputString, out choiceIndex );                
-            }
         }
-        m_story.ChooseChoiceIndex(choiceIndex-1);
+        Debug.Log($"user choice is {choiceIndex.Value}");
+        m_story.ChooseChoiceIndex(choiceIndex.Value);
     }
 
     public IEnumerator ShowCurrentText()

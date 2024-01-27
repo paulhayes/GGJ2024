@@ -12,7 +12,7 @@ public class TypingInput : Singleton<TypingInput>
 
 	public void TypePhrases(string[] phrases)
     {
-		var options = phrases.Select(p => new Option(p)).ToArray();
+		var options = phrases.Where((p)=>p.ToLower()!="mistype").Select(p => new Option(p)).ToArray();
 		OnStartTyping?.Invoke(options);
 		StartCoroutine(TypePhrasesCoroutine(options));
     }
@@ -24,13 +24,14 @@ public class TypingInput : Singleton<TypingInput>
 		{
 			TimeLeft -= Time.deltaTime;
 			string input = Input.inputString.ToLower();
-
 			foreach (var option in options)
-			{
+			{				
 				CheckInput(option, input);
 
 				if (option.IsFinished())
 					yield break;
+
+
 			}
 
 			yield return null;
