@@ -1,59 +1,74 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
-public class TypingInput : MonoBehaviour
+public class TypingInput : Singleton<TypingInput>
 {
 	public event Action<string> OnSuccessfullyTypedWord;
 	public event Action OnTimeout;
+	public List<OptionUI> optionUIs = new List<OptionUI>(); // TODO: move this elsewhere
 
 	private void Start()
 	{
-		TypePhrases(new[] { "Test" });
+		// TEST
+		TypePhrases(new[] { "Test", "Lorem Ipsum", "Depression", "Temple" });
+		OnSuccessfullyTypedWord += phrase => Debug.Log($"Successfully wrote: {phrase}");
+		OnTimeout += () => Debug.Log($"Timed out!");
 	}
 
 	public void TypePhrases(string[] phrases)
     {
-        StartCoroutine(TypePhrasesCoroutine(phrases));
+		var options = phrases.Select(p => new Option(p)).ToArray();
+        
+		foreach (var ui in optionUIs)
+			ui.gameObject.SetActive(false);
+
+		for (int i = 0; i < options.Length; i++)
+		{
+			var ui = optionUIs[i];
+			ui.gameObject.SetActive(true);
+			ui.SetOption(options[i]);
+		}
+
+		StartCoroutine(TypePhrasesCoroutine(options));
     }
 
-	private IEnumerator TypePhrasesCoroutine(string[] phrases)
+	private IEnumerator TypePhrasesCoroutine(Option[] options)
 	{
-		var timer = 0;
-		int count = phrases.Length;
-		int[] idx = new int[count];
-
+		float timer = 0;
 		while (timer < 52)
 		{
+			timer += Time.deltaTime;
 			string input = Input.inputString.ToLower();
-			
-			for (int i = 0; i < count; i++)
+
+			foreach (var option in options)
 			{
-				string phrase = phrases[i].ToLower();
-				int index = idx[i];
+				CheckInput(option, input);
 
-				foreach (var letter in input)
-				{
-					print(phrase[index] + "");
-
-					if (phrase[index] == letter) //can go out of bounds
-					{
-						idx[i] = ++index;
-						print(phrase.Substring(0, index));
-					}
-
-					if (idx[i] >= phrase.Length)
-					{
-						OnSuccessfullyTypedWord?.Invoke(phrase);
-						print($"Successfully wrote: {phrase}");
-						yield break;
-					}
-				}
+				if (option.IsFinished())
+					yield break;
 			}
 
 			yield return null;
 		}
 
 		OnTimeout?.Invoke();
+
+		void CheckInput(Option option, string input)
+		{
+			foreach (var letter in input)
+			{
+				if (option.GetNext() == letter)
+					option.Increment();
+
+				if (option.IsFinished())
+				{
+					OnSuccessfullyTypedWord?.Invoke(option.phrase);
+					return;
+				}
+			}
+		}
 	}
 }
