@@ -9,7 +9,7 @@ using System.Linq;
 public class StoryParser : MonoBehaviour
 {
     
-    public event Action<int> CharacterChangeEvent;
+    public event Action<CharacterTransitionData> CharacterChangeEvent;
     public event Action<DialogSnippet> CharacterDialogEvent;
     public event Action ConversationChoice;
 
@@ -21,7 +21,7 @@ public class StoryParser : MonoBehaviour
 
     Story m_story;
 
-    bool m_characterChanged = false;
+    CharacterTransitionData m_characterChangeData = null;
 
     public static StoryParser Instance {
         private set;
@@ -47,8 +47,8 @@ public class StoryParser : MonoBehaviour
         });
         m_story.ObserveVariable("character",(varName,val)=>{
             Debug.Log($"{varName} changed to {val}");
-            CharacterChangeEvent?.Invoke((int)val);
-            StartCoroutine(ContinueRoutine());
+            m_characterChangeData = new CharacterTransitionData((int)val);
+            CharacterChangeEvent?.Invoke(m_characterChangeData);
         });
         
         
@@ -62,24 +62,22 @@ public class StoryParser : MonoBehaviour
         StartCoroutine(ContinueRoutine());
     }
 
-    private void OnFinishedTyping(int idx)
-    {
-        print("INDEX TYPED: "+idx);
-    }
 
-    IEnumerator ContinueRoutine()
+    IEnumerator ContinueRoutine(CharacterTransitionData characterTransitionData=null)
     {
-        while(!m_characterChanged){
+        
+        while(enabled){
             yield return Next();
             yield return new WaitForSeconds(1);
         }
     }
 
     public IEnumerator Next(){
-        
-
         while (m_story.canContinue) {
             Debug.Log (m_story.Continue());
+            while(m_characterChangeData !=null && !m_characterChangeData.complete){
+                yield return null;
+            }
             yield return ShowCurrentText();
         }
 
