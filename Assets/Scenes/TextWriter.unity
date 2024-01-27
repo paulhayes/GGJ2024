@@ -364,7 +364,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a7e75bd00e854d4a9a8bb953adada68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  optionPrefab: {fileID: 0}
+  optionPrefab: {fileID: 3714389957712548297, guid: a966731f89478654ba48c3a49b7a9c44,
+    type: 3}
   options: []
   points:
   - {fileID: 1813763957}
