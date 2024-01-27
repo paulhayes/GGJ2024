@@ -1,46 +1,30 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
 public class TypingInput : Singleton<TypingInput>
 {
-	public event Action<string> OnSuccessfullyTypedWord;
-	public event Action OnTimeout;
-	public List<OptionUI> optionUIs = new List<OptionUI>(); // TODO: move this elsewhere
+	public float TimeLeft {  get; private set; }
 
-	private void Start()
-	{
-		// TEST
-		TypePhrases(new[] { "Test", "Lorem Ipsum", "Depression", "Temple" });
-		OnSuccessfullyTypedWord += phrase => Debug.Log($"Successfully wrote: {phrase}");
-		OnTimeout += () => Debug.Log($"Timed out!");
-	}
+	public event Action<Option[]> OnStartTyping;
+	public event Action<string> OnFinishedTyping;
+
+
 
 	public void TypePhrases(string[] phrases)
     {
 		var options = phrases.Select(p => new Option(p)).ToArray();
-        
-		foreach (var ui in optionUIs)
-			ui.gameObject.SetActive(false);
-
-		for (int i = 0; i < options.Length; i++)
-		{
-			var ui = optionUIs[i];
-			ui.gameObject.SetActive(true);
-			ui.SetOption(options[i]);
-		}
-
+		OnStartTyping?.Invoke(options);
 		StartCoroutine(TypePhrasesCoroutine(options));
     }
 
 	private IEnumerator TypePhrasesCoroutine(Option[] options)
 	{
-		float timer = 0;
-		while (timer < 52)
+		TimeLeft = 5;
+		while (TimeLeft > 0)
 		{
-			timer += Time.deltaTime;
+			TimeLeft -= Time.deltaTime;
 			string input = Input.inputString.ToLower();
 
 			foreach (var option in options)
@@ -54,7 +38,7 @@ public class TypingInput : Singleton<TypingInput>
 			yield return null;
 		}
 
-		OnTimeout?.Invoke();
+		OnFinishedTyping?.Invoke(null);
 
 		void CheckInput(Option option, string input)
 		{
@@ -65,7 +49,7 @@ public class TypingInput : Singleton<TypingInput>
 
 				if (option.IsFinished())
 				{
-					OnSuccessfullyTypedWord?.Invoke(option.phrase);
+					OnFinishedTyping?.Invoke(option.phrase);
 					return;
 				}
 			}

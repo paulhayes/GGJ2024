@@ -3,12 +3,36 @@ using System.Collections.Generic;
 using UnityEngine;
 using Ink.Runtime;
 using Ink.UnityIntegration;
+using System;
 
 public class StoryParser : MonoBehaviour
 {
+    
+    public event Action<int> CharacterChangeEvent;
+    public event Action<string> CharacterDialog;
+
+    public event Action<int> SuspicionChange;
+    
     [SerializeField] TextAsset m_text;
+    
 
     Story m_story;
+
+    public static StoryParser Instance {
+        private set;
+        get;
+    }
+
+    void Awake()
+    {
+        Instance = this;
+    }
+
+    void OnDestroy()
+    {
+        Debug.Log("DESTROY");
+        Instance = null;
+    }
 
     public void Start()
     {
@@ -18,6 +42,8 @@ public class StoryParser : MonoBehaviour
         InkPlayerWindow window = InkPlayerWindow.GetWindow(true);
         if(window != null) InkPlayerWindow.Attach(m_story);
         #endif
+
+        
 
         StartCoroutine(Main());
     }
