@@ -11,6 +11,7 @@ public class StoryParser : MonoBehaviour
     
     public event Action<int> CharacterChangeEvent;
     public event Action<DialogSnippet> CharacterDialogEvent;
+    public event Action ConversationChoice;
 
     public event Action<int> SuspicionChangeEvent;
 
@@ -82,7 +83,8 @@ public class StoryParser : MonoBehaviour
             yield return ShowCurrentText();
         }
 
-        var phrases = m_story.currentChoices.Select<Choice,string>( (choice)=>choice.text.Trim() ).ToArray();
+        ConversationChoice?.Invoke();
+		var phrases = m_story.currentChoices.Select<Choice,string>( (choice)=>choice.text.Trim() ).ToArray();
         TypingInput.Instance.TypePhrases(phrases);
         int? choiceIndex=null;
         Action<int> onFinishedTyping = (index)=>{
