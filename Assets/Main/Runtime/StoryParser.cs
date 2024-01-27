@@ -37,7 +37,7 @@ public class StoryParser : MonoBehaviour
         Instance = null;
     }
 
-    public void Start()
+    public IEnumerator Start()
     {
         m_story = new Story( m_text.text );
         m_story.ObserveVariable("suspicion",(varName,val)=>{
@@ -50,17 +50,21 @@ public class StoryParser : MonoBehaviour
             StartCoroutine(ContinueRoutine());
         });
         
+        TypingInput.Instance.OnFinishedTyping += OnFinishedTyping;
 
         #if UNITY_EDITOR
         InkPlayerWindow window = InkPlayerWindow.GetWindow(true);
         if(window != null) InkPlayerWindow.Attach(m_story);
         #endif
 
-        
+        yield return null;
         m_story.Continue();
     }
 
-
+    private void OnFinishedTyping(string obj)
+    {
+        
+    }
 
     IEnumerator ContinueRoutine()
     {
@@ -103,7 +107,7 @@ public class StoryParser : MonoBehaviour
     public IEnumerator ShowCurrentText()
     {
         var shownSnippet = new DialogSnippet(m_story.currentText); 
-        CharacterDialogEvent.Invoke(shownSnippet);
+        CharacterDialogEvent?.Invoke(shownSnippet);
         while(!shownSnippet.complete){
             yield return null;
         }
