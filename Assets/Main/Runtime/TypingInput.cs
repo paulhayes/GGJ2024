@@ -8,7 +8,7 @@ public class TypingInput : Singleton<TypingInput>
 	public float TimeLeft {  get; private set; }
 
 	public event Action<Option[]> OnStartTyping;
-	public event Action<string> OnFinishedTyping;
+	public event Action<int> OnFinishedTyping;
 
 	public void TypePhrases(string[] phrases)
     {
@@ -36,7 +36,7 @@ public class TypingInput : Singleton<TypingInput>
 			yield return null;
 		}
 
-		OnFinishedTyping?.Invoke(null);
+		OnFinishedTyping?.Invoke(-1);
 
 		void CheckInput(Option option, string input)
 		{
@@ -47,7 +47,8 @@ public class TypingInput : Singleton<TypingInput>
 
 				if (option.IsFinished())
 				{
-					OnFinishedTyping?.Invoke(option.phrase);
+					int phraseIdx = Array.IndexOf(options, option);
+					OnFinishedTyping?.Invoke(phraseIdx);
 					return;
 				}
 			}

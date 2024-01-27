@@ -61,9 +61,9 @@ public class StoryParser : MonoBehaviour
         m_story.Continue();
     }
 
-    private void OnFinishedTyping(string obj)
+    private void OnFinishedTyping(int idx)
     {
-        
+        print("INDEX TYPED: "+idx);
     }
 
     IEnumerator ContinueRoutine()
