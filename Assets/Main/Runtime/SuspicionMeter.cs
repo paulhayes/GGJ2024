@@ -6,11 +6,11 @@ using UnityEngine.UI;
 [RequireComponent(typeof(Slider))]
 public class SuspicionMeter : MonoBehaviour
 {
-	public float shakeDuration = .2f;
-	public float shakeIntensity = 90;
+	public float punchDuration = .2f;
+	public float shakeIntensity = 2f;
 
 	private Slider slider;
-	private float curSuspicion = 0;
+	private int curSuspicion = 0;
 
 	private void Awake()
 	{
@@ -23,15 +23,40 @@ public class SuspicionMeter : MonoBehaviour
 		StoryParser.Instance.SuspicionChangeEvent += OnSuspicionChanges;
 	}
 
-    private void OnSuspicionChanges(int value)
+	private void Update()
+	{
+		if (Input.GetKeyDown(KeyCode.Space))
+		{
+			int diff = 10;
+			float mult = Mathf.Clamp01(diff * .1f);
+			transform.DOPunchPosition(new Vector3(.5f, 1f, .5f) * mult, punchDuration, diff, .5f);
+			//transform.DOPunchRotation(new Vector3(0,0,75) * mult, punchDuration, diff, .5f);
+
+			DOTween.Shake(() => transform.rotation.eulerAngles, x =>
+			{
+				var rotation = transform.rotation;
+				rotation.eulerAngles = Vector3.forward * x.x;
+				transform.rotation = rotation;
+			}, punchDuration, diff * shakeIntensity, 8, 0);
+		}
+	}
+
+	private void OnSuspicionChanges(int value)
     {
         SetSuspicion(value);
 
 		if (value > curSuspicion)
 		{
-			float diff = value - curSuspicion;
-			transform.DOShakeRotation(shakeDuration, shakeIntensity * diff);
-			print($"shake: {shakeIntensity * diff}");
+			int diff = value - curSuspicion;
+			float mult = Mathf.Clamp01(diff * .1f);
+			transform.DOPunchPosition(new Vector3(.5f, 1f, .5f) * mult, punchDuration, diff, .5f);
+			//transform.DOPunchRotation(new Vector3(0,0,75) * mult, punchDuration, diff, .5f);
+			DOTween.Shake(() => transform.rotation.eulerAngles, x =>
+			{
+				var rotation = transform.rotation;
+				rotation.eulerAngles = Vector3.forward * x.x;
+				transform.rotation = rotation;
+			}, punchDuration, diff * shakeIntensity, 8, 0);
 		}
 		curSuspicion = value;
     }
