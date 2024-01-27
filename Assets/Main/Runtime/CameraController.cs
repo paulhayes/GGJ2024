@@ -1,24 +1,23 @@
+using DG.Tweening;
 using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
 	public Transform dialoguePoint, choicesPoint;
-	private Transform target;
+	public float transitionDuration = 0.2f;
+
+	private Camera cam;
 
 	private void Start()
 	{
-		var story = FindObjectOfType<StoryParser>(); //fuckit
-
-		story.CharacterDialogEvent += _ => MoveCamera(dialoguePoint);
-		story.ConversationChoice += ()  => MoveCamera(choicesPoint);
-	}
-
-	private void Update()
-	{
+		StoryParser.Instance.CharacterDialogEvent += _ => MoveCamera(dialoguePoint);
+		StoryParser.Instance.ConversationChoice  += () => MoveCamera(choicesPoint);
+		cam = Camera.main;
 	}
 
 	private void MoveCamera(Transform point)
 	{
-		target = point;
+		cam.transform.DOMove(point.position, transitionDuration);
+		cam.transform.DORotate(point.eulerAngles, transitionDuration);
 	}
 }
