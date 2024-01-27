@@ -10,8 +10,6 @@ public class TypingInput : Singleton<TypingInput>
 	public event Action<Option[]> OnStartTyping;
 	public event Action<string> OnFinishedTyping;
 
-
-
 	public void TypePhrases(string[] phrases)
     {
 		var options = phrases.Select(p => new Option(p)).ToArray();
