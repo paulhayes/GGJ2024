@@ -2,6 +2,8 @@ using System;
 
 public class Option
 {
+	public float CompletionPct => idx / (float)phrase.Length;
+
 	public int idx;
 	public string phrase;
 

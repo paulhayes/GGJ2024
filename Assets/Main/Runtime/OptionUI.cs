@@ -6,6 +6,7 @@ public class OptionUI : MonoBehaviour
 {
 	public TextMeshProUGUI typingText;
 	public TextMeshProUGUI backgroundText;
+	
 	private Option option;
 
 	public void SetOption(Option option)
@@ -21,6 +22,7 @@ public class OptionUI : MonoBehaviour
 		if (option == null)
 			return;
 
+		typingText.fontSize = backgroundText.fontSize;
 		typingText.text = option.GetTyped();
     }
 }
