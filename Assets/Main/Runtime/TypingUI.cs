@@ -11,6 +11,7 @@ public class TypingUI : MonoBehaviour
 
 	private void Start()
 	{
+		optionPrefab.gameObject.SetActive(false);
 		TypingInput.Instance.OnStartTyping += ShowOptions;
 		TypingInput.Instance.OnFinishedTyping += _ => HideOptions();
 	}
@@ -38,6 +39,7 @@ public class TypingUI : MonoBehaviour
 		while (i >= options.Count) 
 		{
 			var newOption = Instantiate(optionPrefab, transform);
+			newOption.gameObject.SetActive(true);
 			options.Add(newOption);
 		}
 

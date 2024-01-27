@@ -211,7 +211,7 @@ Transform:
   m_GameObject: {fileID: 5759762}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalPosition: {x: 0, y: 1, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -427,6 +427,7 @@ GameObject:
   - component: {fileID: 910782531}
   - component: {fileID: 910782532}
   - component: {fileID: 910782533}
+  - component: {fileID: 910782534}
   m_Layer: 0
   m_Name: ConversationState
   m_TagString: Untagged
@@ -477,6 +478,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_text: {fileID: 4900000, guid: 041791a5c19e5eb46beaf299840928aa, type: 3}
+--- !u!114 &910782534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 910782530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b3e07bc9de43da44acfd98ccc115633, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1243490883
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -719,9 +732,9 @@ Animation:
   m_GameObject: {fileID: 1904313787}
   m_Enabled: 1
   serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: b1bdfa2e06d0ab941a8c1adb2b73e292, type: 2}
+  m_Animation: {fileID: 7400000, guid: 5648040f23bf02d4eb1a95a55db998d3, type: 2}
   m_Animations:
-  - {fileID: 7400000, guid: b1bdfa2e06d0ab941a8c1adb2b73e292, type: 2}
+  - {fileID: 7400000, guid: 5648040f23bf02d4eb1a95a55db998d3, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
