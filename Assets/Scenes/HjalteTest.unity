@@ -836,6 +836,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 910782531}
     m_Modifications:
+    - target: {fileID: 414837237999810402, guid: 76a4a775f1825c24fa2f3da62ae7d5a7,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 178
+      objectReference: {fileID: 0}
+    - target: {fileID: 414837237999810402, guid: 76a4a775f1825c24fa2f3da62ae7d5a7,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 18
+      objectReference: {fileID: 0}
     - target: {fileID: 2211661312816145452, guid: 76a4a775f1825c24fa2f3da62ae7d5a7,
         type: 3}
       propertyPath: m_Pivot.x
@@ -953,6 +963,12 @@ PrefabInstance:
       propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2819775376524920958, guid: 76a4a775f1825c24fa2f3da62ae7d5a7,
+        type: 3}
+      propertyPath: optionPrefab
+      value: 
+      objectReference: {fileID: 3714389957712548297, guid: a966731f89478654ba48c3a49b7a9c44,
+        type: 3}
     - target: {fileID: 5059743331288386309, guid: 76a4a775f1825c24fa2f3da62ae7d5a7,
         type: 3}
       propertyPath: m_Name
@@ -991,7 +1007,8 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 5663883487145808217, guid: 76a4a775f1825c24fa2f3da62ae7d5a7, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76a4a775f1825c24fa2f3da62ae7d5a7, type: 3}
