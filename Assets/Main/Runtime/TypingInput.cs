@@ -10,18 +10,7 @@ public class TypingInput : Singleton<TypingInput>
 	public event Action<Option[]> OnStartTyping;
 	public event Action<string> OnFinishedTyping;
 
-	private void Start()
-	{
-		// TEST
-		TypePhrases(new[] { "Test", "Lorem Ipsum", "Depression", "Temple" });
-		OnFinishedTyping += phrase =>
-		{
-			if (phrase == null)
-				Debug.Log("Timed out!");
-			else
-				Debug.Log($"Successfully wrote: {phrase}");
-		};
-	}
+
 
 	public void TypePhrases(string[] phrases)
     {
