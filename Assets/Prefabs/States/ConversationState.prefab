@@ -567,8 +567,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1455924839152726384, guid: 5a7c3cbc12185e3478338753654db2be,
         type: 3}
+      propertyPath: punchDuration
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1455924839152726384, guid: 5a7c3cbc12185e3478338753654db2be,
+        type: 3}
       propertyPath: shakeIntensity
-      value: 90
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1522669794346071127, guid: 5a7c3cbc12185e3478338753654db2be,
         type: 3}
