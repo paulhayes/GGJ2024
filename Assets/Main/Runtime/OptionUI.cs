@@ -9,8 +9,8 @@ public class OptionUI : MonoBehaviour
 {
 	public TextMeshProUGUI typingText;
 	public TextMeshProUGUI backgroundText;
-	
-	private Option option;
+
+	public Option option;
 	private Image panel;
 
 	private void Awake()
