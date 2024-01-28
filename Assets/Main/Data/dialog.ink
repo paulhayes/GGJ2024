@@ -538,7 +538,7 @@ Where are you from again?
 - I'm keeping my eye on you!
 
 === fail ===
-~suspicion-=11
+~suspicion+=11
 - I don't think you work here at all! I'm calling secuirty.
 
 -> END

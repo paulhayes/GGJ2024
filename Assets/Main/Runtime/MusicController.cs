@@ -9,6 +9,8 @@ public class MusicController : Singleton<MusicController>
 	private string music, ambience;
 	private EventInstance musicInstance, ambienceInstance;
 
+	[SerializeField] StoryParser m_storyParser;
+
 	private IEnumerator Start()
 	{
 		yield return new WaitForEndOfFrame();
@@ -21,13 +23,13 @@ public class MusicController : Singleton<MusicController>
 
 		Mute();
 
-		StoryParser.Instance.CharacterChangeEvent += _ =>
+		m_storyParser.CharacterChangeEvent += _ =>
 		{
 			musicInstance.setVolume(1);
 			ambienceInstance.setVolume(1);
 			musicInstance.setParameterByName("PersonEnter", 0);
 		};
-		StoryParser.Instance.CharacterDialogEvent += _ =>
+		m_storyParser.CharacterDialogEvent += _ =>
 		{
 			musicInstance.setParameterByName("PersonEnter", 1);
 		};
