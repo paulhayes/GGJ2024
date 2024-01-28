@@ -323,6 +323,8 @@ Seems unlikely...
     ~suspicion+=5
     Without a uniform? What firm did we hire?
 
+=== fail ===
+- OMG I don't think you work here at all!  I'm calling secuirty.
 
 
 -> END
