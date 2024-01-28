@@ -26,7 +26,6 @@ public class TypingUI : MonoBehaviour
 		bubble.gameObject.SetActive(true);
 		bubble.transform.position = points[i].position;
 		bubble.Setup(options[i].option.phrase, i == 1 || i == 4);
-		Destroy(bubble.gameObject, .6f);
 
 		HideOptions();
 	}

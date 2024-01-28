@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System.Collections;
 using System.Linq;
 using TMPro;
@@ -19,11 +20,14 @@ public class SpeechBubble : MonoBehaviour
 	public void WriteDialogue(DialogSnippet dialogue)
 	{
 		visuals.SetActive(true);
+		visuals.transform.DOScale(Vector3.one, .67f).SetEase(Ease.OutElastic, 1f);
 		StartCoroutine(TextWriter(dialogue));
 	}
 
 	public void HideDialogue()
 	{
+		visuals.transform.DOKill();
+		visuals.transform.localScale = Vector3.one*.1f;
 		visuals.SetActive(false);
 	}
 
@@ -31,7 +35,7 @@ public class SpeechBubble : MonoBehaviour
 	{
 		int idx = 0;
 
-		while (idx <= dialogue.text.Length && !Input.anyKeyDown) 
+		while (idx <= dialogue.text.Length && !Input.anyKeyDown) // pls fix: this sucks (may skip down frame)
 		{
 			text.text = dialogue.text.Substring(0, idx++);
 			yield return new WaitForSeconds(1f/lettersPrSec);		
