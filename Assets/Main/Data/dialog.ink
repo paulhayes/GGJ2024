@@ -157,6 +157,7 @@ Where are you from again?
 
 //-----------------------Char change-----------------------
 ~character=Bradley
+
 - Oh hi! I don't think we've met yet! My name is Bradley! I've just begun my internship here!
  * Ok...
     Yeah, and you know, I already really love it here! Everyone is like a big warm family and it's just so great!
@@ -174,8 +175,7 @@ Where are you from again?
     That is definitely odd... I don't think we've had any new interns since we were hired! Weird...
  * Accounting
     ~suspicion-=10  
-    Oh really? What are your thoughts on the new tax forms? 
-    Jerry keeps bragging about them, hope someday they let me actually touch the files...
+    Oh really? What are your thoughts on the new tax forms? Jerry keeps bragging about them, hope someday they let me actually touch the files...
  * Don't work here
     ~suspicion+=30
     Aahahah very funny sir! Like someone would just walk in from the street and join a random party! ahahaa...ahah..uh
@@ -205,8 +205,7 @@ I swear to god I can't wait to for this internship to be over and done with!
     ~suspicion+=10
     Are you sure you work here? Do you believe HR will do anything about this?
 
-- I'm going to go join the rest of the intern crew in the bathroom and smoke a doobie... 
-  You know where to find us if you're down.
+- I'm going to go join the rest of the intern crew in the bathroom and smoke a doobie... You know where to find us if you're down.
 
 //-----------------------Char change----------------------
 ~character=James
@@ -303,7 +302,18 @@ I swear to god I can't wait to for this internship to be over and done with!
 //-----------------------Char change-----------------------
 ~character=Sarah
 
-
+- Did Jimmy go through here? Please help me hide!
+ * Who?
+    ~suspicion+=10
+    You don't know Jimmy? Are you new here?
+ * SandwichGate?
+    Oh no he got to you too?! It's been weeks! WEEKS! Getting the same freaking email about a damn sandwich!
+ * Yes!
+    ~suspicion-=5
+    Thank god, I can hang out here for a bit. He's been hunting the HR department to complain about his stupid sandwiches. AGAIN!
+ * mistype
+    ~suspicion+=10
+    You're slurring your words!
 
 //-----------------------Char change-----------------------
 ~character=Miriam
@@ -325,8 +335,6 @@ Seems unlikely...
     ~suspicion+=5
     Without a uniform? What firm did we hire?
 
-=== fail ===
-- OMG I don't think you work here at all!  I'm calling secuirty.
 
 
 -> END
