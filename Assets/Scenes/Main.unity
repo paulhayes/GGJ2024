@@ -318,7 +318,7 @@ MonoBehaviour:
   - {r: 1, g: 0.63991976, b: 0, a: 1}
   - {r: 0.24096651, g: 0.8962264, b: 0.30009624, a: 1}
   timeToSwitchColor: 5
-  rotSpeed: 20
+  rotSpeed: 23
 --- !u!1 &61786360
 GameObject:
   m_ObjectHideFlags: 0
@@ -376,7 +376,7 @@ MonoBehaviour:
   - {r: 0.080322154, g: 0.8962264, b: 0.8446467, a: 1}
   - {r: 1, g: 0.63991976, b: 0, a: 1}
   - {r: 0.24096651, g: 0.8962264, b: 0.30009624, a: 1}
-  timeToSwitchColor: 5
+  timeToSwitchColor: 8
   rotSpeed: 20
 --- !u!114 &61786363
 MonoBehaviour:
@@ -605,7 +605,7 @@ MonoBehaviour:
   - {r: 0.080322154, g: 0.8962264, b: 0.8446467, a: 1}
   - {r: 1, g: 0.63991976, b: 0, a: 1}
   - {r: 0.24096651, g: 0.8962264, b: 0.30009624, a: 1}
-  timeToSwitchColor: 5
+  timeToSwitchColor: 8
   rotSpeed: 20
 --- !u!1 &135736016
 GameObject:
@@ -749,7 +749,7 @@ MonoBehaviour:
   - {r: 0.080322154, g: 0.8962264, b: 0.8446467, a: 1}
   - {r: 1, g: 0.63991976, b: 0, a: 1}
   - {r: 0.24096651, g: 0.8962264, b: 0.30009624, a: 1}
-  timeToSwitchColor: 5
+  timeToSwitchColor: 8
   rotSpeed: 20
 --- !u!1 &394783914
 GameObject:
@@ -1142,8 +1142,8 @@ MonoBehaviour:
   - {r: 0.080322154, g: 0.8962264, b: 0.8446467, a: 1}
   - {r: 1, g: 0.63991976, b: 0, a: 1}
   - {r: 0.24096651, g: 0.8962264, b: 0.30009624, a: 1}
-  timeToSwitchColor: 5
-  rotSpeed: 20
+  timeToSwitchColor: 3
+  rotSpeed: 15
 --- !u!1 &531102788
 GameObject:
   m_ObjectHideFlags: 0
@@ -1451,7 +1451,7 @@ MonoBehaviour:
   - {r: 1, g: 0.63991976, b: 0, a: 1}
   - {r: 0.24096651, g: 0.8962264, b: 0.30009624, a: 1}
   timeToSwitchColor: 5
-  rotSpeed: 20
+  rotSpeed: 23
 --- !u!114 &817527280
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1928,7 +1928,7 @@ MonoBehaviour:
   - {r: 1, g: 0.63991976, b: 0, a: 1}
   - {r: 0.24096651, g: 0.8962264, b: 0.30009624, a: 1}
   timeToSwitchColor: 5
-  rotSpeed: 20
+  rotSpeed: 23
 --- !u!114 &1016184157
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2215,8 +2215,8 @@ MonoBehaviour:
   - {r: 0.080322154, g: 0.8962264, b: 0.8446467, a: 1}
   - {r: 1, g: 0.63991976, b: 0, a: 1}
   - {r: 0.24096651, g: 0.8962264, b: 0.30009624, a: 1}
-  timeToSwitchColor: 5
-  rotSpeed: 20
+  timeToSwitchColor: 3
+  rotSpeed: 15
 --- !u!114 &1225607995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2684,8 +2684,8 @@ MonoBehaviour:
   - {r: 0.080322154, g: 0.8962264, b: 0.8446467, a: 1}
   - {r: 1, g: 0.63991976, b: 0, a: 1}
   - {r: 0.24096651, g: 0.8962264, b: 0.30009624, a: 1}
-  timeToSwitchColor: 5
-  rotSpeed: 20
+  timeToSwitchColor: 3
+  rotSpeed: 15
 --- !u!114 &1614327814
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3031,8 +3031,8 @@ MonoBehaviour:
   - {r: 0.080322154, g: 0.8962264, b: 0.8446467, a: 1}
   - {r: 1, g: 0.63991976, b: 0, a: 1}
   - {r: 0.24096651, g: 0.8962264, b: 0.30009624, a: 1}
-  timeToSwitchColor: 5
-  rotSpeed: 20
+  timeToSwitchColor: 3
+  rotSpeed: 23
 --- !u!114 &1904313788 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5547145020591538045, guid: 85cad7544274360419129da51a5c25fe,
@@ -3317,7 +3317,7 @@ MonoBehaviour:
   - {r: 0.080322154, g: 0.8962264, b: 0.8446467, a: 1}
   - {r: 1, g: 0.63991976, b: 0, a: 1}
   - {r: 0.24096651, g: 0.8962264, b: 0.30009624, a: 1}
-  timeToSwitchColor: 5
+  timeToSwitchColor: 8
   rotSpeed: 20
 --- !u!114 &2081969762 stripped
 MonoBehaviour:
