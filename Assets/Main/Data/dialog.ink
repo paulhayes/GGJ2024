@@ -539,6 +539,6 @@ Where are you from again?
 
 === fail ===
 ~suspicion+=11
-- I don't think you work here at all! I'm calling secuirty.
+I don't think you work here at all! I'm calling Security.
 
 -> END
