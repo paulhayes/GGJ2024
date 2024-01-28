@@ -103,6 +103,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{369677a4-9a3c-49ba-a121-abaa4af34718}">
+		<property name="volume">
+			<value>-2</value>
+		</property>
 		<property name="name">
 			<value>schockedSTOP</value>
 		</property>
