@@ -4,42 +4,33 @@ VAR suspicion = 0
 CONST Jerry = 1     // Asshole
                     // Very bro-ish
                     // Has problems with HR
-CONST Janet = 2     // Airhead
-                    //Accused of stealing money - doesn't really get the gravity of this
 // Marketing
-CONST Felicity = 3  // Director
-                    // No sense of humor
-                    // Mean highschool girl all grown up, 
-                    // Cat lady
-                    // Finds James (IT mean guy) attractive
-CONST Jimmy = 4     // Comedy relief
+CONST Jimmy = 2     // Comedy relief
                     // Big guy
                     // Childlike (a bit dumb) 
 // HR
-CONST Margaret = 5  // Older woman
+CONST Margaret = 3  // Older woman
                     // Sweet
                     // Lowkey horny
-CONST Sarah = 6     // Young ingénue (young girl, sweet, innocent)
+CONST Sarah = 4     // Young ingénue (young girl, sweet, innocent)
                     // Afraid of confronting people - this causes problems with her position in HR
 // IT support
-CONST James = 6     // "hum Actually-" guy - can't fail to take the bait if someone says something wrong and has to correct them
+CONST James = 5     // "hum Actually-" guy - can't fail to take the bait if someone says something wrong and has to correct them
                     // Thinks everyone he is smarter than everyone
                     // Takes on the tasks of Ralph all the time
 // Interns
-CONST Bradley = 7   // Loves the job - has fully drank the koolaid
+CONST Bradley = 6   // Loves the job - has fully drank the koolaid
                     // Doesn't get along with Rebbeca
-CONST Rebbeca = 8   // Hates the job - overworked and without pay                 // Doesn't get along with Bradley
-//Janitor
-CONST Will = 9     // Mysterious with very little to say
-                    // Everybody thinks he has definitely killed some people
+CONST Rebbeca = 7   // Hates the job - overworked and without pay                 // Doesn't get along with Bradley
 //Upper management
-CONST Giles = 10    // CEO Son, 12 y.o., Fortnite
-CONST Miriam = 11   // No bullshit
+CONST Giles = 8    // CEO Son
+                    // 12 y.o., Fortnite
+CONST Miriam = 9   // No bullshit
                     // Competent
                     // Weakspot: Tim
-CONST Tim = 12      // Incompetent brother in law of Miriam
+CONST Tim = 10      // Incompetent brother in law of Miriam
                     // Just as scared as you of being found out
-CONST Benedict = 13 // CEO 
+CONST Benedict = 11 // CEO 
                     // Very enlighted and in touch with his emotions, but is actually a bad boss
                     // Is always on the phone yelling at someone
 
@@ -54,7 +45,7 @@ Where are you from again?
  *  Human Resources
     Ah, y'all are real sensitive nowadays, aren't ya?
  *  IT Support
-    Oh really? Could you fix my computer, it has an error
+    Oh really? Could you fix my computer, it has an error.
  *  Janitorial Services
     Ah! You keep on cleaning those toilets. That's where I spend most of my day!
  *  Accounting
@@ -75,7 +66,7 @@ Where are you from again?
     Where have you been? This is all everyone on the upper floors keeps talking about!
  *  mistype
     ~suspicion+=10
-    Hmmm, okay...
+    You good mate?
 
 - Anyway, how are you liking the new tax forms? Pretty cool right? My idea.
  * They suck
@@ -89,23 +80,35 @@ Where are you from again?
     Of course you are, Those forms are a piece of bureaucratic beauty!
  *  mistype
     ~suspicion+=10   
-    Hmmm, okay...
+    Couldn't quite catch that...
     
 - Well then! I'm going to grab some more beer and checkout the babes from marketing, bye!
 
 //-----------------------Char change-----------------------
 ~character=Margaret
 - Someone keeps printing pics of their butt on the office printers...
- * I'm pretty sure it's Tim
-   I don't know about that, Tim's butt is very nicely shaped - not that I have been looking at it!
+ * Jerry?
+   I don't know about that, Jerry's butt is very nicely shaped - not that I have been looking at it!
  * Butt?
    You heard me right son. Just pages and pages of a round, perky butt...
- * Getting complaints
-   So many complaints! We get sent all the printed images, and I of course have to go through all of them to see if they belong to the same person!
  *  mistype
     ~suspicion+=10  
     Are you feeling well love? You're slurring your words...
-    
+
+- I keep telling them that the best solution for these type of problems is to check everyone's butts!
+ * Agreed!
+    Ahahah! Someone that knows what's up!
+ * Weird
+    ~suspicion+=10 
+    Is it? Don't people like butts?
+ * Inappropriate...
+    ~suspicion+=10 
+    Oh, apologies, nobody's ever complained to my face...
+
+- It's been a crazy month, I'm happy we get this party to relax a bit!
+ * Deserved!
+ * 
+
 //-----------------------Char change-----------------------
 ~character=Giles
 - Are you the driver? Take me home right now!
