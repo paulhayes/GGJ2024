@@ -21,23 +21,14 @@ public class StoryParser : Singleton<StoryParser>
 
     CharacterTransitionData m_characterChangeData = null;
 
-    public IEnumerator Start()
+    void OnEnable()
     {
         m_story = new Story( m_text.text );
-        m_story.ObserveVariable(SUS_KEY,(varName,val)=>{
-            int sus = (int)val;
-            int adj = sus-curSus;
-			Debug.Log($"{varName} changed to {val} (adj of {adj})");
-            
-            SuspicionChangeEvent?.Invoke(sus);
-			SuspicionAdjustEvent?.Invoke(adj);
+    }
 
-			if (sus >= 100) {
-                m_story.ChoosePathString("fail");
-            }
-
-            curSus = sus;
-        });
+    public IEnumerator Start()
+    {        
+        m_story.ObserveVariable(SUS_KEY,OnSuspicionChanged);
         m_story.ObserveVariable("character",(varName,val)=>{
             Debug.Log($"{varName} changed to {val}");
             m_characterChangeData = new CharacterTransitionData((int)val);
@@ -52,6 +43,30 @@ public class StoryParser : Singleton<StoryParser>
         yield return null;
         StartCoroutine(ContinueRoutine());
     }
+
+    void OnDisable()
+    {
+        m_story = null;
+    }
+
+    private void OnSuspicionChanged(string varName, object val)
+    {        
+        int sus = (int)val;
+        int adj = sus-curSus;
+        Debug.Log($"{varName} changed to {val} (adj of {adj})");
+        
+        SuspicionChangeEvent?.Invoke(sus);
+        SuspicionAdjustEvent?.Invoke(adj);
+
+        if (sus >= 100) {
+            m_story.RemoveVariableObserver(OnSuspicionChanged,SUS_KEY);
+            m_story.ChoosePathString("fail");
+        }
+        
+        curSus = sus;
+        
+    }
+
 
     IEnumerator ContinueRoutine(CharacterTransitionData characterTransitionData=null)
     {
