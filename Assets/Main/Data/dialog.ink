@@ -75,7 +75,7 @@ Where are you from again?
 - Anyway, how are you liking the new tax forms? 
 - Pretty cool right? My idea of course.
  * They suck
-    ~suspicion+=10
+    ~suspicion+=11
     How dare you?! 
     Those forms are a bureaucratic masterpiece!
  * What forms?
@@ -280,16 +280,20 @@ Where are you from again?
     ~suspicion-=5
     Dude, me neither. Cheers!
  * I don't know
+    ~suspicion-=5
     I get you! This building is so big it's easy to get lost.
  * Yours
     I'm so sorry, I didn't mean to be rude, I'm not good with faces.
 
 - So, how are you enjoying the free food and open bar?
  * Great!
+    ~suspicion-=5
     Free food always tastes the best!
  * No quiche
+    ~suspicion-=10
     Oh shoot! I was supposed to get the quiche...
  * Needs more wine!
+    ~suspicion-=5
     Right?
     I swear there was more wine there before I drank it.
 
@@ -312,7 +316,7 @@ Bye!
 
 - Can you believe Margaret from HR told me, it wasn't that big of a deal? She's crazy!
  * Overreacting
-    ~suspicion+=20
+    ~suspicion+=15
     Overreacting?! I'm not overreacting! It's much more than that! 
     You don't take a man's sandwich like that!
  * Maybe Tim?
@@ -391,7 +395,9 @@ Bye!
     Without a uniform? What firm did we hire?
 
 === fail ===
+~suspicion-=11
 - I don't think you work here at all! I'm calling secuirty.
+
 
 
 -> END
