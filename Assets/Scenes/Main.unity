@@ -3687,16 +3687,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1588258074916205194, guid: 24c12370d9a3f2d49b31d84c4593b3ce,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 1aec57a363c32c445bc081b4ab629ce0, type: 2}
-    - target: {fileID: 3173593406800628139, guid: 24c12370d9a3f2d49b31d84c4593b3ce,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 1aec57a363c32c445bc081b4ab629ce0, type: 2}
     - target: {fileID: 3216315871498588411, guid: 24c12370d9a3f2d49b31d84c4593b3ce,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3747,11 +3737,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4000596107436301943, guid: 24c12370d9a3f2d49b31d84c4593b3ce,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 1aec57a363c32c445bc081b4ab629ce0, type: 2}
     - target: {fileID: 5981722941264041898, guid: 24c12370d9a3f2d49b31d84c4593b3ce,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -3767,11 +3752,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: ConversationState
       objectReference: {fileID: 0}
-    - target: {fileID: 8833313534314643683, guid: 24c12370d9a3f2d49b31d84c4593b3ce,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: fa3997f0f30c3214393a53e1bb99f5c3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -574,6 +574,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3265977703983748620, guid: 77e0ea4c5b11c6a4f9dbc127b3869ea4,
         type: 3}
+      propertyPath: m_waitDuration
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3265977703983748620, guid: 77e0ea4c5b11c6a4f9dbc127b3869ea4,
+        type: 3}
       propertyPath: m_characters.Array.size
       value: 11
       objectReference: {fileID: 0}
@@ -1515,6 +1520,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3216315871498588411}
     m_Modifications:
+    - target: {fileID: 1719172960467956594, guid: 98675680b49367a489605721a8e93458,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: fa3997f0f30c3214393a53e1bb99f5c3, type: 2}
     - target: {fileID: 3746368903373956031, guid: 98675680b49367a489605721a8e93458,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1570,6 +1580,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: jerry
       objectReference: {fileID: 0}
+    - target: {fileID: 4703832835109173818, guid: 98675680b49367a489605721a8e93458,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1aec57a363c32c445bc081b4ab629ce0, type: 2}
+    - target: {fileID: 6541893659884957158, guid: 98675680b49367a489605721a8e93458,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1aec57a363c32c445bc081b4ab629ce0, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1594,6 +1614,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: You
       objectReference: {fileID: 0}
+    - target: {fileID: 7009373015147968094, guid: 225be4436a0ab7f4fbad7e05c0439126,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1aec57a363c32c445bc081b4ab629ce0, type: 2}
     - target: {fileID: 7688180566473135822, guid: 225be4436a0ab7f4fbad7e05c0439126,
         type: 3}
       propertyPath: m_LocalPosition.x
