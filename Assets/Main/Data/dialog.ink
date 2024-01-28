@@ -107,23 +107,84 @@ Where are you from again?
 
 - It's been a crazy month, I'm happy we get this party to relax a bit!
  * Deserved!
- * 
+    ~suspicion-=10
+    Aw thank you sweetheart! 
+    You know just what to say to melt this old lady's heart!
+ * From what?
+    ~suspicion+=10
+    I'll have you know we are very busy down at HR! Cheeky!
+
+- Well, keep on the lookout for anyone sitting on a printer won't you love? Cheers!
 
 //-----------------------Char change-----------------------
 ~character=Giles
 - Are you the driver? Take me home right now!
  * No?
-   Do you know who my daddy is? I'll have you fired!
- * Who are you
-   What do you mean? I'm Giles and my daddy is the boss of this company!
- *  mistype
+    ~suspicion+=20
+    Do you know who my daddy is? I'll have you fired!
+ * You are?
+    ~suspicion+=20
+    What do you mean? I'm Giles and my daddy is the boss of this company!
+ * Not a driver
+    Ugh that sucks! A new hotdog skin just dropped and I have a bunch of VBucks burning a whole in my pocket!
+ * What?
+    ~suspicion+=10
+    Man did they hire a "special guy" again?
+ * mistype
     Ugh, are you drunk? Gross!
     
-//-----------------------Char change-----------------------
-//~character=Bradley
+- I can't believe I have to be here! I could be ranking up in fortnite right now!
+ * Fortnite
+    ~suspicion+=10
+    You don't know fortnite? Are you like, a boomer or something?
+ * Ranking
+    I'm silver 3, I'm going to go pro for sure!
+    Daddy's going to buy an e-sports team for my birthday!
+ * Leave?
+    ~suspicion+=10
+    And walk home? Are you actually insane or just drunk?
+ * Ask your dad?
+    Don't you think I've thought of that? I can't find him anywhere!
+
+- I  also demanded they get turkey quiches for today and there's none!
+ * Quiches?
+    Of course you wouldn't know what a  quiche is. A quiche is a... it's like a type of...  well it doesn't matter! It's delicious!
+ * Sucks to be you!
+    ~suspicion+=30
+    You think you're funny? My father will hear about this!
+
+- I'm going to check if my dad let's me use his computer, for real for real no cap.
 
 //-----------------------Char change-----------------------
-//~character=Rebbeca
+~character=Bradley
+- Oh hi! I don't think we've met yet! My name is Bradley! I've just begun my internship here!
+ * Ok...
+    Yeah, and you know, I already really love it here! Everyone is like a big warm family and it's just so great!
+ * Don't talk to me
+    ~suspicion+=5
+    Oh uh ok, is this like a hazing thing? Everyone keeps telling me that ahaha....
+ * Intern?
+    Yes! Can you believe it? this company is amazing! Such productive work, you really feel like you're changing things in the world... You know... with the widgets we make and all...
+
+- Anyway, what department are you on? Don't think I've seen your face around. I'm good with faces you know?
+ * Janitor
+    Oh really? I don't really know much about our janitorial staff, but you are greatly appreciated! Like the cogs on a well oiled machine, you know?
+ * Intern!
+    ~suspicion+=20
+    That is definitely odd... I don't think we've had any new interns since we were hired! Weird...
+ * Accounting
+    ~suspicion-=10  
+    Oh really? What are your thoughts on the new tax forms? Jerry keeps bragging about them, hope someday they let me actually touch the files...
+ * Don't work here
+    ~suspicion+=30
+    Aahahah very funny sir! Like someone would just walk in from the street and join a random party! ahahaa...ahah..uh
+
+- Oh sorry give me a second, Jerry just asked me to go grab more beer for the bar!
+
+//-----------------------Char change-----------------------
+~character=Rebbeca
+
+
 
 //-----------------------Char change----------------------
 //~character=Janet
