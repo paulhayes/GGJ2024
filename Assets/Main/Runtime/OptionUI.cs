@@ -12,10 +12,18 @@ public class OptionUI : MonoBehaviour
 
 	public Option option;
 	private Image panel;
+	private BoilingLines bl;
+	private Image[] panels;
 
 	private void Awake()
 	{
 		panel = GetComponentInChildren<Image>();
+		bl = GetComponent<BoilingLines>();
+	}
+
+	private void Start()
+	{
+		panels = bl.GetImages();
 	}
 
 	public void SetOption(Option option)
@@ -51,5 +59,8 @@ public class OptionUI : MonoBehaviour
 
 		transform.localScale = Vector3.one * scale;
 		panel.color = new Color(1,1,1,opacity);
+
+		foreach (var p in panels)
+			p.color = panel.color;
 	}
 }
