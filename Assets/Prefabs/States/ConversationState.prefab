@@ -3677,6 +3677,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TypingUICanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 8783522207733740036, guid: 76a4a775f1825c24fa2f3da62ae7d5a7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
