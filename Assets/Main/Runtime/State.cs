@@ -8,6 +8,6 @@ public class State : MonoBehaviour
     public event Action<string> RequestStateChange;
     public void ChangeState(string name)
     {
-        RequestStateChange.Invoke(name);
+        RequestStateChange?.Invoke(name);
     }
 }
