@@ -582,6 +582,7 @@ GameObject:
   - component: {fileID: 7886537698755258963}
   - component: {fileID: 4619478065984820771}
   - component: {fileID: 851977098961071539}
+  - component: {fileID: 4300616001889747086}
   m_Layer: 0
   m_Name: FailState
   m_TagString: Untagged
@@ -634,6 +635,19 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!114 &4300616001889747086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3998535248182147713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cae3d565eac7214788e220ddae3fa80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toPlay: event:/Music/final_menu_song
 --- !u!1 &4783338694379091126
 GameObject:
   m_ObjectHideFlags: 0

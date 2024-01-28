@@ -1,26 +1,25 @@
 using FMOD.Studio;
+using System;
 using System.Collections;
 using UnityEngine;
 
 public class MusicController : Singleton<MusicController>
 {
 	[FMODUnity.EventRef, SerializeField]
-	private string music, ambience, intro;
+	private string music, ambience;
 	private EventInstance musicInstance, ambienceInstance;
 
 	private IEnumerator Start()
 	{
 		yield return new WaitForEndOfFrame();
 
-		AudioSystem.Instance.PlayOneShot(intro);
-
 		musicInstance = AudioSystem.Instance.CreateInstance(music);
 		ambienceInstance = AudioSystem.Instance.CreateInstance(ambience);
 
 		musicInstance.start();
 		ambienceInstance.start();
-		musicInstance.setVolume(0);
-		ambienceInstance.setVolume(0);
+
+		Mute();
 
 		StoryParser.Instance.CharacterChangeEvent += _ =>
 		{
@@ -44,5 +43,11 @@ public class MusicController : Singleton<MusicController>
 	{
 		musicInstance.setPaused(false);
 		ambienceInstance.setPaused(false);
+	}
+
+	public void Mute()
+	{
+		musicInstance.setVolume(0);
+		ambienceInstance.setVolume(0);
 	}
 }

@@ -384,6 +384,7 @@ GameObject:
   - component: {fileID: 1062588731579551984}
   - component: {fileID: 941279702957929629}
   - component: {fileID: 8054719749347669942}
+  - component: {fileID: 5643510934545726615}
   m_Layer: 0
   m_Name: WinState
   m_TagString: Untagged
@@ -436,6 +437,19 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!114 &5643510934545726615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3737361234042068726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cae3d565eac7214788e220ddae3fa80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toPlay: event:/Music/final_menu_song
 --- !u!1 &4817508243923957309
 GameObject:
   m_ObjectHideFlags: 0
