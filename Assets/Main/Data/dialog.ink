@@ -208,30 +208,6 @@ I swear to god I can't wait to for this internship to be over and done with!
 
 //-----------------------Char change----------------------
 ~character=James
-
-- I can't believe the CEO brought his 12 year old son to the party. 
-- I guess it was his turn to look after the little shit this weekend.
- * Spoiled
-    ~suspicion-=10
-    Oh my god, yes! I couldn't believe it when I heard that he spent my annual salary on VBucks...
- * Sweet child
-    ~suspicion+=10
-    Are you crazy? You think that spoiled brat is sweet? You haven't been here long have you?
- * Demon spawn
-    ~suspicion-=10
-    Can you believe he just asked me to drive him home? Who does he think he is?
-
-- Anyway this party sucks! 
-- Can't even enjoy a turkey quiche before without some dumb accountant asking my his computer doesn't work!
- * Quiche?
-    Yeah man, that's the only reason I came up from the basement... Huge disappointment.
- * Computer
-//-----------------------Char change-----------------------
-~character=Tim
-
-- Heeey man -hic- how you doin?
-//-----------------------Char change-----------------------
-//~character=Felicity
 - I can't believe the CEO brought his 12 year old son to the party. I guess it was his turn to look after the little rascal this weekend.
 * Spoiled brat
   ~suspicion-=10
@@ -248,34 +224,106 @@ I swear to god I can't wait to for this internship to be over and done with!
    ~suspicion+=10
    Ugh, are you drunk? Gross!
 
-//-----------------------Char change-----------------------
-//~character=Tim 
 
 //-----------------------Char change-----------------------
-//~character=Benedict
+~character=Tim
+
+- Heeey man -hic- how you doin?
+ * You good?
+    ~suspicion-=5
+    Yeah man, I'm greaa -hic- aat!
+ * Heeey!
+    Ehehe hey... do you know where my nephew went? I was s'posed to drive him to some place called fortnite?
+ * Want water?
+    ~suspicion+=10
+    Water?! Are you crazy? Everyone knows I only drink buckfast!
+ * Sit?
+    Nah man, I've got to danceee! I can feel the music in my bones!
+    
+- Hmmm, what floor you on? Don't think I've seen your face before...
+
 
 //-----------------------Char change-----------------------
 ~character=Jimmy
+
 - I can't believe this sandwich theft keeps happening,! I'll have to write an email to HR again, ugh...
-* What's up with the fridge?
-  ~suspicion+=20
-  What do you mean what's up?! We have a very serious problem of sandwich thievery!!
-  
-* Justice for the sandwich!
-  ~suspicion-=20
-  Yes! I demand the culprit be brought to justice!
+ * The fridge?
+    ~suspicion+=10
+    What do you mean what's up?! We have a very serious problem of sandwich thievery!!
+ * Tim? 
+    Do you think he's behind this?! He does have little rat thief hands...
+ * Justice for the sandwich!
+    ~suspicion-=10
+    Yes! I demand the culprit be brought to justice!
+
+- Can you believe Margaret from HR told me to it wasn't that big of a deal? She's crazy!
+ * Overreacting
+    ~suspicion+=20
+    Overreacting?! I'm notoverreacting! It's much more than that! you don't take a man's sandwich like that!
+ * Tim?
+    ~suspicion-=5
+    Yeah! I think I WILL ask Tim, mighteven smell his breath, see if it smells like turkey
+ * Crazy
+    ~suspicion-=5
+    Finally, someone that agrees with me! We deserve to be heard!
+
+- They really thought having turkey mini quiches here would distract me from what really matters! Fools!
+ * Mini quiches?
+    Oh, I've eaten the last 20, my bad...
+ * It matters ?
+    ~suspicion+=10
+    We've been over this! You don't play with a man's food!
+ * Fools!
+    ~suspicion-=10
+    You're right mate!They think we can't fight back against this oppressive system!
+ * Turkey sucks!
+    ~suspicion+=10
+    Blasphemy! I'll make a complaint to HR about this!
+
+- Don't be fooled, they're only having this party to keep us quiet about our fridge rights! I'm going to go find someone from HR!
 
 //-----------------------Char change-----------------------
-//~character=Miriam
+~character=Benedict
+
+- You look lost son.
+- Do you even know what we make here at Redundant Solutions?
+
+ * Arrogance?
+    ~suspicion-=5
+    Ha! You've got guts boy, I like that. Speak to Miss Philips, tell her to bring you along on my next Ayahuasca retreat.
+ * Widgets?
+    ~suspicion-=10
+    That's right, the best damn widgets in the world, and don't you forget it
+ * Photocopiers?
+    ~suspicion+=30
+    What are you talking about! We make widgets you idiot! Get out of my sight, before I fire you!
+
+- Wait a second, I have to get this call - YEA MIKE? I HOPE YOU'RE NOT CALLING ME ABOUT THE
 
 //-----------------------Char change-----------------------
-//~character=Sarah
+~character=Sarah
+
 
 //-----------------------Char change-----------------------
-//~character=Will
+~character=Miriam
 
-//-----------------------Char change-----------------------
-//~character=James
+- And who might you be? I know everyone in this company.
+ * Tim?
+    ~suspicion+=10
+    He's a moron, But I don't thinke he would hire someone without consulting me first!
+ * Gile's Driver
+    ~suspicion+=5
+    My brother finally caved and hired a personal driver for the brat? 
+Seems unlikely...
+ * Janitor
+    I see! Well I don't really know the whole janitorial services team...
+ * New intern?
+    ~suspicion+=30
+    Are you asking me if you're an intern here? That's definitely a bad way to about it.
+ * Catering
+    ~suspicion+=5
+    Without a uniform? What firm did we hire?
+
 
 
 -> END
