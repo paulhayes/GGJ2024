@@ -16,9 +16,10 @@ public class Dancer : MonoBehaviour
 		SurpriseController.Instance.OnSurprised += Surprise;
 		SurpriseController.Instance.OnOverIt    += Jump;
 
+	    transform.eulerAngles = Vector3.up * Random.Range(0f, 359f);
 		origPos = transform.position;
         float secs = Random.Range(0f, duration);
-	
+
         yield return new WaitForSeconds(secs);
         Jump();
 	}
@@ -28,11 +29,15 @@ public class Dancer : MonoBehaviour
 		float secs = Random.Range(0f, duration * 2f);
         float jump = Random.Range(0.3f, 1f);
 
-        transform.DOPunchPosition(punch * jump, duration * jump, vibrato, elasticity)
-            .OnComplete(() => Jump())
-            .SetEase(Ease.InBounce)
-            .SetDelay(secs);
-    }
+		transform.localScale = Vector3.one;
+		transform.DOPunchPosition(punch * jump, duration * jump, vibrato, elasticity)
+			.OnComplete(() => Jump())
+			.SetEase(Ease.InBounce)
+			.SetDelay(secs);
+		transform.DOPunchScale(Vector3.one * .2f, duration/3f, 0, 1f)
+			.SetEase(Ease.InBounce)
+			.SetDelay(secs);
+	}
 
     void Surprise()
     {
