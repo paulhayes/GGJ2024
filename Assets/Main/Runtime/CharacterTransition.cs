@@ -34,14 +34,14 @@ public class CharacterTransition : MonoBehaviour
     IEnumerator CharacterAppear(Transform character,CharacterTransitionData characterData)
     {
         if(currentCharactrer){
-            Transition(m_inPosition,m_outPosition,character,0.6f,m_animCurveOut);
+            Transition(m_inPosition,m_outPosition,character,m_duration,m_animCurveOut);
             currentCharactrer.gameObject.SetActive(false);
         }
 
         yield return new WaitForSeconds(8f);
 
         character.gameObject.SetActive(true);
-        Transition(m_outPosition,m_inPosition,character,0.6f,m_animCurveIn);
+        Transition(m_outPosition,m_inPosition,character,m_duration,m_animCurveIn);
         currentCharactrer = character;
         characterData.complete = true;
     }
