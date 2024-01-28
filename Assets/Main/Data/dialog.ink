@@ -47,7 +47,8 @@ Where are you from again?
  *  IT Support
     Oh really? Could you fix my computer, it has an error.
  *  Janitorial Services
-    Ah! You keep on cleaning those toilets. That's where I spend most of my day!
+    Ah! You keep on cleaning those toilets. 
+    That's where I spend most of my day!
  *  Accounting
     ~suspicion+=10
     I haven't seen you around the office, are you pulling my leg?
@@ -58,26 +59,31 @@ Where are you from again?
 - Did you hear Janet was caught with her hand in petty cash?
  *  Dumb Move!
     ~suspicion-=5
-    Crazy right? The first rule of stealing is don't get caught! What can you expect from a pretty blonde like that.
+    Crazy right? The first rule of stealing is don't get caught! 
+    What can you expect from a silly blonde like that.
  *  Not Janet
-    I know right? She seems like such a little sweetheart... Guess the quiet ones are the naughtiest!
+    I know right? She seems like such a little sweetheart... 
+    Guess the quiet ones are the naughtiest!
  *  Who?
     ~suspicion+=10
-    Where have you been? This is all everyone on the upper floors keeps talking about!
+    Where have you been? 
+    This is all everyone on the upper floors keeps talking about!
  *  mistype
     ~suspicion+=10
     You good mate?
 
-- Anyway, how are you liking the new tax forms? Pretty cool right? My idea.
+- Anyway, how are you liking the new tax forms? 
+- Pretty cool right? My idea of course.
  * They suck
     ~suspicion+=10
-    How dare you?! Those forms are a bureaucratic masterpiece!
+    How dare you?! 
+    Those forms are a bureaucratic masterpiece!
  * What forms?
     ~suspicion+=20
     Didn't you receive the newsletter update? Strange...
  * Loving them!
     ~suspicion-=10
-    Of course you are, Those forms are a piece of bureaucratic beauty!
+    Of course you are, those forms are a piece of bureaucratic beauty!
  *  mistype
     ~suspicion+=10   
     Couldn't quite catch that...
@@ -95,7 +101,7 @@ Where are you from again?
     ~suspicion+=10  
     Are you feeling well love? You're slurring your words...
 
-- I keep telling them that the best solution for these type of problems is to check everyone's butts!
+- I keep telling them that the best solution for these problems is to check everyone's butts!
  * Agreed!
     Ahahah! Someone that knows what's up!
  * Weird
@@ -104,7 +110,6 @@ Where are you from again?
  * Inappropriate...
     ~suspicion+=10 
     Oh, apologies, nobody's ever complained to my face...
-
 - It's been a crazy month, I'm happy we get this party to relax a bit!
  * Deserved!
     ~suspicion-=10
@@ -118,7 +123,8 @@ Where are you from again?
 
 //-----------------------Char change-----------------------
 ~character=Giles
-- Are you the driver? Take me home right now!
+- Are you the driver? 
+- Take me home right now!
  * No?
     ~suspicion+=20
     Do you know who my daddy is? I'll have you fired!
@@ -126,14 +132,16 @@ Where are you from again?
     ~suspicion+=20
     What do you mean? I'm Giles and my daddy is the boss of this company!
  * I'm not a driver
-    Ugh that sucks! A new hotdog skin just dropped and I have a bunch of VBucks burning a whole in my pocket!
+    Ugh that sucks! 
+    A new hotdog skin just dropped and I have a bunch of VBucks burning a whole in my pocket!
  * What?
     ~suspicion+=10
     Man did they hire a "special guy" again?
  * mistype
     Ugh, are you drunk? Gross!
     
-- I can't believe I have to be here! I could be ranking up in fortnite right now!
+- I can't believe I have to be here! 
+- I could be ranking up in fortnite right now!
  * Fortnite
     ~suspicion+=10
     You don't know fortnite? Are you like, a boomer or something?
@@ -148,79 +156,101 @@ Where are you from again?
 
 - I  also demanded they get turkey quiches for today and there's none!
  * Quiches?
-    Of course you wouldn't know what a  quiche is. A quiche is a... it's like a type of...  well it doesn't matter! It's delicious!
+    Of course you wouldn't know what a  quiche is. 
+    A quiche is a... it's like a type of... well it doesn't matter! 
+    It's delicious!
  * Sucks to be you!
     ~suspicion+=30
     You think you're funny? My father will hear about this!
 
-- I'm going to check if my dad let's me use his computer, for real for real no cap.
+- I'm going to check if my dad let's me use his computer, bye.
 
 //-----------------------Char change-----------------------
 ~character=Bradley
 
-- Oh hi! I don't think we've met yet! My name is Bradley! I've just begun my internship here!
+- Oh hi! I don't think we've met yet! 
+- My name is Bradley! 
+- I've just begun my internship here!
  * Ok...
-    Yeah, and you know, I already really love it here! Everyone is like a big warm family and it's just so great!
+    Yeah, and you know, I already feel so helpful! 
+    Everyone keeps asking me for the most random stuff, they really must like my work!
+    Even the CEO has asked me once to accompany his child to some type of gaming tournament...
+    That's trust right there!
  * Don't talk to me
     ~suspicion+=5
-    Oh uh ok, is this like a hazing thing? Everyone keeps telling me that ahaha....
+    Oh uh ok, is this like a hazing thing? 
+    Everyone keeps telling me that ahaha....
  * Intern?
-    Yes! Can you believe it? this company is amazing! Such productive work, you really feel like you're changing things in the world... You know... with the widgets we make and all...
+    Yes! Can you believe it? this company is amazing! 
+    Such productive work, you really feel like you're changing things in the world... 
+    You know... with the widgets we make and all... those are real helpful!
 
-- Anyway, what department are you on? Don't think I've seen your face around. I'm good with faces you know?
- * Janitor
-    Oh really? I don't really know much about our janitorial staff, but you are greatly appreciated! Like the cogs on a well oiled machine, you know?
+- Anyway, what department are you on? 
+- Don't think I've seen your face around. 
+- I'm good with faces you know?
  * Intern!
     ~suspicion+=20
-    That is definitely odd... I don't think we've had any new interns since we were hired! Weird...
+    That is definitely odd... 
+    I don't think we've had any new interns since we were hired! 
+    Weird...
  * Accounting
     ~suspicion-=10  
-    Oh really? What are your thoughts on the new tax forms? Jerry keeps bragging about them, hope someday they let me actually touch the files...
+    Oh! What are your thoughts on the new tax forms? 
+    Jerry keeps bragging about them, hope someday I can actually touch files...
  * Don't work here
     ~suspicion+=30
-    Aahahah very funny sir! Like someone would just walk in from the street and join a random party! ahahaa...ahah..uh
+    Aahahah very funny sir! 
+    Like someone would just walk in from the street and join a random party! 
+    ahahaa...ahah...uh...
 
 - Oh sorry give me a second, Jerry just asked me to go grab more beer for the bar!
 
 //-----------------------Char change-----------------------
 ~character=Rebbeca
 
-- Oh my god, thank god he's gone... I'm Rebbeca by the way. Also an intern.
- * Right?
+- Oh my god, thank god he's gone... 
+- I'm Rebbeca by the way. Also an intern.
+ * He's a bit much
     ~suspicion-=10 
     He's crazy, this job suuucks!
-I swear to god I can't wait to for this internship to be over and done with!
- *interns multiplying?
-    Ahaha good one! Trust me, I hate this more than you do.
+    I swear to god I can't wait to for this internship to be over and done with!
+ *interns multiplying
+    Ahaha good one! 
+    Trust me, I hate this more than you do.
 
 - Did you hear Brad, they hooked the sucker for sure!
 - We're getting fucked over here, doing all the grunt work for shit pay?
 - They even have me driving the CEO's son sometimes...
- * Quit?
+ * Quit
     ~suspicion+=10
-    Wow great advice! Wouldn't be here if I didn't need the job
+    Wow great advice! 
+    Wouldn't be here if I didn't need the job.
  * Sucks to be you
     Ahahah funny! You should try stand up!
- * Complain?
+ * Complain
     ~suspicion+=10
-    Are you sure you work here? Do you believe HR will do anything about this?
+    Are you sure you work here? 
+    Do you really believe HR will do anything about this...
 
-- I'm going to go join the rest of the intern crew in the bathroom and smoke a doobie... You know where to find us if you're down.
+- I'm going to go join the rest of the intern crew in the bathroom and smoke a doobie... 
+- You know where to find us if you're down.
+- Bye!
 
 //-----------------------Char change----------------------
 ~character=James
-- I can't believe the CEO brought his 12 year old son to the party. I guess it was his turn to look after the little rascal this weekend.
-* Spoiled brat
-  ~suspicion-=10
-  Oh my god, yes!
-  I couldn't believe it when I heard that he spent my annual salary on VBucks...
-* Sweet child
-  ~suspicion+=10
-  Are you crazy? You think that spoiled brat is sweet?
-  You haven't been here long have you?
-* Demon spawn
-  ~suspicion-=10
-  Can you believe he just asked me to drive him home? Who does he think he is?
+- I can't believe the CEO brought his 12 year old son to the party. 
+- He's such a little shit. 
+ * Spoiled brat
+    ~suspicion-=10
+    Oh my god, yes!
+    I couldn't believe it when I heard that he spent my annual salary on VBucks...
+ * Sweet child
+    ~suspicion+=10
+    Are you crazy? You think that spoiled brat is sweet?
+    You haven't been here long have you?
+ * Demon spawn
+    ~suspicion-=10
+    Can you believe he just asked me to drive him home? Who does he think he is?
  * mistype
    ~suspicion+=10
    Ugh, are you drunk? Gross!
