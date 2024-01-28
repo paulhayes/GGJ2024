@@ -3,15 +3,14 @@ using UnityEngine;
 using Ink.Runtime;
 using System;
 using System.Linq;
+using Ink.UnityIntegration;
 
 public class StoryParser : MonoBehaviour
 {
     public event Action<CharacterTransitionData> CharacterChangeEvent;
     public event Action<DialogSnippet> CharacterDialogEvent;
     public event Action ConversationChoice;
-
     public event Action<int> SuspicionChangeEvent;
-
     
     [SerializeField] TextAsset m_text;
     
@@ -49,8 +48,8 @@ public class StoryParser : MonoBehaviour
         });
         
         #if UNITY_EDITOR
-        // InkPlayerWindow window = InkPlayerWindow.GetWindow(true);
-        // if(window != null) InkPlayerWindow.Attach(m_story);
+        InkPlayerWindow window = InkPlayerWindow.GetWindow(true);
+        if(window != null) InkPlayerWindow.Attach(m_story);
         #endif
 
         yield return null;
@@ -76,17 +75,19 @@ public class StoryParser : MonoBehaviour
         }
 
         ConversationChoice?.Invoke();
+
 		var phrases = m_story.currentChoices.Select<Choice,string>( (choice)=>choice.text.Trim() ).ToArray();
-        TypingInput.Instance.TypePhrases(phrases);
         int? choiceIndex=null;
         Action<int> onFinishedTyping = (index)=>{
             choiceIndex=index;
-
             if(choiceIndex==-1){
                 choiceIndex=phrases.Length-1;
             }
         };
         TypingInput.Instance.OnFinishedTyping += onFinishedTyping;
+        TypingInput.Instance.OnMistype += OnMistype;
+        TypingInput.Instance.TypePhrases(phrases);
+
         if( m_story.currentChoices.Count > 0 )
         {
             for (int i = 0; i < m_story.currentChoices.Count; ++i) {
@@ -100,11 +101,19 @@ public class StoryParser : MonoBehaviour
         }
 
         TypingInput.Instance.OnFinishedTyping -= onFinishedTyping;
-
+        TypingInput.Instance.OnMistype -= OnMistype;
         Debug.Log($"user choice is {choiceIndex.Value}");
         m_story.ChooseChoiceIndex(choiceIndex.Value);
         m_story.Continue();
     }
+
+    private void OnMistype()
+    {
+        print("TYPO!");
+        m_story.variablesState["suspicion"] = (int)m_story.variablesState["suspicion"]+2;
+        //SuspicionChangeEvent.Invoke((int)m_story.variablesState["suspicion"]);
+    }
+
 
     public IEnumerator ShowCurrentText()
     {

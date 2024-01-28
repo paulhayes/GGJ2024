@@ -37,7 +37,7 @@ public class SpeechBubble : MonoBehaviour
 
 		while (idx <= dialogue.text.Length && !Input.anyKeyDown) // pls fix: this sucks (may skip down frame)
 		{
-			text.text = dialogue.text.Substring(0, idx++);
+			text.text = $"{dialogue.text.Substring(0, idx)}<color=#00000080>{dialogue.text.Substring(idx++)}</color>";
 			yield return new WaitForSeconds(1f/lettersPrSec);		
 		}
 

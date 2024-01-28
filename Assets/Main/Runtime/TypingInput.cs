@@ -55,7 +55,7 @@ public class TypingInput : Singleton<TypingInput>
 
 			if (mistype)
 			{
-				print("TYPO!");
+				
 				OnMistype?.Invoke();
 				AudioSystem.Instance.PlayOneShot(mistypeSFX);
 			}

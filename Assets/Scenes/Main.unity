@@ -3687,6 +3687,50 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1831834727689755, guid: 24c12370d9a3f2d49b31d84c4593b3ce, type: 3}
+      propertyPath: m_text
+      value: Lorem <color=#00000000>ipsum</color>
+      objectReference: {fileID: 0}
+    - target: {fileID: 1831834727689755, guid: 24c12370d9a3f2d49b31d84c4593b3ce, type: 3}
+      propertyPath: m_fontSize
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 1831834727689755, guid: 24c12370d9a3f2d49b31d84c4593b3ce, type: 3}
+      propertyPath: m_margin.w
+      value: 19.337677
+      objectReference: {fileID: 0}
+    - target: {fileID: 1831834727689755, guid: 24c12370d9a3f2d49b31d84c4593b3ce, type: 3}
+      propertyPath: m_margin.x
+      value: 29.4534
+      objectReference: {fileID: 0}
+    - target: {fileID: 1831834727689755, guid: 24c12370d9a3f2d49b31d84c4593b3ce, type: 3}
+      propertyPath: m_margin.y
+      value: 23.228317
+      objectReference: {fileID: 0}
+    - target: {fileID: 1831834727689755, guid: 24c12370d9a3f2d49b31d84c4593b3ce, type: 3}
+      propertyPath: m_margin.z
+      value: 19.337677
+      objectReference: {fileID: 0}
+    - target: {fileID: 1831834727689755, guid: 24c12370d9a3f2d49b31d84c4593b3ce, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1831834727689755, guid: 24c12370d9a3f2d49b31d84c4593b3ce, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1831834727689755, guid: 24c12370d9a3f2d49b31d84c4593b3ce, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1831834727689755, guid: 24c12370d9a3f2d49b31d84c4593b3ce, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 1831834727689755, guid: 24c12370d9a3f2d49b31d84c4593b3ce, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4278190080
+      objectReference: {fileID: 0}
     - target: {fileID: 3216315871498588411, guid: 24c12370d9a3f2d49b31d84c4593b3ce,
         type: 3}
       propertyPath: m_LocalPosition.x

@@ -12,7 +12,7 @@ public class TestTypingInput : MonoBehaviour
 		// TEST
 		m_typingInput.OnFinishedTyping += phrase =>
 		{
-			if (phrase == null)
+			if (phrase == -1)
 				Debug.Log("Timed out!");
 			else
 				Debug.Log($"Successfully wrote: {phrase}");
