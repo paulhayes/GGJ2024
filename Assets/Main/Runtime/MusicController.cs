@@ -15,11 +15,11 @@ public class MusicController : MonoBehaviour
 
 		StoryParser.Instance.CharacterChangeEvent += _ =>
 		{
-			musicInstance.setParameterByName("PersonEnter", 1);
+			musicInstance.setParameterByName("PersonEnter", 0);
 		};
 		StoryParser.Instance.CharacterDialogEvent += _ =>
 		{
-			musicInstance.setParameterByName("PersonEnter", 0);
+			musicInstance.setParameterByName("PersonEnter", 1);
 		};
 	}
 }
