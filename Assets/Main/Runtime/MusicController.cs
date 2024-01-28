@@ -1,4 +1,5 @@
 using FMOD.Studio;
+using System.Collections;
 using UnityEngine;
 
 public class MusicController : MonoBehaviour
@@ -7,12 +8,14 @@ public class MusicController : MonoBehaviour
 	private string music;
 	private EventInstance musicInstance;
 
-	private void Start()
+	private IEnumerator Start()
 	{
+		yield return new WaitForEndOfFrame();
+
 		musicInstance = AudioSystem.Instance.CreateInstance(music);	
 		musicInstance.start();
 		musicInstance.setVolume(.15f);
-
+		 
 		StoryParser.Instance.CharacterChangeEvent += _ =>
 		{
 			musicInstance.setParameterByName("PersonEnter", 0);
