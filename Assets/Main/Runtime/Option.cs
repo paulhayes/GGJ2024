@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 
 public class Option
 {
@@ -9,6 +10,8 @@ public class Option
 
 	public event Action OnIncremented;
 	public event Action<char> OnMistyped;
+
+	private char[] charsToSkip = new[] { ' ', '\'', '?', '!' };
 
 	public Option(string phrase)
 	{
@@ -29,7 +32,7 @@ public class Option
 			return;
 
 		var next = GetNext();
-		if (next == ' ' || next == '\'')
+		if (charsToSkip.Contains(next))
 			Increment();
 	}
 	
