@@ -229,6 +229,18 @@ MonoBehaviour:
   visuals: {fileID: 8620571597420817795}
   text: {fileID: 6616987982436054278}
   lettersPrSec: 50
+  talk:
+  - event:/SFX/Other Characters/woman1
+  - event:/SFX/Other Characters/guy1
+  - event:/SFX/Other Characters/guy2
+  - event:/SFX/Other Characters/woman3
+  - event:/SFX/Other Characters/laughing_grumpy_guy
+  - event:/SFX/Other Characters/guy3
+  - event:/SFX/Other Characters/woman2
+  - event:/SFX/Other Characters/child
+  - event:/SFX/Other Characters/woman4
+  - event:/SFX/Other Characters/laughing_grumpy_guy
+  - event:/SFX/Other Characters/boss
 --- !u!1 &4741986162199163525
 GameObject:
   m_ObjectHideFlags: 0

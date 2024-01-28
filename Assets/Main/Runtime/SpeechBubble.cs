@@ -1,7 +1,10 @@
 using DG.Tweening;
+using FMOD.Studio;
+using System;
 using System.Collections;
 using System.Linq;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class SpeechBubble : MonoBehaviour
@@ -10,11 +13,35 @@ public class SpeechBubble : MonoBehaviour
 	public TextMeshProUGUI text;
 	public float lettersPrSec = 50;
 
+	[FMODUnity.EventRef, SerializeField]
+	private string[] talk;
+		//talkSarah,
+		//talkJerry,
+		//talkJimmy,
+		//talkMargaret,
+		//talkJames,
+		//talkBradley,
+		//talkRebbeca,
+		//talkGiles,
+		//talkMiriam,
+		//talkTim,
+		//talkBenedict;
+
+	private EventInstance talkInstance;
+	
 	private void Start()
 	{
 		StoryParser.Instance.CharacterDialogEvent += WriteDialogue;
 		StoryParser.Instance.ConversationChoice	  += HideDialogue;
 		StoryParser.Instance.CharacterChangeEvent += _ => HideDialogue();
+		StoryParser.Instance.CharacterChangeEvent += ChangeTalk;
+	}
+
+	private void ChangeTalk(CharacterTransitionData data)
+	{
+		talkInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+		talkInstance.release();
+		talkInstance = AudioSystem.Instance.CreateInstance(talk[data.characterIndex]);
 	}
 
 	public void WriteDialogue(DialogSnippet dialogue)
@@ -33,6 +60,8 @@ public class SpeechBubble : MonoBehaviour
 
 	IEnumerator TextWriter(DialogSnippet dialogue)
 	{
+		talkInstance.start();
+
 		int idx = 0;
 
 		while (idx <= dialogue.text.Length && !Input.anyKeyDown) // pls fix: this sucks (may skip down frame)
@@ -44,6 +73,8 @@ public class SpeechBubble : MonoBehaviour
 		text.text = dialogue.text;
 		//yield return new WaitForSeconds(dialogue.text.Split(' ').Length/2);
 		yield return null;
+
+		talkInstance.stop(STOP_MODE.ALLOWFADEOUT);
 
 		while ( !Input.anyKeyDown ){
 			yield return null;

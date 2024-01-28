@@ -11,7 +11,7 @@ public class Option
 	public event Action OnIncremented;
 	public event Action<char> OnMistyped;
 
-	private char[] charsToSkip = new[] { ' ', '\'', '?', '!' };
+	private char[] charsToSkip = new[] { ' ', '\'', '?', '!', '.' };
 
 	public Option(string phrase)
 	{
