@@ -184,14 +184,52 @@ Where are you from again?
 //-----------------------Char change-----------------------
 ~character=Rebbeca
 
+- Oh my god, thank god he's gone... I'm Rebbeca by the way. Also an intern.
+ * Right?
+    ~suspicion-=10 
+    He's crazy, this job suuucks!
+I swear to god I can't wait to for this internship to be over and done with!
+ *interns multiplying?
+    Ahaha good one! Trust me, I hate this more than you do.
 
+- Did you hear Brad, they hooked the sucker for sure!
+- We're getting fucked over here, doing all the grunt work for shit pay?
+- They even have me driving the CEO's son sometimes...
+ * Quit?
+    ~suspicion+=10
+    Wow great advice! Wouldn't be here if I didn't need the job
+ * Sucks to be you
+    Ahahah funny! You should try stand up!
+ * Complain?
+    ~suspicion+=10
+    Are you sure you work here? Do you believe HR will do anything about this?
+
+- I'm going to go join the rest of the intern crew in the bathroom and smoke a doobie... You know where to find us if you're down.
 
 //-----------------------Char change----------------------
-//~character=Janet
+~character=James
 
+- I can't believe the CEO brought his 12 year old son to the party. 
+- I guess it was his turn to look after the little shit this weekend.
+ * Spoiled
+    ~suspicion-=10
+    Oh my god, yes! I couldn't believe it when I heard that he spent my annual salary on VBucks...
+ * Sweet child
+    ~suspicion+=10
+    Are you crazy? You think that spoiled brat is sweet? You haven't been here long have you?
+ * Demon spawn
+    ~suspicion-=10
+    Can you believe he just asked me to drive him home? Who does he think he is?
+
+- Anyway this party sucks! 
+- Can't even enjoy a turkey quiche before without some dumb accountant asking my his computer doesn't work!
+ * Quiche?
+    Yeah man, that's the only reason I came up from the basement... Huge disappointment.
+ * Computer
 //-----------------------Char change-----------------------
-//~character=Will
+~character=Tim
 
+- Heeey man -hic- how you doin?
 //-----------------------Char change-----------------------
 //~character=Felicity
 - I can't believe the CEO brought his 12 year old son to the party. I guess it was his turn to look after the little rascal this weekend.
