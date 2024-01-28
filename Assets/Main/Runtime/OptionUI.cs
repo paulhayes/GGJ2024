@@ -1,7 +1,9 @@
+using DG.Tweening;
 using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 public class OptionUI : MonoBehaviour
 {
@@ -22,6 +24,17 @@ public class OptionUI : MonoBehaviour
 
 		typingText.text = "";
 		backgroundText.text = option.phrase;
+
+		float x = Random.Range(0f, 30f);
+		float y = Random.Range(0f, 30f);
+
+		transform.DOMoveX(transform.position.x + 30f-x, Random.Range(3f, 5f))
+				 .SetEase(Ease.InOutExpo)
+				 .SetLoops(-1, LoopType.Yoyo);
+
+		transform.DOMoveY(transform.position.y + 30f - y, Random.Range(3f, 5f))
+				 .SetEase(Ease.InOutExpo)
+				 .SetLoops(-1, LoopType.Yoyo);
 	}
 
 	private void Update()
