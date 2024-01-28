@@ -298,10 +298,9 @@ I swear to god I can't wait to for this internship to be over and done with!
     ~suspicion+=30
     What are you talking about! We make widgets you idiot! Get out of my sight, before I fire you!
 
-- Wait a second, I have to get this call - YEA MIKE? I HOPE YOU'RE NOT CALLING ME ABOUT THE
-
 //-----------------------Char change-----------------------
 ~character=Sarah
+
 
 
 //-----------------------Char change-----------------------
