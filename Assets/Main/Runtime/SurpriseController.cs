@@ -14,7 +14,7 @@ public class SurpriseController : Singleton<SurpriseController>
 	{
 		StoryParser.Instance.SuspicionAdjustEvent += adj => 
 		{
-			if (adj >= 10)
+			if (adj > 10)
 				Surprise(); 
 		};
 	}
