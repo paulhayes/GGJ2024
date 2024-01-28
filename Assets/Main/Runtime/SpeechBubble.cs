@@ -13,6 +13,7 @@ public class SpeechBubble : MonoBehaviour
 	{
 		StoryParser.Instance.CharacterDialogEvent += WriteDialogue;
 		StoryParser.Instance.ConversationChoice	  += HideDialogue;
+		StoryParser.Instance.CharacterChangeEvent += _ => HideDialogue();
 	}
 
 	public void WriteDialogue(DialogSnippet dialogue)
@@ -30,13 +31,17 @@ public class SpeechBubble : MonoBehaviour
 	{
 		int idx = 0;
 
-		while (idx <= dialogue.text.Length) 
+		while (idx <= dialogue.text.Length && !Input.anyKeyDown) 
 		{
 			text.text = dialogue.text.Substring(0, idx++);
-			yield return new WaitForSeconds(1f/lettersPrSec);					
+			yield return new WaitForSeconds(1f/lettersPrSec);		
 		}
+
+		text.text = dialogue.text;
 		//yield return new WaitForSeconds(dialogue.text.Split(' ').Length/2);
-		while( !Input.anyKeyDown ){
+		yield return null;
+
+		while ( !Input.anyKeyDown ){
 			yield return null;
 		}
 		dialogue.complete=true;

@@ -1,14 +1,11 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Ink.Runtime;
-using Ink.UnityIntegration;
 using System;
 using System.Linq;
 
 public class StoryParser : MonoBehaviour
 {
-    
     public event Action<CharacterTransitionData> CharacterChangeEvent;
     public event Action<DialogSnippet> CharacterDialogEvent;
     public event Action ConversationChoice;
@@ -51,8 +48,6 @@ public class StoryParser : MonoBehaviour
             CharacterChangeEvent?.Invoke(m_characterChangeData);
         });
         
-        
-
         #if UNITY_EDITOR
         // InkPlayerWindow window = InkPlayerWindow.GetWindow(true);
         // if(window != null) InkPlayerWindow.Attach(m_story);
@@ -61,7 +56,6 @@ public class StoryParser : MonoBehaviour
         yield return null;
         StartCoroutine(ContinueRoutine());
     }
-
 
     IEnumerator ContinueRoutine(CharacterTransitionData characterTransitionData=null)
     {
