@@ -46,4 +46,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   music: event:/Music/Main theme
   ambience: event:/SFX/Ambience
-  shock: event:/SFX/schockedSTOP
+  intro: event:/Music/intro_music
