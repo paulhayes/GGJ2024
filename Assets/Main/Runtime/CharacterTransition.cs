@@ -58,7 +58,7 @@ public class CharacterTransition : MonoBehaviour
             if(elapsed>1){
                 elapsed=1;
             }
-            Debug.Log(elapsed);
+            //Debug.Log(elapsed);
             target.position = Vector3.LerpUnclamped(startTransform.position,endTransform.position,animCurve.Evaluate(elapsed));
             target.rotation = Quaternion.Lerp(startTransform.rotation,endTransform.rotation,animCurve.Evaluate(elapsed));
 

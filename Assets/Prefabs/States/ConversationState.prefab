@@ -3677,6 +3677,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: TypingUICanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 7178111072009235071, guid: 76a4a775f1825c24fa2f3da62ae7d5a7,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 7178111072009235071, guid: 76a4a775f1825c24fa2f3da62ae7d5a7,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8783522207733740036, guid: 76a4a775f1825c24fa2f3da62ae7d5a7,
         type: 3}
       propertyPath: m_IsActive
