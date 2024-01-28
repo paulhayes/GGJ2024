@@ -74,11 +74,11 @@ Where are you from again?
 - Anyway, how are you liking the new tax forms? 
 - Pretty cool right? My idea of course.
  * They suck
-    ~suspicion+=11
+    ~suspicion+=1
     How dare you?! 
     Those forms are a bureaucratic masterpiece!
  * What forms?
-    ~suspicion+=20
+    ~suspicion+=15
     Didn't you receive the newsletter update? Strange...
  * I love them to death!
     ~suspicion-=10
@@ -109,7 +109,7 @@ Where are you from again?
     ~suspicion+=10 
     Is it? Don't people like butts?
  * Inappropriate...
-    ~suspicion+=10 
+    ~suspicion+=20 
     Oh, apologies, nobody's ever complained to my face...
     
 - It's been a crazy month, I'm happy we get this party to relax a bit!
@@ -118,7 +118,7 @@ Where are you from again?
     Aw thank you sweetheart! 
     You know just what to say to melt this old lady's heart!
  * From what?
-    ~suspicion+=10
+    ~suspicion+=15
     I'll have you know we are very busy down at HR! Cheeky!
 
 - Well, keep on the lookout for anyone sitting on a printer, won't you love? Cheers!
@@ -128,10 +128,10 @@ Where are you from again?
 - Are you the driver? 
 - Take me home right now!
  * Why?
-    ~suspicion+=15
+    ~suspicion+=20
     Do you know who my father is? I'll have you fired!
  * And you are?
-    ~suspicion+=15
+    ~suspicion+=25
     What do you mean? I'm Giles and my father is the boss of this company!
  * I'm not the driver
     Ugh that sucks! 
@@ -140,7 +140,7 @@ Where are you from again?
     ~suspicion+=5
     Man did they hire a "special guy" again?
  * mistype
-    ~suspicion+=5
+    ~suspicion+=10
     Can't you talk?
     
 - I can't believe I have to be here! 
@@ -157,7 +157,7 @@ Where are you from again?
  * Ask your dad?
     Don't you think I've thought of that? I can't find him anywhere!
  * mistype
-    ~suspicion+=5
+    ~suspicion+=10
     Can't you talk?
 
 - Also I demanded they get turkey quiches for today and there are none!
@@ -169,10 +169,8 @@ Where are you from again?
  * Too bad!
     ~suspicion+=30
     You think you're funny? My father will hear about this!
- * I saw some over there
-    Oh cool, thanks!
  * mistype
-    ~suspicion+=5
+    ~suspicion+=10
     Can't you talk?
     
 - I'm going to check if my dad will let me use his computer. Bye.
@@ -205,7 +203,7 @@ Where are you from again?
 - Don't think I've seen your face around. 
 - I'm good with faces you know?
  * Intern!
-    ~suspicion+=20
+    ~suspicion+=25
     That is definitely odd... 
     I haven't heard of any new interns since they hired Rebecca and I...
     Weird...
@@ -245,13 +243,13 @@ Where are you from again?
 - They're using us. We do all the grunt work, yet we get paid in pence?
 - They even have me driving the CEO's son sometimes...
  * Quit
-    ~suspicion+=10
+    ~suspicion+=15
     Wow great advice! 
     Wouldn't be here if I didn't need the job.
  * Sucks to be you
     Ahahah funny! You should try stand up!
  * Complain
-    ~suspicion+=10
+    ~suspicion+=15
     Are you sure you work here? 
     HR would never do anything about this...
     
@@ -267,7 +265,7 @@ Where are you from again?
     Oh my god, yes!
     I couldn't believe it when I heard that he spent my annual salary on that video game...
  * Sweet child
-    ~suspicion+=10
+    ~suspicion+=25
     Are you crazy? You think that spoiled brat is sweet?
     You haven't been here long have you?
  * Demon spawn
@@ -303,7 +301,7 @@ Where are you from again?
 - It was Jerry's idea and so far it's only given me more work.
 - Only today 3 people called because they broke their keyboards out of frustration.
  * More work 
-    ~suspicion+=10
+    ~suspicion+=15
     Wow are we insinuating we are lazy?! 
     I'll have you know we have the biggest worload of all the departments
  * 403K-CT5 form?
@@ -386,7 +384,7 @@ Where are you from again?
     ~suspicion-=10
     That's right, the best damn widgets in the world, and don't you forget it
  * Photocopiers?
-    ~suspicion+=20
+    ~suspicion+=25
     What are you talking about! 
     We make widgets you idiot! 
     Get out of my sight, before I fire you!   
@@ -416,7 +414,7 @@ Where are you from again?
     ~suspicion-=5
     Oh don't worry about it, we embrace all religions and walks of life here at Redundant Solutions.
  * Divorce
-    ~suspicion+=5
+    ~suspicion+=15
     No no, happily married, 8 years now. 
     You know, lovely woman, love of my life, all that mumbo jumbo.
  * Relationship goals
@@ -451,7 +449,7 @@ Where are you from again?
 - Can you believe Margaret from HR told me, it wasn't that big of a deal?
 - She's crazy!
  * Overreacting
-    ~suspicion+=15
+    ~suspicion+=25
     Overreacting?! I'm not overreacting! 
     It's much more than that! 
     You don't take a man's sandwich like that!
@@ -490,7 +488,7 @@ Where are you from again?
 
 - And who might you be? I know everyone in this company.
  * Tim hired me?
-    ~suspicion+=10
+    ~suspicion+=15
     He's a moron, but I don't think he would hire someone without consulting me first!
  * Gile's Driver
     ~suspicion+=5
@@ -499,7 +497,7 @@ Where are you from again?
  * Janitor
     I see! Well I don't really know the whole janitorial services team...
  * Intern?
-    ~suspicion+=20
+    ~suspicion+=25
     Are you asking me if you're an intern here? 
     That's definitely a bad way to about it.
  * Catering
@@ -515,7 +513,7 @@ Where are you from again?
     ~suspicion+=5
     Only ok? i see you think we might have room for improvements.
  * Was shit frankly
-    ~suspicion+=20
+    ~suspicion+=25
     Oh my word. No need for that type of language in the work place! 
     We are only acceting constructive criticism at the moment.
  * Amazing
@@ -529,9 +527,10 @@ Where are you from again?
 - Can't believe he's top pick for the annual bonus! 
 - He hardly does any work.
  * Bitchy
-    ~suspicion+=20
+    ~suspicion+=25
     Whoa whoa whoa! HR WILL be hearing about this, you can be sure!
  * Unfair
+     ~suspicion-=10
     Completely unfair!
     Not saying I'M the one that should be getting it, but there certainly are more deserving candidates.
 
