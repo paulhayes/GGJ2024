@@ -34,7 +34,7 @@ public class Dancer : MonoBehaviour
 			.OnComplete(() => Jump())
 			.SetEase(Ease.InBounce)
 			.SetDelay(secs);
-		transform.DOPunchScale(Vector3.one * .25f, duration/3f, 0, 1f)
+		transform.DOPunchScale(Vector3.one * .2f, duration/3f, 0, 1f)
 			.SetEase(Ease.InBounce)
 			.SetDelay(secs);
 	}
