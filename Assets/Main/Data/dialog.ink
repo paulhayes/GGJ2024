@@ -174,7 +174,8 @@ Where are you from again?
     That is definitely odd... I don't think we've had any new interns since we were hired! Weird...
  * Accounting
     ~suspicion-=10  
-    Oh really? What are your thoughts on the new tax forms? Jerry keeps bragging about them, hope someday they let me actually touch the files...
+    Oh really? What are your thoughts on the new tax forms? 
+    Jerry keeps bragging about them, hope someday they let me actually touch the files...
  * Don't work here
     ~suspicion+=30
     Aahahah very funny sir! Like someone would just walk in from the street and join a random party! ahahaa...ahah..uh
@@ -204,7 +205,8 @@ I swear to god I can't wait to for this internship to be over and done with!
     ~suspicion+=10
     Are you sure you work here? Do you believe HR will do anything about this?
 
-- I'm going to go join the rest of the intern crew in the bathroom and smoke a doobie... You know where to find us if you're down.
+- I'm going to go join the rest of the intern crew in the bathroom and smoke a doobie... 
+  You know where to find us if you're down.
 
 //-----------------------Char change----------------------
 ~character=James
