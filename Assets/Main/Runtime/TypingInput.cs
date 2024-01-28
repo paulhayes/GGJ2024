@@ -1,3 +1,4 @@
+using FMODUnity;
 using System;
 using System.Collections;
 using System.Linq;
@@ -10,6 +11,9 @@ public class TypingInput : Singleton<TypingInput>
 	public event Action<Option[]> OnStartTyping;
 	public event Action<int> OnFinishedTyping;
 	public event Action OnMistype;
+
+	[FMODUnity.EventRef, SerializeField]
+	private string typeSFX, mistypeSFX;
 
 	public void TypePhrases(string[] phrases)
     {
@@ -43,6 +47,14 @@ public class TypingInput : Singleton<TypingInput>
 				if (option.IsFinished())
 					yield break;
 			}
+
+            if (mistype)
+            {
+				OnMistype?.Invoke();
+				print("TYPO!");
+				AudioSystem.Instance.PlayOneShot(mistypeSFX);
+			}
+			else AudioSystem.Instance.PlayOneShot(typeSFX);
 
 			yield return null;
 		}

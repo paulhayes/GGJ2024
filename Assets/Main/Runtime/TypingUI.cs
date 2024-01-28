@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,6 +6,7 @@ using UnityEngine;
 public class TypingUI : MonoBehaviour
 {
 	public OptionUI optionPrefab;
+	public OptionBubble bubblePrefab;
 	
 	public List<OptionUI> options;
 	public RectTransform[] points;
@@ -12,11 +14,23 @@ public class TypingUI : MonoBehaviour
 	private void Start()
 	{
 		optionPrefab.gameObject.SetActive(false);
+		bubblePrefab.gameObject.SetActive(false);
 		TypingInput.Instance.OnStartTyping += ShowOptions;
-		TypingInput.Instance.OnFinishedTyping += _ => HideOptions();
+		TypingInput.Instance.OnFinishedTyping += FinishTyping;
 	}
 
-	public void ShowOptions(Option[] optionData)
+	private void FinishTyping(int i)
+	{
+		// Spawn bubble
+		var bubble = Instantiate(bubblePrefab, transform);
+		bubble.gameObject.SetActive(true);
+		bubble.transform.position = points[i].position;
+		bubble.Setup(options[i].option.phrase, i == 1 || i == 4);
+
+		HideOptions();
+	}
+
+	private void ShowOptions(Option[] optionData)
 	{
 		for (int i = 0; i < optionData.Length; i++)
 		{
@@ -26,7 +40,7 @@ public class TypingUI : MonoBehaviour
 		}
 	}
 
-	public void HideOptions()
+	private void HideOptions()
 	{
 		foreach (var option in options)
 		{
