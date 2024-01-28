@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.01.00">
 	<object class="Event" id="{727ded09-a503-498d-abaf-35a6904bf421}">
+		<property name="color">
+			<value>Red Light 1</value>
+		</property>
 		<property name="name">
-			<value>POP</value>
+			<value>Talking_pop</value>
 		</property>
 		<property name="outputFormat">
-			<value>0</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
-			<destination>{26eb23ab-ce76-4728-b6ef-199e661d0c2b}</destination>
+			<destination>{4698c29f-df99-4fa9-a361-9a693aa8301f}</destination>
 		</relationship>
 		<relationship name="mixer">
 			<destination>{6c6378a0-6e0b-4def-be6a-7d28572c873b}</destination>
@@ -60,7 +63,7 @@
 	<object class="MarkerTrack" id="{855b2ad2-07e9-46e4-82f8-750d8297a29d}" />
 	<object class="GroupTrack" id="{0932b7dd-fdbd-4b97-82db-01269054aba4}">
 		<relationship name="modules">
-			<destination>{71792133-6f23-4770-8aba-7aded7bfa30f}</destination>
+			<destination>{ae3b91d4-9f27-4d10-9e89-0cb66395d9d0}</destination>
 		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{68685d5e-372c-4ce1-9f0b-c837dba19abc}</destination>
@@ -68,7 +71,7 @@
 	</object>
 	<object class="Timeline" id="{e927568f-c6de-4642-bb6e-4ba4bb149987}">
 		<relationship name="modules">
-			<destination>{71792133-6f23-4770-8aba-7aded7bfa30f}</destination>
+			<destination>{ae3b91d4-9f27-4d10-9e89-0cb66395d9d0}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{c7326c9b-5283-4ba1-9f3a-bf647d1b15d6}">
@@ -88,26 +91,17 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{5415c769-6e88-475e-b495-6b9576c78bda}" />
-	<object class="SingleSound" id="{71792133-6f23-4770-8aba-7aded7bfa30f}">
+	<object class="SingleSound" id="{ae3b91d4-9f27-4d10-9e89-0cb66395d9d0}">
 		<property name="length">
-			<value>0.045999999999999999</value>
+			<value>0.033203125</value>
 		</property>
-		<property name="timelockedOffset">
-			<value>0.099929355184930013</value>
-		</property>
-		<property name="pitch">
-			<value>-2.79999995</value>
-		</property>
-		<relationship name="modulators">
-			<destination>{6b9d13a6-772d-464c-9069-fdb07d367592}</destination>
-		</relationship>
 		<relationship name="audioFile">
-			<destination>{ef2100eb-d77a-4031-9800-5aa08cd6148e}</destination>
+			<destination>{4a3f0606-bfc1-4062-83d4-58c24a3a749f}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{68685d5e-372c-4ce1-9f0b-c837dba19abc}">
 		<property name="name">
-			<value>POP</value>
+			<value>talking_pop</value>
 		</property>
 		<relationship name="effectChain">
 			<destination>{8c7d163f-8204-423d-9118-d211b33e7367}</destination>
@@ -126,14 +120,6 @@
 	</object>
 	<object class="MixerBusPanner" id="{d9810095-3629-4752-ba73-8c89d71fc796}" />
 	<object class="MixerBusFader" id="{6ff6e1a5-9877-4095-8144-fda18eb9b124}" />
-	<object class="RandomizerModulator" id="{6b9d13a6-772d-464c-9069-fdb07d367592}">
-		<property name="nameOfPropertyBeingModulated">
-			<value>pitch</value>
-		</property>
-		<property name="amount">
-			<value>17</value>
-		</property>
-	</object>
 	<object class="MixerBusEffectChain" id="{8c7d163f-8204-423d-9118-d211b33e7367}">
 		<relationship name="effects">
 			<destination>{ba6eeb20-0b5e-45a7-b79b-c0992ef441f4}</destination>
