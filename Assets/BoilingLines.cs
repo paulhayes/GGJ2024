@@ -20,6 +20,7 @@ public class BoilingLines : MonoBehaviour
             index=0;
         }
         m_images[index].enabled=true;
-        
     }
+
+    public Image[] GetImages() => m_images;
 }
