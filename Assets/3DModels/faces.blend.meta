@@ -3,7 +3,17 @@ guid: f463efbe52b68ab4283b9e6c1f156f3c
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ShinyVertCol
+    second: {fileID: 2100000, guid: c91673f16ceacc340aa42ed574042489, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: VetCol
+    second: {fileID: 2100000, guid: 64ff67be221f7354ba96cc1d97334d11, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -43,8 +53,8 @@ ModelImporter:
     importPhysicalCameras: 1
     importVisibility: 1
     importBlendShapes: 1
-    importCameras: 1
-    importLights: 1
+    importCameras: 0
+    importLights: 0
     nodeNameCollisionStrategy: 1
     fileIdsGeneration: 2
     swapUVChannels: 0
