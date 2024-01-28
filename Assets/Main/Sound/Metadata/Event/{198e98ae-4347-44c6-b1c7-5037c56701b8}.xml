@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.01.00">
 	<object class="Event" id="{198e98ae-4347-44c6-b1c7-5037c56701b8}">
+		<property name="color">
+			<value>Red Light 1</value>
+		</property>
 		<property name="name">
 			<value>Mistype</value>
 		</property>
 		<property name="outputFormat">
-			<value>0</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
-			<destination>{26eb23ab-ce76-4728-b6ef-199e661d0c2b}</destination>
+			<destination>{4698c29f-df99-4fa9-a361-9a693aa8301f}</destination>
 		</relationship>
 		<relationship name="mixer">
 			<destination>{e06c2321-dd0a-435d-8883-b95f02444b30}</destination>
@@ -60,7 +63,7 @@
 	<object class="MarkerTrack" id="{e193c0fa-46d3-4ca6-bdfa-0ea0a8b14dd8}" />
 	<object class="GroupTrack" id="{b9299724-5050-449f-a0d9-4be4693abf5b}">
 		<relationship name="modules">
-			<destination>{9a67f460-30c9-4a28-8b64-2a1df759dbd7}</destination>
+			<destination>{e7e78a7f-3a6c-40d9-8f04-c25fd3482e53}</destination>
 		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{9eacb258-bd36-44aa-b500-4e03af012631}</destination>
@@ -68,7 +71,7 @@
 	</object>
 	<object class="Timeline" id="{982f8e1e-1d44-4bf7-ba3c-03a6873d636f}">
 		<relationship name="modules">
-			<destination>{9a67f460-30c9-4a28-8b64-2a1df759dbd7}</destination>
+			<destination>{e7e78a7f-3a6c-40d9-8f04-c25fd3482e53}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{85f34ea3-993a-4724-a8c0-fd07ef2ae61c}">
@@ -88,23 +91,23 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{52e5cd51-023d-4ddc-b117-de18a35ddbf8}" />
-	<object class="SingleSound" id="{9a67f460-30c9-4a28-8b64-2a1df759dbd7}">
+	<object class="SingleSound" id="{e7e78a7f-3a6c-40d9-8f04-c25fd3482e53}">
 		<property name="length">
-			<value>0.10473356009070285</value>
+			<value>0.25</value>
 		</property>
-		<property name="timelockedOffset">
-			<value>0.099957676921916927</value>
-		</property>
-		<property name="pitch">
-			<value>-17</value>
+		<property name="name">
+			<value>mistype</value>
 		</property>
 		<relationship name="audioFile">
-			<destination>{ef2100eb-d77a-4031-9800-5aa08cd6148e}</destination>
+			<destination>{7de13804-a574-40ac-aa5f-7b1807ea8f74}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{9eacb258-bd36-44aa-b500-4e03af012631}">
+		<property name="volume">
+			<value>-4</value>
+		</property>
 		<property name="name">
-			<value>POP</value>
+			<value>mistype</value>
 		</property>
 		<relationship name="effectChain">
 			<destination>{5cbe85a3-c046-4bf6-867d-387b47bfd1be}</destination>
