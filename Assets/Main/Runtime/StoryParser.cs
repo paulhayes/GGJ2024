@@ -23,6 +23,8 @@ public class StoryParser : Singleton<StoryParser>
 
     void OnEnable()
     {
+        m_characterChangeData = null;
+        curSus = 0;
         m_story = new Story( m_text.text );
     }
 
@@ -46,6 +48,8 @@ public class StoryParser : Singleton<StoryParser>
 
     void OnDisable()
     {
+        m_characterChangeData = null;
+        curSus = 0;
         m_story = null;
     }
 
