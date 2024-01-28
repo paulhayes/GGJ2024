@@ -22,18 +22,24 @@ public class TypingUI : MonoBehaviour
 	private void FinishTyping(int i)
 	{
 		if (i < 0)
-		{
-			HideOptions();
-			return;
-		}
-
-		// Spawn bubble
-		var bubble = Instantiate(bubblePrefab, transform);
-		bubble.gameObject.SetActive(true);
-		bubble.transform.position = points[i].position;
-		bubble.Setup(options[i].option.phrase, i == 1 || i == 4);
+			SpawnBubble(points[0], "...");
+		else
+			SpawnBubble(i);
 
 		HideOptions();
+	}
+
+	private void SpawnBubble(int i)
+	{
+		SpawnBubble(points[i], options[i].option.phrase, i == 1 || i == 4);
+	}
+
+	private void SpawnBubble(Transform point, string phrase, bool flip = false)
+	{
+		var bubble = Instantiate(bubblePrefab, transform);
+		bubble.gameObject.SetActive(true);
+		bubble.transform.position = point.position;
+		bubble.Setup(phrase, flip);
 	}
 
 	private void ShowOptions(Option[] optionData)
