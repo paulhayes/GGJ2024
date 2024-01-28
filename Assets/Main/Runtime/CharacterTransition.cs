@@ -36,7 +36,7 @@ public class CharacterTransition : MonoBehaviour
     IEnumerator CharacterAppear(Transform character,CharacterTransitionData characterData)
     {
         if(currentCharactrer){
-            Transition(m_inPosition,m_outPosition,character,m_transitionOutDuration,m_animCurveOut);
+            Transition(m_inPosition,m_outPosition,currentCharactrer,m_transitionOutDuration,m_animCurveOut);
             currentCharactrer.gameObject.SetActive(false);
         }
 

@@ -112,38 +112,38 @@ MonoBehaviour:
   m_inPosition: {fileID: 1137121007482521098}
   m_transitionInDuration: 1.2
   m_transitionOutDuration: 2.4
-  m_waitDuration: 8
+  m_waitDuration: 2
   m_characters:
   - {fileID: 0}
   m_animCurveIn:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 1.0852983
-      outSlope: 1.0852983
+      time: 0.2629969
+      value: 0.006165373
+      inSlope: 0.08920654
+      outSlope: 0.08920654
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 0.14459948
+      outWeight: 0.18677798
     - serializedVersion: 3
-      time: 0.88073295
-      value: 1.0666776
-      inSlope: 0.9174178
-      outSlope: 0.9174178
+      time: 0.92507094
+      value: 1.0264871
+      inSlope: 0.2516163
+      outSlope: 0.2516163
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.07794444
-      outWeight: 0.91250104
+      inWeight: 0.10577976
+      outWeight: 0.33333334
     - serializedVersion: 3
       time: 1
       value: 1
-      inSlope: 0.049018316
-      outSlope: 0.049018316
+      inSlope: -0.6992779
+      outSlope: -0.6992779
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.10550457
+      inWeight: 0.1330275
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
