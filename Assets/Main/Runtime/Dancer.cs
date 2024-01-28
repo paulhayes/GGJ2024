@@ -8,10 +8,18 @@ public class Dancer : MonoBehaviour
     public float duration = .3f;
     public int vibrato = 0;
     public float elasticity = .1f;
+
+    private Vector3 origPos;
+
 	private IEnumerator Start()
 	{
+		SurpriseController.Instance.OnSurprised += Surprise;
+		SurpriseController.Instance.OnOverIt    += Jump;
+
+		origPos = transform.position;
         float secs = Random.Range(0f, duration);
-		yield return new WaitForSeconds(secs);
+	
+        yield return new WaitForSeconds(secs);
         Jump();
 	}
 
@@ -24,5 +32,11 @@ public class Dancer : MonoBehaviour
             .OnComplete(() => Jump())
             .SetEase(Ease.InBounce)
             .SetDelay(secs);
+    }
+
+    void Surprise()
+    {
+        transform.DOKill();
+        transform.position = origPos;
     }
 }

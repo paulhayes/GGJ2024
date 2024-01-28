@@ -2,10 +2,10 @@ using FMOD.Studio;
 using System.Collections;
 using UnityEngine;
 
-public class MusicController : MonoBehaviour
+public class MusicController : Singleton<MusicController>
 {
 	[FMODUnity.EventRef, SerializeField]
-	private string music, ambience, shock;
+	private string music, ambience;
 	private EventInstance musicInstance, ambienceInstance;
 
 	private IEnumerator Start()
@@ -30,16 +30,15 @@ public class MusicController : MonoBehaviour
 		};
 	}
 
-	private void Update()
-	{
-		if (Input.GetKeyDown(KeyCode.Space))
-			Shock();
-	}
-
-	public void Shock()
+	public void Pause()
 	{
 		musicInstance.setPaused(true);
 		ambienceInstance.setPaused(true);
-		AudioSystem.Instance.PlayOneShot(shock);
+	}
+
+	public void Play()
+	{
+		musicInstance.setPaused(false);
+		ambienceInstance.setPaused(false);
 	}
 }
