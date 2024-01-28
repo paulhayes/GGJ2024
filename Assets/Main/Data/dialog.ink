@@ -47,9 +47,9 @@ VAR character = 0
 
 
 ~character=Jerry
-//Whoa there mate, watch where you're going! 
-//Wait - Do I know you? 
-//My name is Jerry, from Accounting.
+Whoa there mate, watch where you're going! 
+Wait - Do I know you? 
+My name is Jerry, from Accounting.
 Where are you from again?
  *  Human Resources
     Ah, y'all are real sensitive nowadays, aren't ya?
@@ -58,38 +58,38 @@ Where are you from again?
  *  Janitorial Services
     Ah! You keep on cleaning those toilets. That's where I spend most of my day!
  *  Accounting
+    ~suspicion+=10
     I haven't seen you around the office?
-    ~suspicion+=10
  *  mistype
-    Hmmm, okay...
     ~suspicion+=10
+    Hmmm, okay...
 
 - Did you hear Janet was caught with her hand in petty cash?
  *  Dumb Move!
-    Crazy right? The first rule of stealing is don't get caught! What can you expect from a pretty blonde like that.
     ~suspicion-=5
+    Crazy right? The first rule of stealing is don't get caught! What can you expect from a pretty blonde like that.
  *  Not Janet
     I know right? She seems like such a little sweetheart... Guess the quiet ones are the naughtiest!
  *  Who?
+    ~suspicion+=10
     Where have you been? This is all everyone on the upper floors keeps talking about!
-    ~suspicion+=10
  *  mistype
-    Hmmm, okay...
     ~suspicion+=10
+    Hmmm, okay...
 
 - Anyway, how are you liking the new tax forms? Pretty cool right? My idea.
  * They suck
-    How dare you?! Those forms are a bureaucratic masterpiece!
     ~suspicion+=10
+    How dare you?! Those forms are a bureaucratic masterpiece!
  * What forms?
-    Didn't you receive the newsletter update? Strange...
     ~suspicion+=20
+    Didn't you receive the newsletter update? Strange...
  * Loving them!
-    Of course you are, Those forms are a piece of bureaucratic beauty!
     ~suspicion-=10
+    Of course you are, Those forms are a piece of bureaucratic beauty!
  *  mistype
-    Hmmm, okay...
     ~suspicion+=10   
+    Hmmm, okay...
     
 - Well then! I'm going to grab some more beer and checkout the babes from marketing, bye!
 
@@ -103,8 +103,8 @@ Where are you from again?
  * Getting complaints
    So many complaints! We get sent all the printed images, and I of course have to go through all of them to see if they belong to the same person!
  *  mistype
-    Are you feeling well love? You're slurring your words...
     ~suspicion+=10  
+    Are you feeling well love? You're slurring your words...
     
 //-----------------------Char change-----------------------
 ~character=Giles
@@ -132,18 +132,19 @@ Where are you from again?
 //~character=Felicity
 - I can't believe the CEO brought his 12 year old son to the party. I guess it was his turn to look after the little rascal this weekend.
 * Spoiled brat
+  ~suspicion-=10
   Oh my god, yes!
   I couldn't believe it when I heard that he spent my annual salary on VBucks...
-  ~suspicion-=10
-* Sweet childAre you crazy? You think that spoiled brat is sweet?
-  You haven't been here long have you?
+* Sweet child
   ~suspicion+=10
+  Are you crazy? You think that spoiled brat is sweet?
+  You haven't been here long have you?
 * Demon spawn
-  Can you believe he just asked me to drive him home? Who does he think he is?
   ~suspicion-=10
+  Can you believe he just asked me to drive him home? Who does he think he is?
  * mistype
-   Ugh, are you drunk? Gross!
    ~suspicion+=10
+   Ugh, are you drunk? Gross!
 
 //-----------------------Char change-----------------------
 //~character=Tim 
@@ -155,12 +156,12 @@ Where are you from again?
 ~character=Jimmy
 - I can't believe this sandwich theft keeps happening,! I'll have to write an email to HR again, ugh...
 * What's up with the fridge?
-  What do you mean what's up?! We have a very serious problem of sandwich thievery!!
   ~suspicion+=20
-
+  What do you mean what's up?! We have a very serious problem of sandwich thievery!!
+  
 * Justice for the sandwich!
-  Yes! I demand the culprit be brought to justice!
   ~suspicion-=20
+  Yes! I demand the culprit be brought to justice!
 
 //-----------------------Char change-----------------------
 //~character=Miriam
