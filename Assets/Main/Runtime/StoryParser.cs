@@ -11,9 +11,11 @@ public class StoryParser : Singleton<StoryParser>
     public event Action<CharacterTransitionData> CharacterChangeEvent;
     public event Action<DialogSnippet> CharacterDialogEvent;
     public event Action ConversationChoice;
-    public event Action<int> SuspicionChangeEvent;
-    
-    [SerializeField] TextAsset m_text;
+	public event Action<int> SuspicionChangeEvent;
+	public event Action<int> SuspicionAdjustEvent;
+
+	private int curSus = 0;
+	[SerializeField] TextAsset m_text;
 
     Story m_story;
 
@@ -23,11 +25,18 @@ public class StoryParser : Singleton<StoryParser>
     {
         m_story = new Story( m_text.text );
         m_story.ObserveVariable(SUS_KEY,(varName,val)=>{
-            Debug.Log($"{varName} changed to {val}");
-            SuspicionChangeEvent?.Invoke((int)val);
-            if((int)val>=100){
+            int sus = (int)val;
+            int adj = sus-curSus;
+			Debug.Log($"{varName} changed to {val} (adj of {adj})");
+            
+            SuspicionChangeEvent?.Invoke(sus);
+			SuspicionAdjustEvent?.Invoke(adj);
+
+			if (sus >= 100) {
                 m_story.ChoosePathString("fail");
             }
+
+            curSus = sus;
         });
         m_story.ObserveVariable("character",(varName,val)=>{
             Debug.Log($"{varName} changed to {val}");
