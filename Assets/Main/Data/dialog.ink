@@ -176,18 +176,18 @@ Where are you from again?
 - Oh hi! I don't think we've met yet! 
 - My name is Bradley! 
 - I've just begun my internship here!
- * Ok...
+ * Okay...
     Yeah, and you know, I already feel so helpful! 
     Everyone keeps asking me for the most random stuff, they really must like my work!
-    Even the CEO once asked me to accompany his child to a gaming tournament...
+    The CEO even asked me to accompany his child to a gaming tournament once!
     That's trust right there!
  * Don't talk to me
     ~suspicion+=5
     Oh uh ok, is this like a hazing thing? 
     Everyone keeps telling me that ahaha....
- * Intern?
-    Yes! Can you believe it? this company is amazing! 
-    Such productive work, you really feel like you're changing things in the world... 
+ * Internship? Neat.
+    Yes! Can you believe it? This company is amazing! 
+    Such productive work. You really feel like you're changing things in the world... 
     You know... with the widgets we make and all... those are real helpful!
 
 - Anyway, what department are you on? 
@@ -196,19 +196,19 @@ Where are you from again?
  * Intern!
     ~suspicion+=20
     That is definitely odd... 
-    I don't think we've had any new interns since we were hired! 
+    I haven't heard of any new interns since they hired Rebecca and I...
     Weird...
- * Accounting
+ * I'm in accounting
     ~suspicion-=10  
     Oh! What are your thoughts on the new tax forms? 
-    Jerry keeps bragging about them, hope someday I can actually touch files...
+    Jerry keeps bragging about them. I hope one day I'll be able to do work like that.
  * Don't work here
     ~suspicion+=30
     Aahahah very funny sir! 
     Like someone would just walk in from the street and join a random party! 
-    ahahaa...ahah...uh...
+    hahaa... ahah... uh...
 
-- Oh sorry give me a second, Jerry just asked me to go grab more beer for the bar!
+- Oh sorry give me a second. Jerry just asked me to go grab more beer for the bar!
 
 //-----------------------Char change-----------------------
 ~character=Rebbeca
@@ -217,14 +217,14 @@ Where are you from again?
 - I'm Rebbeca by the way. Also an intern.
  * He's a bit much
     ~suspicion-=10 
-    He's crazy, this job suuucks!
+    He's crazy! This job suuucks!
+    Some kind of Stockholm syndrome for sure.
     I swear to god I can't wait to for this internship to be over and done with!
- *interns multiplying
+ * Interns multiplying
     Ahaha good one! 
     Trust me, I hate this more than you do.
 
-- Did you hear Brad, they hooked the sucker for sure!
-- We're getting fucked over here, doing all the grunt work for shit pay?
+- They're using us. We do all the grunt work, yet we get paid in pence?
 - They even have me driving the CEO's son sometimes...
  * Quit
     ~suspicion+=10
@@ -235,20 +235,19 @@ Where are you from again?
  * Complain
     ~suspicion+=10
     Are you sure you work here? 
-    Do you really believe HR will do anything about this...
-
+    HR would never do anything about this...
+    
 - I'm going to go join the rest of the intern crew in the bathroom and smoke a doobie... 
-- You know where to find us if you're down.
+- You know where to find us if you're down
 - Bye!
 
 //-----------------------Char change----------------------
 ~character=James
 - I can't believe the CEO brought his 12 year old son to the party. 
-- He's such a little shit. 
  * Spoiled brat
     ~suspicion-=10
     Oh my god, yes!
-    I couldn't believe it when I heard that he spent my annual salary on VBucks...
+    I couldn't believe it when I heard that he spent my annual salary on that video game...
  * Sweet child
     ~suspicion+=10
     Are you crazy? You think that spoiled brat is sweet?
@@ -267,7 +266,7 @@ Where are you from again?
 - Heeey man -hic- how you doin?
  * You good?
     ~suspicion-=5
-    Yeah man, I'm greaa -hic- aat!
+    Yeah man, I'm greaa-hic-aat!
  * Heeey!
     Ehehe hey... do you know where my nephew went? I was s'posed to drive him to some place called fortnite?
  * Want water?
@@ -277,26 +276,46 @@ Where are you from again?
     Nah man, I've got to danceee! I can feel the music in my bones!
     
 - Hmmm, what floor you on? Don't think I've seen your face before...
+ * Don't work here
+    ~suspicion-=5
+    Dude, me neither. Cheers!
+ * I don't know
+    I get you! This building is so big it's easy to get lost.
+ * Yours
+    I'm so sorry, I didn't mean to be rude, I'm not good with faces.
 
+- So, how are you enjoying the free food and open bar?
+ * Great!
+    Free food always tastes the best!
+ * No quiche
+    Oh shoot! I was supposed to get the quiche...
+ * Needs more wine!
+    Right?
+    I swear there was more wine there before I drank it.
 
+Oh no!
+My cup is empty again, how does this keep happening? 
+Bye!
+    
 //-----------------------Char change-----------------------
 ~character=Jimmy
 
-- I can't believe this sandwich theft keeps happening,! I'll have to write an email to HR again, ugh...
- * The fridge?
+- I can't believe this sandwich theft keeps happening! I'll have to write an email to HR again, ugh...
+ * What's up?
     ~suspicion+=10
-    What do you mean what's up?! We have a very serious problem of sandwich thievery!!
- * Tim? 
+    What do you mean what's up?! We have a very serious problem of sandwich thievery!
+ * Maybe Tim? 
     Do you think he's behind this?! He does have little rat thief hands...
  * Justice for the sandwich!
     ~suspicion-=10
     Yes! I demand the culprit be brought to justice!
 
-- Can you believe Margaret from HR told me to it wasn't that big of a deal? She's crazy!
+- Can you believe Margaret from HR told me, it wasn't that big of a deal? She's crazy!
  * Overreacting
     ~suspicion+=20
-    Overreacting?! I'm notoverreacting! It's much more than that! you don't take a man's sandwich like that!
- * Tim?
+    Overreacting?! I'm not overreacting! It's much more than that! 
+    You don't take a man's sandwich like that!
+ * Maybe Tim?
     ~suspicion-=5
     Yeah! I think I WILL ask Tim, mighteven smell his breath, see if it smells like turkey
  * Crazy
@@ -306,14 +325,15 @@ Where are you from again?
 - They really thought having turkey mini quiches here would distract me from what really matters! Fools!
  * Mini quiches?
     Oh, I've eaten the last 20, my bad...
- * It matters ?
+ * It matters?
     ~suspicion+=10
     We've been over this! You don't play with a man's food!
- * Fools!
+ * Corruption!
     ~suspicion-=10
-    You're right mate!They think we can't fight back against this oppressive system!
+    You're right! They think we can't fight back against this oppressive system!
+    This goes all the way to the top!
  * Turkey sucks!
-    ~suspicion+=10
+    ~suspicion+=11
     Blasphemy! I'll make a complaint to HR about this!
 
 - Don't be fooled, they're only having this party to keep us quiet about our fridge rights! I'm going to go find someone from HR!
@@ -331,7 +351,7 @@ Where are you from again?
     ~suspicion-=10
     That's right, the best damn widgets in the world, and don't you forget it
  * Photocopiers?
-    ~suspicion+=30
+    ~suspicion+=20
     What are you talking about! We make widgets you idiot! Get out of my sight, before I fire you!
 
 //-----------------------Char change-----------------------
@@ -354,24 +374,24 @@ Where are you from again?
 ~character=Miriam
 
 - And who might you be? I know everyone in this company.
- * Tim?
-    ~suspicion+=10
-    He's a moron, But I don't thinke he would hire someone without consulting me first!
- * Gile's Driver
+ * Tim hired me
+    Oh Tim... 
+    Okay, carry on
+ * Driver
     ~suspicion+=5
-    My brother finally caved and hired a personal driver for the brat? 
-Seems unlikely...
+    So, my brother finally caved and hired a personal driver for the brat? 
+    Seems unlikely...
  * Janitor
     I see! Well I don't really know the whole janitorial services team...
- * New intern?
-    ~suspicion+=30
+ * Intern?
+    ~suspicion+=20
     Are you asking me if you're an intern here? That's definitely a bad way to about it.
  * Catering
     ~suspicion+=5
     Without a uniform? What firm did we hire?
 
 === fail ===
-- OMG I don't think you work here at all!  I'm calling secuirty.
+- I don't think you work here at all! I'm calling secuirty.
 
 
 -> END
