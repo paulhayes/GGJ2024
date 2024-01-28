@@ -429,11 +429,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6217759255835033507, guid: d8817b5e262b40e4d8540c0b8aa8b2ef,
-        type: 3}
-      propertyPath: music
-      value: event:/Music/Main theme
-      objectReference: {fileID: 0}
     - target: {fileID: 6250835823352777978, guid: d8817b5e262b40e4d8540c0b8aa8b2ef,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -620,12 +615,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3934562000447251908, guid: 24c12370d9a3f2d49b31d84c4593b3ce,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 70ec2f6ba8eec584aa25cb0135180708,
-        type: 3}
     - target: {fileID: 5981722941264041898, guid: 24c12370d9a3f2d49b31d84c4593b3ce,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -640,16 +629,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ConversationState
-      objectReference: {fileID: 0}
-    - target: {fileID: 8341420336210414895, guid: 24c12370d9a3f2d49b31d84c4593b3ce,
-        type: 3}
-      propertyPath: typeSFX
-      value: event:/SFX/POP
-      objectReference: {fileID: 0}
-    - target: {fileID: 8341420336210414895, guid: 24c12370d9a3f2d49b31d84c4593b3ce,
-        type: 3}
-      propertyPath: mistypeSFX
-      value: event:/SFX/Mistype
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

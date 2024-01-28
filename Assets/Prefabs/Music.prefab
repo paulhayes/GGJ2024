@@ -44,3 +44,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d37811a994d37a41ad26e7c2935f6c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  music: event:/Music/Main theme

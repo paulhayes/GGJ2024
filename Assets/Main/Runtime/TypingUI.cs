@@ -21,6 +21,12 @@ public class TypingUI : MonoBehaviour
 
 	private void FinishTyping(int i)
 	{
+		if (i < 0)
+		{
+			HideOptions();
+			return;
+		}
+
 		// Spawn bubble
 		var bubble = Instantiate(bubblePrefab, transform);
 		bubble.gameObject.SetActive(true);

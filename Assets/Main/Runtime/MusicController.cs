@@ -11,6 +11,7 @@ public class MusicController : MonoBehaviour
 	{
 		musicInstance = AudioSystem.Instance.CreateInstance(music);	
 		musicInstance.start();
+		musicInstance.setVolume(.15f);
 
 		StoryParser.Instance.CharacterChangeEvent += _ =>
 		{

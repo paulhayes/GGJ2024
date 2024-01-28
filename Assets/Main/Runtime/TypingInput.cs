@@ -10,6 +10,7 @@ public class TypingInput : Singleton<TypingInput>
 
 	public event Action<Option[]> OnStartTyping;
 	public event Action<int> OnFinishedTyping;
+	public event Action OnType;
 	public event Action OnMistype;
 
 	[FMODUnity.EventRef, SerializeField]
@@ -30,6 +31,7 @@ public class TypingInput : Singleton<TypingInput>
 			TimeLeft -= Time.deltaTime;
 			string input = Input.inputString.ToLower();
 			bool mistype = true;
+			bool finished= false;
 
 			if (string.IsNullOrEmpty(input))
 			{
@@ -45,16 +47,26 @@ public class TypingInput : Singleton<TypingInput>
 					mistype = false;
 
 				if (option.IsFinished())
-					yield break;
+				{
+					finished = true;
+					break;
+				}
 			}
 
-            if (mistype)
-            {
-				OnMistype?.Invoke();
+			if (mistype)
+			{
 				print("TYPO!");
+				OnMistype?.Invoke();
 				AudioSystem.Instance.PlayOneShot(mistypeSFX);
 			}
-			else AudioSystem.Instance.PlayOneShot(typeSFX);
+			else
+			{
+				OnType?.Invoke();
+				AudioSystem.Instance.PlayOneShot(typeSFX);
+			}
+
+			if (finished)
+				yield break;
 
 			yield return null;
 		}
