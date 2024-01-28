@@ -33,9 +33,12 @@ public class SpeechBubble : MonoBehaviour
 		while (idx <= dialogue.text.Length) 
 		{
 			text.text = dialogue.text.Substring(0, idx++);
-			yield return new WaitForSeconds(1f/lettersPrSec);			
+			yield return new WaitForSeconds(1f/lettersPrSec);					
 		}
-		yield return new WaitForSeconds(dialogue.text.Split(' ').Length/2);
+		//yield return new WaitForSeconds(dialogue.text.Split(' ').Length/2);
+		while( !Input.anyKeyDown ){
+			yield return null;
+		}
 		dialogue.complete=true;
 	}
 }

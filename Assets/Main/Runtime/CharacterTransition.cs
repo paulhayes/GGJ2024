@@ -9,7 +9,9 @@ public class CharacterTransition : MonoBehaviour
     [SerializeField] Transform m_outPosition;
     [SerializeField] Transform m_inPosition;
 
-    [SerializeField] float m_duration;
+    [SerializeField] float m_transitionInDuration = 1.2f;
+    [SerializeField] float m_transitionOutDuration = 2.4f;
+    [SerializeField] float m_waitDuration = 8f;
 
     [SerializeField] Transform[] m_characters;
 
@@ -34,14 +36,14 @@ public class CharacterTransition : MonoBehaviour
     IEnumerator CharacterAppear(Transform character,CharacterTransitionData characterData)
     {
         if(currentCharactrer){
-            Transition(m_inPosition,m_outPosition,character,m_duration,m_animCurveOut);
+            Transition(m_inPosition,m_outPosition,character,m_transitionOutDuration,m_animCurveOut);
             currentCharactrer.gameObject.SetActive(false);
         }
 
-        yield return new WaitForSeconds(8f);
+        yield return new WaitForSeconds(m_waitDuration);
 
         character.gameObject.SetActive(true);
-        yield return Transition(m_outPosition,m_inPosition,character,m_duration,m_animCurveIn);
+        yield return Transition(m_outPosition,m_inPosition,character,m_transitionInDuration,m_animCurveIn);
         currentCharactrer = character;
         characterData.complete = true;
     }
@@ -49,6 +51,7 @@ public class CharacterTransition : MonoBehaviour
     IEnumerator Transition(Transform startTransform, Transform endTransform, Transform target, float duration, AnimationCurve animCurve)
     {
         float elapsed = 0;
+        target.position = startTransform.position;
         while(elapsed<1){
             yield return null;
             elapsed+=Time.deltaTime/duration;
@@ -56,7 +59,7 @@ public class CharacterTransition : MonoBehaviour
                 elapsed=1;
             }
             Debug.Log(elapsed);
-            target.position = Vector3.Lerp(startTransform.position,endTransform.position,animCurve.Evaluate(elapsed));
+            target.position = Vector3.LerpUnclamped(startTransform.position,endTransform.position,animCurve.Evaluate(elapsed));
             target.rotation = Quaternion.Lerp(startTransform.rotation,endTransform.rotation,animCurve.Evaluate(elapsed));
 
         }

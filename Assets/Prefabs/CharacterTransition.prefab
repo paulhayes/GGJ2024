@@ -110,7 +110,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_outPosition: {fileID: 3839497699435361125}
   m_inPosition: {fileID: 1137121007482521098}
-  m_duration: 2
+  m_transitionInDuration: 1.2
+  m_transitionOutDuration: 2.4
+  m_waitDuration: 8
   m_characters:
   - {fileID: 0}
   m_animCurveIn:
@@ -119,20 +121,29 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 0
       value: 0
-      inSlope: 0
-      outSlope: 0
+      inSlope: 1.0852983
+      outSlope: 1.0852983
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 0
+      outWeight: 0.14459948
+    - serializedVersion: 3
+      time: 0.88073295
+      value: 1.0666776
+      inSlope: 0.9174178
+      outSlope: 0.9174178
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.07794444
+      outWeight: 0.91250104
     - serializedVersion: 3
       time: 1
       value: 1
-      inSlope: 0
-      outSlope: 0
+      inSlope: 0.049018316
+      outSlope: 0.049018316
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0
+      inWeight: 0.10550457
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
@@ -143,18 +154,18 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 0
       value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
       weightedMode: 0
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
       time: 1
       value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
       weightedMode: 0
       inWeight: 0
       outWeight: 0
