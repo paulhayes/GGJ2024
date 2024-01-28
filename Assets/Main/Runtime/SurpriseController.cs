@@ -10,11 +10,20 @@ public class SurpriseController : Singleton<SurpriseController>
 	[FMODUnity.EventRef, SerializeField]
 	private string surprise;
 
-	public void Update()
+	private void Start()
 	{
-		if (Input.GetKeyDown(KeyCode.Space))
-			Surprise();
+		StoryParser.Instance.SuspicionAdjustEvent += adj => 
+		{
+			if (adj >= 10)
+				Surprise(); 
+		};
 	}
+
+	//public void Update()
+	//{
+	//	if (Input.GetKeyDown(KeyCode.Space))
+	//		Surprise();
+	//}
 
 	public void Surprise()
 	{
