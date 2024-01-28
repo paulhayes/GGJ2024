@@ -17,8 +17,8 @@ public class MusicController : Singleton<MusicController>
 
 		musicInstance.start();
 		ambienceInstance.start();
-		musicInstance.setVolume(.15f);
-		ambienceInstance.setVolume(.5f);
+		//musicInstance.setVolume(.15f);
+		//ambienceInstance.setVolume(.5f);
 
 		StoryParser.Instance.CharacterChangeEvent += _ =>
 		{
