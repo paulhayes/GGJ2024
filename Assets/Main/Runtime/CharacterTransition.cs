@@ -18,7 +18,7 @@ public class CharacterTransition : MonoBehaviour
     [SerializeField] AnimationCurve m_animCurveIn;
     [SerializeField] AnimationCurve m_animCurveOut;
 
-    Transform currentCharactrer;
+    Transform m_currentCharactrer = null;
     void Start()
     {
         foreach(var character in m_characters){
@@ -35,16 +35,16 @@ public class CharacterTransition : MonoBehaviour
     
     IEnumerator CharacterAppear(Transform character,CharacterTransitionData characterData)
     {
-        if(currentCharactrer){
-            Transition(m_inPosition,m_outPosition,currentCharactrer,m_transitionOutDuration,m_animCurveOut);
-            currentCharactrer.gameObject.SetActive(false);
+        if(m_currentCharactrer){
+            yield return Transition(m_inPosition,m_outPosition,m_currentCharactrer,m_transitionOutDuration,m_animCurveOut);
+            m_currentCharactrer.gameObject.SetActive(false);
         }
 
         yield return new WaitForSeconds(m_waitDuration);
 
         character.gameObject.SetActive(true);
         yield return Transition(m_outPosition,m_inPosition,character,m_transitionInDuration,m_animCurveIn);
-        currentCharactrer = character;
+        m_currentCharactrer = character;
         characterData.complete = true;
     }
 
