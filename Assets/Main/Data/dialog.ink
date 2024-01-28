@@ -104,9 +104,6 @@ Where are you from again?
  * Inappropriate...
     ~suspicion+=10 
     Oh, apologies, nobody's ever complained to my face...
- * mistype
-    ~suspicion+=10
-    Couldn't quite hear you...
 
 - It's been a crazy month, I'm happy we get this party to relax a bit!
  * Deserved!
@@ -116,15 +113,11 @@ Where are you from again?
  * From what?
     ~suspicion+=10
     I'll have you know we are very busy down at HR! Cheeky!
- *  mistype
-    ~suspicion+=10
-    Didn't understand a single word love!
 
 - Well, keep on the lookout for anyone sitting on a printer won't you love? Cheers!
 
 //-----------------------Char change-----------------------
 ~character=Giles
-
 - Are you the driver? Take me home right now!
  * No?
     ~suspicion+=20
@@ -132,14 +125,13 @@ Where are you from again?
  * You are?
     ~suspicion+=20
     What do you mean? I'm Giles and my daddy is the boss of this company!
- * Not a driver
+ * I'm not a driver
     Ugh that sucks! A new hotdog skin just dropped and I have a bunch of VBucks burning a whole in my pocket!
  * What?
     ~suspicion+=10
     Man did they hire a "special guy" again?
  * mistype
-    ~suspicion+=10
-    Ugh, are you drunk?
+    Ugh, are you drunk? Gross!
     
 - I can't believe I have to be here! I could be ranking up in fortnite right now!
  * Fortnite
@@ -153,25 +145,18 @@ Where are you from again?
     And walk home? Are you actually insane or just drunk?
  * Ask your dad?
     Don't you think I've thought of that? I can't find him anywhere!
- * mistype
-    ~suspicion+=10
-    Maybe you should stop drinking...
 
 - I  also demanded they get turkey quiches for today and there's none!
  * Quiches?
-    Of course you wouldn't know what a  quiche is. A quiche is a... it's like a type of... well it doesn't matter! It's delicious!
+    Of course you wouldn't know what a  quiche is. A quiche is a... it's like a type of...  well it doesn't matter! It's delicious!
  * Sucks to be you!
     ~suspicion+=30
     You think you're funny? My father will hear about this!
- * mistype
-    ~suspicion+=10
-    Ok I didn't understand anything you've said!
 
 - I'm going to check if my dad let's me use his computer, for real for real no cap.
 
 //-----------------------Char change-----------------------
 ~character=Bradley
-
 - Oh hi! I don't think we've met yet! My name is Bradley! I've just begun my internship here!
  * Ok...
     Yeah, and you know, I already really love it here! Everyone is like a big warm family and it's just so great!
@@ -180,9 +165,6 @@ Where are you from again?
     Oh uh ok, is this like a hazing thing? Everyone keeps telling me that ahaha....
  * Intern?
     Yes! Can you believe it? this company is amazing! Such productive work, you really feel like you're changing things in the world... You know... with the widgets we make and all...
- * mistype
-    ~suspicion+=10
-    Oh do you need some water?
 
 - Anyway, what department are you on? Don't think I've seen your face around. I'm good with faces you know?
  * Janitor
@@ -196,9 +178,6 @@ Where are you from again?
  * Don't work here
     ~suspicion+=30
     Aahahah very funny sir! Like someone would just walk in from the street and join a random party! ahahaa...ahah..uh
- * mistype
-    ~suspicion+=10
-    Sorry, didn't catch what you said?
 
 - Oh sorry give me a second, Jerry just asked me to go grab more beer for the bar!
 
@@ -212,9 +191,6 @@ Where are you from again?
 I swear to god I can't wait to for this internship to be over and done with!
  *interns multiplying?
     Ahaha good one! Trust me, I hate this more than you do.
- * mistype
-    ~suspicion+=10
-    You good?
 
 - Did you hear Brad, they hooked the sucker for sure!
 - We're getting fucked over here, doing all the grunt work for shit pay?
@@ -227,35 +203,26 @@ I swear to god I can't wait to for this internship to be over and done with!
  * Complain?
     ~suspicion+=10
     Are you sure you work here? Do you believe HR will do anything about this?
-  * mistype
-    ~suspicion+=10
-    Nope, didn't get it...
 
 - I'm going to go join the rest of the intern crew in the bathroom and smoke a doobie... You know where to find us if you're down.
 
 //-----------------------Char change----------------------
 ~character=James
-
 - I can't believe the CEO brought his 12 year old son to the party. I guess it was his turn to look after the little rascal this weekend.
- * Spoiled brat
-    ~suspicion-=10
-    Oh my god, yes!
-    I couldn't believe it when I heard that he spent my annual salary on VBucks...
- * Sweet child
-    ~suspicion+=10
-    Are you crazy? You think that spoiled brat is sweet?
-    You haven't been here long have you?
- * Demon spawn
-    ~suspicion-=10
-    Can you believe he just asked me to drive him home? Who does he think he is?
+* Spoiled brat
+  ~suspicion-=10
+  Oh my god, yes!
+  I couldn't believe it when I heard that he spent my annual salary on VBucks...
+* Sweet child
+  ~suspicion+=10
+  Are you crazy? You think that spoiled brat is sweet?
+  You haven't been here long have you?
+* Demon spawn
+  ~suspicion-=10
+  Can you believe he just asked me to drive him home? Who does he think he is?
  * mistype
-    ~suspicion+=10
-    Drunk already? Damn.
-   
-- 22
- * mistype
-    ~suspicion+=10
-    No clue what just came out your mouth.
+   ~suspicion+=10
+   Ugh, are you drunk? Gross!
 
 
 //-----------------------Char change-----------------------
@@ -272,9 +239,6 @@ I swear to god I can't wait to for this internship to be over and done with!
     Water?! Are you crazy? Everyone knows I only drink buckfast!
  * Sit?
     Nah man, I've got to danceee! I can feel the music in my bones!
- * mistype
-    ~suspicion+=10
-    Am I supeeer drunk or was that gibberish?
     
 - Hmmm, what floor you on? Don't think I've seen your face before...
 
@@ -291,9 +255,6 @@ I swear to god I can't wait to for this internship to be over and done with!
  * Justice for the sandwich!
     ~suspicion-=10
     Yes! I demand the culprit be brought to justice!
- * mistype
-    ~suspicion+=10
-    Speak clearly man!
 
 - Can you believe Margaret from HR told me to it wasn't that big of a deal? She's crazy!
  * Overreacting
@@ -301,13 +262,10 @@ I swear to god I can't wait to for this internship to be over and done with!
     Overreacting?! I'm notoverreacting! It's much more than that! you don't take a man's sandwich like that!
  * Tim?
     ~suspicion-=5
-    Yeah! I think I WILL ask Tim, mighteven smell his breath, see if it smells like turkey!
+    Yeah! I think I WILL ask Tim, mighteven smell his breath, see if it smells like turkey
  * Crazy
     ~suspicion-=5
     Finally, someone that agrees with me! We deserve to be heard!
- * mistype
-    ~suspicion+=10
-    Don't slur your words!
 
 - They really thought having turkey mini quiches here would distract me from what really matters! Fools!
  * Mini quiches?
@@ -321,9 +279,6 @@ I swear to god I can't wait to for this internship to be over and done with!
  * Turkey sucks!
     ~suspicion+=10
     Blasphemy! I'll make a complaint to HR about this!
- * mistype
-    ~suspicion+=10
-    Didn't understand you!
 
 - Don't be fooled, they're only having this party to keep us quiet about our fridge rights! I'm going to go find someone from HR!
 
@@ -342,14 +297,10 @@ I swear to god I can't wait to for this internship to be over and done with!
  * Photocopiers?
     ~suspicion+=30
     What are you talking about! We make widgets you idiot! Get out of my sight, before I fire you!
- * mistype
-    ~suspicion+=10
-    Boy, you've been partying too hard!
 
 //-----------------------Char change-----------------------
 ~character=Sarah
 
-- Did Jimmy go through here? Please help me hide!
 
 
 //-----------------------Char change-----------------------
