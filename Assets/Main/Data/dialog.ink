@@ -50,7 +50,7 @@ Where are you from again?
     Ah! You keep on cleaning those toilets. That's where I spend most of my day!
  *  Accounting
     ~suspicion+=10
-    I haven't seen you around the office?
+    I haven't seen you around the office, are you pulling my leg?
  *  mistype
     ~suspicion+=10
     Hmmm, okay...
