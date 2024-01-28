@@ -57,11 +57,11 @@ Where are you from again?
     Hmmm, okay...
 
 - Did you hear Janet was caught with her hand in petty cash?
- *  Dumb Move!
-    ~suspicion-=5
+ *  Bad move!
     Crazy right? The first rule of stealing is don't get caught! 
     What can you expect from a silly blonde like that.
- *  Not Janet
+ *  Surely not Janet!
+    ~suspicion-=5
     I know right? She seems like such a little sweetheart... 
     Guess the quiet ones are the naughtiest!
  *  Who?
@@ -81,12 +81,12 @@ Where are you from again?
  * What forms?
     ~suspicion+=20
     Didn't you receive the newsletter update? Strange...
- * Loving them!
+ * I love them to death!
     ~suspicion-=10
-    Of course you are, those forms are a piece of bureaucratic beauty!
+    Of course you do! Those forms are a piece of bureaucratic beauty!
  *  mistype
     ~suspicion+=10   
-    Couldn't quite catch that...
+    Sorry, I didn't quite catch that...
     
 - Well then! I'm going to grab some more beer and checkout the babes from marketing, bye!
 
@@ -110,6 +110,7 @@ Where are you from again?
  * Inappropriate...
     ~suspicion+=10 
     Oh, apologies, nobody's ever complained to my face...
+    
 - It's been a crazy month, I'm happy we get this party to relax a bit!
  * Deserved!
     ~suspicion-=10
@@ -119,51 +120,55 @@ Where are you from again?
     ~suspicion+=10
     I'll have you know we are very busy down at HR! Cheeky!
 
-- Well, keep on the lookout for anyone sitting on a printer won't you love? Cheers!
+- Well, keep on the lookout for anyone sitting on a printer, won't you love? Cheers!
 
 //-----------------------Char change-----------------------
 ~character=Giles
 - Are you the driver? 
 - Take me home right now!
- * No?
-    ~suspicion+=20
+ * Why?
+    ~suspicion+=15
     Do you know who my daddy is? I'll have you fired!
- * You are?
-    ~suspicion+=20
+ * And you are?
+    ~suspicion+=15
     What do you mean? I'm Giles and my daddy is the boss of this company!
- * I'm not a driver
+ * I'm not the driver
     Ugh that sucks! 
     A new hotdog skin just dropped and I have a bunch of VBucks burning a whole in my pocket!
  * What?
-    ~suspicion+=10
+    ~suspicion+=5
     Man did they hire a "special guy" again?
  * mistype
-    Ugh, are you drunk? Gross!
+    ~suspicion+=5
+    Can't you talk?
     
 - I can't believe I have to be here! 
 - I could be ranking up in fortnite right now!
- * Fortnite
+ * Fortnite?
     ~suspicion+=10
-    You don't know fortnite? Are you like, a boomer or something?
- * Ranking
+    You don't know Fortnite? Are you like a boomer or something?
+ * What's your rank?
     I'm silver 3, I'm going to go pro for sure!
-    Daddy's going to buy an e-sports team for my birthday!
+    Daddy is going to buy an e-sports team for my birthday!
  * Leave?
     ~suspicion+=10
     And walk home? Are you actually insane or just drunk?
  * Ask your dad?
     Don't you think I've thought of that? I can't find him anywhere!
 
-- I  also demanded they get turkey quiches for today and there's none!
+- Also I demanded they get turkey quiches for today and there are none!
  * Quiches?
+    ~suspicion+=10
     Of course you wouldn't know what a  quiche is. 
     A quiche is a... it's like a type of... well it doesn't matter! 
     It's delicious!
- * Sucks to be you!
-    ~suspicion+=30
+ * Too bad!
+    ~suspicion+=20
     You think you're funny? My father will hear about this!
-
-- I'm going to check if my dad let's me use his computer, bye.
+ * I saw some over there
+    Oh cool, thanks!
+    
+- I'm going to check if my dad will let me use his computer. Bye.
 
 //-----------------------Char change-----------------------
 ~character=Bradley
@@ -174,7 +179,7 @@ Where are you from again?
  * Ok...
     Yeah, and you know, I already feel so helpful! 
     Everyone keeps asking me for the most random stuff, they really must like my work!
-    Even the CEO has asked me once to accompany his child to some type of gaming tournament...
+    Even the CEO once asked me to accompany his child to a gaming tournament...
     That's trust right there!
  * Don't talk to me
     ~suspicion+=5
