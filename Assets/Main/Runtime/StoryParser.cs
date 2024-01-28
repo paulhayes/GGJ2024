@@ -4,9 +4,8 @@ using Ink.Runtime;
 using System;
 using System.Linq;
 using Ink.UnityIntegration;
-using Unity.VisualScripting;
 
-public class StoryParser : MonoBehaviour
+public class StoryParser : Singleton<StoryParser>
 {
     public const string SUS_KEY = "suspicion";
     public event Action<CharacterTransitionData> CharacterChangeEvent;
@@ -15,26 +14,10 @@ public class StoryParser : MonoBehaviour
     public event Action<int> SuspicionChangeEvent;
     
     [SerializeField] TextAsset m_text;
-    
 
     Story m_story;
 
     CharacterTransitionData m_characterChangeData = null;
-
-    public static StoryParser Instance {
-        private set;
-        get;
-    }
-
-    void Awake()
-    {
-        Instance = this;
-    }
-
-    void OnDestroy()
-    {
-        Instance = null;
-    }
 
     public IEnumerator Start()
     {

@@ -3548,6 +3548,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8620571597420817795, guid: 550ab7cdbefb84a40931136157cd0b12,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3671,6 +3676,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: TypingUICanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 8783522207733740036, guid: 76a4a775f1825c24fa2f3da62ae7d5a7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
