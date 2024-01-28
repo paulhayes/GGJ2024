@@ -18,12 +18,15 @@ public class PlayerAnimator : MonoBehaviour
 		TypingInput.Instance.OnType += Instance_OnType;
 		TypingInput.Instance.OnMistype += Instance_OnMistype;
 	}
+	
+	private void Update()
+	{
+		transform.position = Vector3.MoveTowards(transform.position, origPos, Time.deltaTime * .5f);	
+	}
 
 	private void Instance_OnType()
 	{
-		transform.DOKill();
-		transform.position = origPos;
-		transform.DOPunchPosition(Vector3.up * talkHeight, talkDuration);
+		transform.DOMoveY(transform.position.y + talkHeight, talkDuration).SetEase(Ease.OutExpo);
 	}
 
 	private void Instance_OnMistype()
