@@ -25,7 +25,11 @@ public class Option
 		idx++;
 		OnIncremented?.Invoke();
 
-		if (!IsFinished() && GetNext() == ' ')
+		if (IsFinished())
+			return;
+
+		var next = GetNext();
+		if (next == ' ' || next == '\'')
 			Increment();
 	}
 	

@@ -29,11 +29,11 @@ public class OptionUI : MonoBehaviour
 		float y = Random.Range(0f, 30f);
 
 		transform.DOMoveX(transform.position.x + 30f-x, Random.Range(3f, 5f))
-				 .SetEase(Ease.InOutExpo)
+				 .SetEase(Ease.InOutQuart)
 				 .SetLoops(-1, LoopType.Yoyo);
 
 		transform.DOMoveY(transform.position.y + 30f - y, Random.Range(3f, 5f))
-				 .SetEase(Ease.InOutExpo)
+				 .SetEase(Ease.InOutQuart)
 				 .SetLoops(-1, LoopType.Yoyo);
 	}
 
