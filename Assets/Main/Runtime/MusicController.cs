@@ -40,6 +40,6 @@ public class MusicController : MonoBehaviour
 	{
 		musicInstance.setPaused(true);
 		ambienceInstance.setPaused(true);
-		
+		AudioSystem.Instance.PlayOneShot(shock);
 	}
 }
