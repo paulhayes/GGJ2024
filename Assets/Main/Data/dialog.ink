@@ -346,12 +346,11 @@ I swear to god I can't wait to for this internship to be over and done with!
     ~suspicion+=10
     Boy, you've been partying too hard!
 
-- Wait a second, I have to get this call - YEA MIKE? I HOPE YOU'RE NOT CALLING ME ABOUT THE
-
 //-----------------------Char change-----------------------
 ~character=Sarah
 
 - Did Jimmy go through here? Please help me hide!
+
 
 //-----------------------Char change-----------------------
 ~character=Miriam
