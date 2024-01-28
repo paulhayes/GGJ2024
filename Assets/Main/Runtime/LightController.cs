@@ -14,8 +14,8 @@ public class LightController : MonoBehaviour
 
     void Update()
     {
-        //if (Input.GetKeyDown(KeyCode.Space) && !isSurprised)
-        //    Surprise();    
+        if (Input.GetKeyDown(KeyCode.Space) && !isSurprised)
+            Surprise();    
     }
 
     void Surprise()
