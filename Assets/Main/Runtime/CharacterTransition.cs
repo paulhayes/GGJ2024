@@ -41,7 +41,7 @@ public class CharacterTransition : MonoBehaviour
         yield return new WaitForSeconds(8f);
 
         character.gameObject.SetActive(true);
-        Transition(m_outPosition,m_inPosition,character,m_duration,m_animCurveIn);
+        yield return Transition(m_outPosition,m_inPosition,character,m_duration,m_animCurveIn);
         currentCharactrer = character;
         characterData.complete = true;
     }
@@ -55,6 +55,7 @@ public class CharacterTransition : MonoBehaviour
             if(elapsed>1){
                 elapsed=1;
             }
+            Debug.Log(elapsed);
             target.position = Vector3.Lerp(startTransform.position,endTransform.position,animCurve.Evaluate(elapsed));
             target.rotation = Quaternion.Lerp(startTransform.rotation,endTransform.rotation,animCurve.Evaluate(elapsed));
 
