@@ -3,7 +3,9 @@ using UnityEngine;
 using Ink.Runtime;
 using System;
 using System.Linq;
+#if UNITY_EDITOR
 using Ink.UnityIntegration;
+#endif
 
 public class StoryParser : Singleton<StoryParser>
 {
