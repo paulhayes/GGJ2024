@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{cde5b185-5369-4eb8-9637-f2c7df50d586}">
+		<property name="assetPath">
+			<value>grumpy guy_1.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>3.0126077097505668</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{4a6a670b-53b0-4f9b-8f4f-d321ede25e26}</destination>
+		</relationship>
+	</object>
+</objects>
