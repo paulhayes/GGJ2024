@@ -61,8 +61,6 @@ public class OptionUI : MonoBehaviour
 		panel.color = new Color(1,1,1,opacity);
 
 		foreach (var p in panels)
-		{
 			p.color = panel.color;
-		}
 	}
 }
