@@ -380,7 +380,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1906427211}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 182.3}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1521255048
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -889,6 +889,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1184815904022715773, guid: ab85e5647bfc5214e889fdf14ee03c85,
+        type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1184815904022715773, guid: ab85e5647bfc5214e889fdf14ee03c85,
+        type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1280
+      objectReference: {fileID: 0}
+    - target: {fileID: 1184815904022715773, guid: ab85e5647bfc5214e889fdf14ee03c85,
+        type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 720
+      objectReference: {fileID: 0}
     - target: {fileID: 3998535248182147713, guid: ab85e5647bfc5214e889fdf14ee03c85,
         type: 3}
       propertyPath: m_Name
@@ -954,6 +969,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8988255032588352221, guid: ab85e5647bfc5214e889fdf14ee03c85,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8988255032588352221, guid: ab85e5647bfc5214e889fdf14ee03c85,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Reload
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -979,6 +1004,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 732397747043436116, guid: 24c12370d9a3f2d49b31d84c4593b3ce,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 786079577689734107, guid: 24c12370d9a3f2d49b31d84c4593b3ce,
         type: 3}
       propertyPath: m_VolumeTrigger
@@ -1032,6 +1062,16 @@ PrefabInstance:
     - target: {fileID: 3216315871498588411, guid: 24c12370d9a3f2d49b31d84c4593b3ce,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5981722941264041898, guid: 24c12370d9a3f2d49b31d84c4593b3ce,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5981722941264041898, guid: 24c12370d9a3f2d49b31d84c4593b3ce,
+        type: 3}
+      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6310184906120292142, guid: 24c12370d9a3f2d49b31d84c4593b3ce,
@@ -1139,6 +1179,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ConversationState
       objectReference: {fileID: 0}
+    - target: {fileID: 7622165713733959336, guid: 24c12370d9a3f2d49b31d84c4593b3ce,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1152,6 +1197,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 157749422620362344, guid: b0ccf3bcd404a7a48be1643e806a33dc,
+        type: 3}
+      propertyPath: m_MatchWidthOrHeight
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 951110758152680729, guid: b0ccf3bcd404a7a48be1643e806a33dc,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 951110758152680729, guid: b0ccf3bcd404a7a48be1643e806a33dc,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Reload
+      objectReference: {fileID: 0}
     - target: {fileID: 1062588731579551984, guid: b0ccf3bcd404a7a48be1643e806a33dc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1202,10 +1262,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1402981342958449624, guid: b0ccf3bcd404a7a48be1643e806a33dc,
+        type: 3}
+      propertyPath: m_RenderMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3737361234042068726, guid: b0ccf3bcd404a7a48be1643e806a33dc,
         type: 3}
       propertyPath: m_Name
       value: WinState
+      objectReference: {fileID: 0}
+    - target: {fileID: 3737361234042068726, guid: b0ccf3bcd404a7a48be1643e806a33dc,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6631034364080298712, guid: b0ccf3bcd404a7a48be1643e806a33dc,
         type: 3}

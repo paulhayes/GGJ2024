@@ -28,9 +28,11 @@ public class StoryParser : Singleton<StoryParser>
         m_characterChangeData = null;
         curSus = 0;
         m_story = new Story( m_text.text );
+
+        StartCoroutine(ContinueRoutine());
     }
 
-    public IEnumerator Start()
+    public void Start()
     {        
         m_story.ObserveVariable(SUS_KEY,OnSuspicionChanged);
         m_story.ObserveVariable("character",(varName,val)=>{
@@ -43,9 +45,7 @@ public class StoryParser : Singleton<StoryParser>
         InkPlayerWindow window = InkPlayerWindow.GetWindow(true);
         if(window != null) InkPlayerWindow.Attach(m_story);
         #endif
-
-        yield return null;
-        StartCoroutine(ContinueRoutine());
+        
     }
 
     void OnDisable()
@@ -76,7 +76,7 @@ public class StoryParser : Singleton<StoryParser>
 
     IEnumerator ContinueRoutine(CharacterTransitionData characterTransitionData=null)
     {
-        
+        yield return null;
         while(enabled){
             yield return Next();
             yield return new WaitForSeconds(1);

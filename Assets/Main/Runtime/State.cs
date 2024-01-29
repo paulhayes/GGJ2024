@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class State : MonoBehaviour
 {
@@ -9,5 +10,10 @@ public class State : MonoBehaviour
     public void ChangeState(string name)
     {        
         RequestStateChange?.Invoke(name);
+    }
+
+    public void Reload()
+    {
+        SceneManager.LoadScene(0);
     }
 }
