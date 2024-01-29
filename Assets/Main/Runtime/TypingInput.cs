@@ -31,7 +31,7 @@ public class TypingInput : Singleton<TypingInput>
 
 	private IEnumerator TypePhrasesCoroutine(Option[] options)
 	{
-		TimeLeft = 15;
+		TimeLeft = 12;
 		while (TimeLeft > 0)
 		{
 			TimeLeft -= Time.deltaTime;
