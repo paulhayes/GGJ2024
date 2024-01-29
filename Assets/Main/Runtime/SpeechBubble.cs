@@ -13,20 +13,6 @@ public class SpeechBubble : MonoBehaviour
 	public TextMeshProUGUI text;
 	public float lettersPrSec = 50;
 
-	[FMODUnity.EventRef, SerializeField]
-	private string[] talk;
-		//talkSarah,
-		//talkJerry,
-		//talkJimmy,
-		//talkMargaret,
-		//talkJames,
-		//talkBradley,
-		//talkRebbeca,
-		//talkGiles,
-		//talkMiriam,
-		//talkTim,
-		//talkBenedict;
-
 	[SerializeField] FMODUnity.EventReference[] talkSoundReferences;
 
 	private EventInstance talkInstance;

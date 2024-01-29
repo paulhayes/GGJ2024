@@ -2,6 +2,7 @@ using FMOD.Studio;
 using FMODUnity;
 using System;
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class MusicController : Singleton<MusicController>
@@ -15,10 +16,9 @@ public class MusicController : Singleton<MusicController>
 	private IEnumerator Start()
 	{
 		yield return new WaitForEndOfFrame();
-
+		yield return new WaitUntil(()=>RuntimeManager.HaveAllBanksLoaded);
 		musicInstance = AudioSystem.Instance.CreateInstance(musicEventRef);
 		ambienceInstance = AudioSystem.Instance.CreateInstance(ambientEventRef);
-
 		musicInstance.start();
 		ambienceInstance.start();
 
