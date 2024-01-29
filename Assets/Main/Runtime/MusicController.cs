@@ -1,12 +1,13 @@
 using FMOD.Studio;
+using FMODUnity;
 using System;
 using System.Collections;
 using UnityEngine;
 
 public class MusicController : Singleton<MusicController>
 {
-	[FMODUnity.EventRef, SerializeField]
-	private string music, ambience;
+	[SerializeField] EventReference musicEventRef;
+	[SerializeField] EventReference ambientEventRef;
 	private EventInstance musicInstance, ambienceInstance;
 
 	[SerializeField] StoryParser m_storyParser;
@@ -15,8 +16,8 @@ public class MusicController : Singleton<MusicController>
 	{
 		yield return new WaitForEndOfFrame();
 
-		musicInstance = AudioSystem.Instance.CreateInstance(music);
-		ambienceInstance = AudioSystem.Instance.CreateInstance(ambience);
+		musicInstance = AudioSystem.Instance.CreateInstance(musicEventRef);
+		ambienceInstance = AudioSystem.Instance.CreateInstance(ambientEventRef);
 
 		musicInstance.start();
 		ambienceInstance.start();

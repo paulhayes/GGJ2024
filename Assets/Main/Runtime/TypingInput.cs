@@ -2,6 +2,7 @@ using FMODUnity;
 using System;
 using System.Collections;
 using System.Linq;
+using System.Text;
 using UnityEngine;
 
 public class TypingInput : Singleton<TypingInput>
@@ -13,8 +14,13 @@ public class TypingInput : Singleton<TypingInput>
 	public event Action OnType;
 	public event Action OnMistype;
 
-	[FMODUnity.EventRef, SerializeField]
-	private string typeSFX, mistypeSFX;
+	[FMODUnity.EventRef(MigrateTo="typeSFXEventRef"), SerializeField]
+	private string typeSFX;
+	[FMODUnity.EventRef(MigrateTo ="mistypeSFXEventRef"), SerializeField]
+	private string mistypeSFX;
+
+	[SerializeField] EventReference typeSFXEventRef;
+	[SerializeField] EventReference mistypeSFXEventRef;
 
 	public void TypePhrases(string[] phrases)
     {
@@ -30,15 +36,17 @@ public class TypingInput : Singleton<TypingInput>
 		{
 			TimeLeft -= Time.deltaTime;
 			string input = Input.inputString.ToLower();
+			
 			bool mistype = true;
 			bool finished= false;
 
+			FilterKeys(ref input);
 			if (string.IsNullOrEmpty(input))
 			{
 				yield return null;
 				continue;
-			}
-
+			}			
+			
 			foreach (var option in options)
 			{
 				bool correct = CheckInput(option, input);
@@ -57,12 +65,12 @@ public class TypingInput : Singleton<TypingInput>
 			{
 				
 				OnMistype?.Invoke();
-				AudioSystem.Instance.PlayOneShot(mistypeSFX);
+				AudioSystem.Instance.PlayOneShot(mistypeSFXEventRef.ToString());
 			}
 			else
 			{
 				OnType?.Invoke();
-				AudioSystem.Instance.PlayOneShot(typeSFX);
+				AudioSystem.Instance.PlayOneShot(typeSFXEventRef.ToString());
 			}
 
 			if (finished)
@@ -102,4 +110,26 @@ public class TypingInput : Singleton<TypingInput>
 			return correct;
 		}
 	}
+
+    private void FilterKeys(ref string input)
+    {
+        if(string.IsNullOrEmpty(input)){
+			return;
+		}
+		if(input.Length==1){
+			if(!char.IsLetterOrDigit(input[0])){
+				input = string.Empty;
+			}		
+			return;
+		}
+
+		StringBuilder filteredKeys = new StringBuilder();
+		for(int i=0;i<input.Length;i++){
+			if( char.IsLetterOrDigit(input[i])){
+				filteredKeys.Append(input[i]);
+			}
+		}
+		input=filteredKeys.ToString();
+    }
+
 }

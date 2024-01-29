@@ -23,7 +23,7 @@ public class AudioSystem : Singleton<AudioSystem>
 		RuntimeManager.PlayOneShot(sfx);
 	}
 
-	public EventInstance CreateInstance(string sfx)
+	public EventInstance CreateInstance(EventReference sfx)
 	{
 		var instance = RuntimeManager.CreateInstance(sfx);
 		instances.Add(instance);

@@ -619,7 +619,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cae3d565eac7214788e220ddae3fa80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toPlay: event:/Music/final_menu_song
+  toPlay: 
+  playEventRef:
+    Guid:
+      Data1: 1702059504
+      Data2: 1192279871
+      Data3: -55361113
+      Data4: -198692925
+    Path: event:/Music/final_menu_song
 --- !u!1 &4817508243923957309
 GameObject:
   m_ObjectHideFlags: 0

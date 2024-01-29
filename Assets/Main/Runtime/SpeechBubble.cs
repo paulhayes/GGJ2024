@@ -27,6 +27,8 @@ public class SpeechBubble : MonoBehaviour
 		//talkTim,
 		//talkBenedict;
 
+	[SerializeField] FMODUnity.EventReference[] talkSoundReferences;
+
 	private EventInstance talkInstance;
 	
 	private void Start()
@@ -37,11 +39,16 @@ public class SpeechBubble : MonoBehaviour
 		StoryParser.Instance.CharacterChangeEvent += ChangeTalk;
 	}
 
+	void OnDisable()
+	{
+		
+	}
+
 	private void ChangeTalk(CharacterTransitionData data)
 	{
 		talkInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
 		talkInstance.release();
-		talkInstance = AudioSystem.Instance.CreateInstance(talk[data.characterIndex]);
+		talkInstance = AudioSystem.Instance.CreateInstance(talkSoundReferences[data.characterIndex]);
 	}
 
 	public void WriteDialogue(DialogSnippet dialogue)

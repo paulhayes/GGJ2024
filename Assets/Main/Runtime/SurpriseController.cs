@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using FMODUnity;
 using UnityEngine;
 
 public class SurpriseController : Singleton<SurpriseController>
@@ -7,8 +8,10 @@ public class SurpriseController : Singleton<SurpriseController>
 	public event Action OnSurprised;
 	public event Action OnOverIt;
 
-	[FMODUnity.EventRef, SerializeField]
+	[FMODUnity.EventRef(MigrateTo ="surpriseEventRef"), SerializeField]
 	private string surprise;
+
+	[SerializeField] EventReference surpriseEventRef;
 
 	private void Start()
 	{
@@ -30,7 +33,7 @@ public class SurpriseController : Singleton<SurpriseController>
 		OnSurprised?.Invoke();
 		MusicController.Instance.Pause();
 		LightController.Instance.NormalLights();
-		AudioSystem.Instance.PlayOneShot(surprise);
+		AudioSystem.Instance.PlayOneShot(surpriseEventRef.ToString());
 
 		StopAllCoroutines();
 		StartCoroutine(_Shock());

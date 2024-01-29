@@ -44,6 +44,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d37811a994d37a41ad26e7c2935f6c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  music: event:/Music/Main theme
-  ambience: event:/SFX/Ambience
-  intro: event:/Music/intro_music
+  music: 
+  ambience: 
+  musicEventRef:
+    Guid:
+      Data1: 1632825401
+      Data2: 1120015601
+      Data3: -589814095
+      Data4: -2024513405
+    Path: event:/Music/Main theme
+  ambientEventRef:
+    Guid:
+      Data1: -978047987
+      Data2: 1167878656
+      Data3: 199997102
+      Data4: -1186623342
+    Path: event:/SFX/Ambience
+  m_storyParser: {fileID: 0}

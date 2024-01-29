@@ -135,7 +135,7 @@ Where are you from again?
     What do you mean? I'm Giles and my father is the boss of this company!
  * I'm not the driver
     Ugh that sucks! 
-    A new hotdog skin just dropped and I have a bunch of VBucks burning a whole in my pocket!
+    A new hotdog skin just dropped and I have a bunch of VBucks burning a hole in my pocket!
  * What?
     ~suspicion+=5
     Man did they hire a "special guy" again?

@@ -16,11 +16,23 @@ public class CharacterTransition : MonoBehaviour
     [SerializeField] AnimationCurve m_animCurveOut;
 
     Transform m_currentCharactrer = null;
-    void Start()
+
+    void OnEnable()
     {
         foreach(var character in m_characters){
             character.gameObject.SetActive(false);
         }
+        m_currentCharactrer = null;
+    }
+
+    void OnDisable()
+    {
+        
+    }
+
+    void Start()
+    {
+        
         StoryParser.Instance.CharacterChangeEvent += OnChange;
     }
 
