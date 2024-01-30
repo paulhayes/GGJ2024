@@ -317,60 +317,6 @@ Where are you from again?
 - See ya around
     
 //-----------------------Char change-----------------------
-~character=Tim
-
-- Heeey man -hic- how you doin?
- * You good?
-    ~suspicion-=5
-    Yeah man, I'm greaa-hic-aat!
- * Heeey!
-    Ehehe hey... do you know where my nephew went? 
-    I was s'posed to drive him to some place called fortnite?
- * Want water?
-    ~suspicion+=10
-    Water?! Are you crazy? 
-    Everyone knows I only drink buckfast!
- * Sit?
-    Nah man, I've got to danceee! 
-    I can feel the music in my bones!
- * mistype
-   ~suspicion+=10
-   I don't know who's drunker, you or me!
-    
-- Hmmm, what floor you on? Don't think I've seen your face before...
- * None 
-    ~suspicion-=5
-    Oh so you don't work here?
-    Good, finally someone I can relate to!
- * I don't know
-    ~suspicion-=5
-    I get you! This building is so big it's easy to get lost.
- * Yours
-    I'm so sorry, I didn't mean to be rude, I'm not good with faces.
- * mistype
-   ~suspicion+=10
-   You are making no sense....
-
-- So, how are you enjoying the free food and open bar?
- * Great!
-    ~suspicion-=5
-    Free food always tastes the best!
- * No quiche
-    ~suspicion-=10
-    Oh shoot! I was supposed to get the quiche...
- * Needs more wine!
-    ~suspicion-=5
-    Right?
-    I swear there was more wine there before I drank it.
- * mistype
-   ~suspicion+=10
-   You're wilding right now...
-
-- Oh no!
-- My cup is empty again, how does this keep happening? 
-- Bye!
-
-//-----------------------Char change-----------------------
 ~character=Benedict
 
 - You look lost son.
@@ -431,6 +377,60 @@ Where are you from again?
 - Enjoy the party!
 
 //-----------------------Char change-----------------------
+~character=Tim
+
+- Heeey man -hic- how you doin?
+ * You good?
+    ~suspicion-=5
+    Yeah man, I'm greaa-hic-aat!
+ * Heeey!
+    Ehehe hey... do you know where my nephew went? 
+    I was s'posed to drive him to some place called fortnite?
+ * Want water?
+    ~suspicion+=10
+    Water?! Are you crazy? 
+    Everyone knows I only drink buckfast!
+ * Sit?
+    Nah man, I've got to danceee! 
+    I can feel the music in my bones!
+ * mistype
+   ~suspicion+=10
+   I don't know who's drunker, you or me!
+    
+- Hmmm, what floor you on? Don't think I've seen your face before...
+ * None 
+    ~suspicion-=5
+    Oh so you don't work here?
+    Good, finally someone I can relate to!
+ * I don't know
+    ~suspicion-=5
+    I get you! This building is so big it's easy to get lost.
+ * Yours
+    I'm so sorry, I didn't mean to be rude, I'm not good with faces.
+ * mistype
+   ~suspicion+=10
+   You are making no sense....
+
+- So, how are you enjoying the free food and open bar?
+ * Great!
+    ~suspicion-=5
+    Free food always tastes the best!
+ * No quiche
+    ~suspicion-=10
+    Oh shoot! I was supposed to get the quiche...
+ * Needs more wine!
+    ~suspicion-=5
+    Right?
+    I swear there was more wine there before I drank it.
+ * mistype
+   ~suspicion+=10
+   You're wilding right now...
+
+- Oh no!
+- My cup is empty again, how does this keep happening? 
+- Bye!
+
+//-----------------------Char change-----------------------
 ~character=Jimmy
 
 - I can't believe this sandwich theft keeps happening! I'll have to write an email to HR again, ugh...
@@ -481,42 +481,43 @@ Where are you from again?
     ~suspicion+=10
     Whoa friend, slow down, didn't understand.
 
-- Don't be fooled, they're only having this party to keep us quiet about our fridge rights! I'm going to go find someone from HR!
+- Don't be fooled, they're only having this party to keep us quiet about our fridge rights! 
+- I'm going to go find someone from HR!
 
 //-----------------------Char change-----------------------
 ~character=Miriam
 
 - And who might you be? I know everyone in this company.
  * Tim hired me?
-    ~suspicion+=15
-    He's a moron, but I don't think he would hire someone without consulting me first!
+    ~suspicion-=5
+    Oh Tim... Sorry, he didn't tell me
  * Gile's Driver
     ~suspicion+=5
     My brother finally caved and hired a personal driver for the brat?
     Seems unlikely...
  * Janitor
-    I see! Well I don't really know the whole janitorial services team...
+    ~suspicion+=5
+    Hmmm... I'm pretty sure I don't know the whole janitorial services team...
  * Intern?
     ~suspicion+=25
     Are you asking me if you're an intern here? 
-    That's definitely a bad way to about it.
  * Catering
     ~suspicion+=5
-    Without a uniform? What firm did we hire?~
+    Without a uniform? What firm did we hire?
  * mistype
     ~suspicion+=10
     You can't even talk straight!
     
-- So, how are you finding the company? 
+- So, how are you finding the party? 
 - We do try to have some get togethers every once in a while to promote workplace socializing.
  * It's ok...
     ~suspicion+=5
     Only ok? i see you think we might have room for improvements.
- * Was shit frankly
+ * Bit shit
     ~suspicion+=25
     Oh my word. No need for that type of language in the work place! 
     We are only acceting constructive criticism at the moment.
- * Amazing
+ * Incredible!
     ~suspicion-=10
     Happy to hear it! 
     Please do make sure to talk to your colleagues about how great it was.
@@ -524,7 +525,6 @@ Where are you from again?
 
 - Ugh, can you believe Tim?
 - He is completely wasted!
-- Can't believe he's top pick for the annual bonus! 
 - He hardly does any work.
  * Bitchy
     ~suspicion+=25
@@ -532,7 +532,7 @@ Where are you from again?
  * Unfair
      ~suspicion-=10
     Completely unfair!
-    Not saying I'M the one that should be getting it, but there certainly are more deserving candidates.
+    Not saying I'M the one that should be promoted, but there are certainly more deserving candidates.
 
 - I'm keeping my eye on you!
 

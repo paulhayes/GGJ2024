@@ -29,9 +29,9 @@ public class TypingInput : Singleton<TypingInput>
 		StartCoroutine(TypePhrasesCoroutine(options));
     }
 
-	public IEnumerator TypePhrasesCoroutine(Option[] options)
+	public IEnumerator TypePhrasesCoroutine(Option[] options, float time = 12)
 	{
-		TimeLeft = 12;
+		TimeLeft = time;
 		while (TimeLeft > 0)
 		{
 			TimeLeft -= Time.deltaTime;

@@ -18,7 +18,7 @@ public class ReplayButton : MonoBehaviour
 	private void Start()
 	{
 		optionUI.SetOption(option);
-		StartCoroutine(TypingInput.Instance.TypePhrasesCoroutine(new[] { option }));
+		StartCoroutine(TypingInput.Instance.TypePhrasesCoroutine(new[] { option }, float.MaxValue));
 		option.OnIncremented += Replay;
 	}
 
