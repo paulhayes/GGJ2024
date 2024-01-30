@@ -29,7 +29,7 @@ public class TypingInput : Singleton<TypingInput>
 		StartCoroutine(TypePhrasesCoroutine(options));
     }
 
-	private IEnumerator TypePhrasesCoroutine(Option[] options)
+	public IEnumerator TypePhrasesCoroutine(Option[] options)
 	{
 		TimeLeft = 12;
 		while (TimeLeft > 0)

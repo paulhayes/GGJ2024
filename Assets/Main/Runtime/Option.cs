@@ -40,4 +40,9 @@ public class Option
 	{
 		OnMistyped?.Invoke(letter);
 	}
+
+	public void Reset()
+	{
+		idx = 0;
+	}
 }

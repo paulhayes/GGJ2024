@@ -1521,7 +1521,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cae3d565eac7214788e220ddae3fa80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toPlay: 
   playEventRef:
     Guid:
       Data1: 728597589

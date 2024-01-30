@@ -1323,7 +1323,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2e08b6f2d4aaf547a2f8dea3c340173, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  surprise: 
+  surprise: event:/SFX/schockedSTOP
   surpriseEventRef:
     Guid:
       Data1: 1543912822
@@ -1763,66 +1763,6 @@ MonoBehaviour:
   - {r: 0.24096651, g: 0.8962264, b: 0.30009624, a: 1}
   timeToSwitchColor: 5
   rotSpeed: 20
---- !u!1 &3840421558639747973
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2818359655329906210}
-  - component: {fileID: 8341420336210414895}
-  m_Layer: 0
-  m_Name: TypingInput
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2818359655329906210
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3840421558639747973}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 130, y: 2, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 3216315871498588411}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8341420336210414895
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3840421558639747973}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dda642af1e8821a43bb4a000163d7890, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  typeSFX: 
-  mistypeSFX: 
-  typeSFXEventRef:
-    Guid:
-      Data1: 1920855305
-      Data2: 1234019587
-      Data3: -1506431061
-      Data4: 569658256
-    Path: event:/SFX/Main character/Talking_pop
-  mistypeSFXEventRef:
-    Guid:
-      Data1: 428775598
-      Data2: 1153844039
-      Data3: 928040881
-      Data4: -1207867451
-    Path: event:/SFX/Main character/Mistype
 --- !u!1 &4417548008312948111
 GameObject:
   m_ObjectHideFlags: 0
@@ -3192,7 +3132,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2818359655329906210}
   - {fileID: 4823153443415203011}
   - {fileID: 4440416757622918487}
   - {fileID: 7805451370483259090}
@@ -4832,17 +4771,17 @@ PrefabInstance:
     - target: {fileID: 882853089261845555, guid: 550ab7cdbefb84a40931136157cd0b12,
         type: 3}
       propertyPath: talkSoundReferences.Array.data[2].Path
-      value: event:/SFX/Other Characters/woman3
+      value: event:/SFX/Other Characters/guy2
       objectReference: {fileID: 0}
     - target: {fileID: 882853089261845555, guid: 550ab7cdbefb84a40931136157cd0b12,
         type: 3}
       propertyPath: talkSoundReferences.Array.data[3].Path
-      value: event:/SFX/Other Characters/laughing_grumpy_guy
+      value: event:/SFX/Other Characters/woman3
       objectReference: {fileID: 0}
     - target: {fileID: 882853089261845555, guid: 550ab7cdbefb84a40931136157cd0b12,
         type: 3}
       propertyPath: talkSoundReferences.Array.data[4].Path
-      value: event:/SFX/Other Characters/guy3
+      value: event:/SFX/Other Characters/laughing_grumpy_guy
       objectReference: {fileID: 0}
     - target: {fileID: 882853089261845555, guid: 550ab7cdbefb84a40931136157cd0b12,
         type: 3}
@@ -4917,62 +4856,62 @@ PrefabInstance:
     - target: {fileID: 882853089261845555, guid: 550ab7cdbefb84a40931136157cd0b12,
         type: 3}
       propertyPath: talkSoundReferences.Array.data[2].Guid.Data1
-      value: -963605996
+      value: 2073094186
       objectReference: {fileID: 0}
     - target: {fileID: 882853089261845555, guid: 550ab7cdbefb84a40931136157cd0b12,
         type: 3}
       propertyPath: talkSoundReferences.Array.data[2].Guid.Data2
-      value: 1145506100
+      value: 1230018109
       objectReference: {fileID: 0}
     - target: {fileID: 882853089261845555, guid: 550ab7cdbefb84a40931136157cd0b12,
         type: 3}
       propertyPath: talkSoundReferences.Array.data[2].Guid.Data3
-      value: -531046479
+      value: -523565434
       objectReference: {fileID: 0}
     - target: {fileID: 882853089261845555, guid: 550ab7cdbefb84a40931136157cd0b12,
         type: 3}
       propertyPath: talkSoundReferences.Array.data[2].Guid.Data4
-      value: 2025211079
+      value: -1006020069
       objectReference: {fileID: 0}
     - target: {fileID: 882853089261845555, guid: 550ab7cdbefb84a40931136157cd0b12,
         type: 3}
       propertyPath: talkSoundReferences.Array.data[3].Guid.Data1
-      value: -912442769
+      value: -963605996
       objectReference: {fileID: 0}
     - target: {fileID: 882853089261845555, guid: 550ab7cdbefb84a40931136157cd0b12,
         type: 3}
       propertyPath: talkSoundReferences.Array.data[3].Guid.Data2
-      value: 1131003247
+      value: 1145506100
       objectReference: {fileID: 0}
     - target: {fileID: 882853089261845555, guid: 550ab7cdbefb84a40931136157cd0b12,
         type: 3}
       propertyPath: talkSoundReferences.Array.data[3].Guid.Data3
-      value: 328023739
+      value: -531046479
       objectReference: {fileID: 0}
     - target: {fileID: 882853089261845555, guid: 550ab7cdbefb84a40931136157cd0b12,
         type: 3}
       propertyPath: talkSoundReferences.Array.data[3].Guid.Data4
-      value: 1918289676
+      value: 2025211079
       objectReference: {fileID: 0}
     - target: {fileID: 882853089261845555, guid: 550ab7cdbefb84a40931136157cd0b12,
         type: 3}
       propertyPath: talkSoundReferences.Array.data[4].Guid.Data1
-      value: -212609510
+      value: -912442769
       objectReference: {fileID: 0}
     - target: {fileID: 882853089261845555, guid: 550ab7cdbefb84a40931136157cd0b12,
         type: 3}
       propertyPath: talkSoundReferences.Array.data[4].Guid.Data2
-      value: 1247664054
+      value: 1131003247
       objectReference: {fileID: 0}
     - target: {fileID: 882853089261845555, guid: 550ab7cdbefb84a40931136157cd0b12,
         type: 3}
       propertyPath: talkSoundReferences.Array.data[4].Guid.Data3
-      value: 731840172
+      value: 328023739
       objectReference: {fileID: 0}
     - target: {fileID: 882853089261845555, guid: 550ab7cdbefb84a40931136157cd0b12,
         type: 3}
       propertyPath: talkSoundReferences.Array.data[4].Guid.Data4
-      value: -635263456
+      value: 1918289676
       objectReference: {fileID: 0}
     - target: {fileID: 882853089261845555, guid: 550ab7cdbefb84a40931136157cd0b12,
         type: 3}
@@ -5333,6 +5272,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TypingUICanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 6230678825924329147, guid: 76a4a775f1825c24fa2f3da62ae7d5a7,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7178111072009235071, guid: 76a4a775f1825c24fa2f3da62ae7d5a7,
         type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -5476,12 +5420,12 @@ PrefabInstance:
     - target: {fileID: 895472572342023553, guid: 5a7c3cbc12185e3478338753654db2be,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 895472572342023553, guid: 5a7c3cbc12185e3478338753654db2be,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7129626324726607740, guid: 5a7c3cbc12185e3478338753654db2be,
         type: 3}
