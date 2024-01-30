@@ -691,10 +691,20 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1861798051767191323, guid: ab85e5647bfc5214e889fdf14ee03c85,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3998535248182147713, guid: ab85e5647bfc5214e889fdf14ee03c85,
         type: 3}
       propertyPath: m_Name
       value: FailState
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998535248182147713, guid: ab85e5647bfc5214e889fdf14ee03c85,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5570608872808257392, guid: ab85e5647bfc5214e889fdf14ee03c85,
         type: 3}
@@ -752,7 +762,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 1861798051767191323, guid: ab85e5647bfc5214e889fdf14ee03c85, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab85e5647bfc5214e889fdf14ee03c85, type: 3}
@@ -892,6 +903,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: WinState
       objectReference: {fileID: 0}
+    - target: {fileID: 3737361234042068726, guid: b0ccf3bcd404a7a48be1643e806a33dc,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6631034364080298712, guid: b0ccf3bcd404a7a48be1643e806a33dc,
         type: 3}
       propertyPath: m_VolumeTrigger
@@ -903,7 +919,8 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 4817508243923957309, guid: b0ccf3bcd404a7a48be1643e806a33dc, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b0ccf3bcd404a7a48be1643e806a33dc, type: 3}
