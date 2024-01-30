@@ -65,12 +65,12 @@ public class TypingInput : Singleton<TypingInput>
 			{
 				
 				OnMistype?.Invoke();
-				AudioSystem.Instance.PlayOneShot(mistypeSFXEventRef.ToString());
+				AudioSystem.Instance.PlayOneShot(mistypeSFXEventRef);
 			}
 			else
 			{
 				OnType?.Invoke();
-				AudioSystem.Instance.PlayOneShot(typeSFXEventRef.ToString());
+				AudioSystem.Instance.PlayOneShot(typeSFXEventRef);
 			}
 
 			if (finished)

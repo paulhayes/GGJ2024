@@ -14,8 +14,8 @@ public class AudioSystem : Singleton<AudioSystem>
 		base.Awake();
 	}
 
-	public void PlayOneShot(string sfx) => RuntimeManager.PlayOneShot(sfx);
-	public void PlayOneShot(string sfx, Vector3 pos) => RuntimeManager.PlayOneShot(sfx, pos);
+	public void PlayOneShot(EventReference sfx) => RuntimeManager.PlayOneShot(sfx);
+	public void PlayOneShot(EventReference sfx, Vector3 pos) => RuntimeManager.PlayOneShot(sfx, pos);
 
 	public async void PlayOneShotDelayed(string sfx, float delay = 0f)
 	{

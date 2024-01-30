@@ -33,7 +33,7 @@ public class SurpriseController : Singleton<SurpriseController>
 		OnSurprised?.Invoke();
 		MusicController.Instance.Pause();
 		LightController.Instance.NormalLights();
-		AudioSystem.Instance.PlayOneShot(surpriseEventRef.ToString());
+		AudioSystem.Instance.PlayOneShot(surpriseEventRef);
 
 		StopAllCoroutines();
 		StartCoroutine(_Shock());
